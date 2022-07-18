@@ -299,13 +299,6 @@ window.addEventListener("DOMContentLoaded", main2);
     title="withMaxOut(b: SwitchBuilder; maxOut: int): SwitchBuilder">withMaxOut(b: SwitchBuilder; maxOut: int): SwitchBuilder</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">withMplex
-      <li><a class="reference" href="#withMplex%2CSwitchBuilder%2Cint"
-    title="withMplex(b: SwitchBuilder; inTimeout = 5.minutes; outTimeout = 5.minutes;
-          maxChannCount = 200): SwitchBuilder">withMplex(b: SwitchBuilder; inTimeout = 5.minutes; outTimeout = 5.minutes;
-          maxChannCount = 200): SwitchBuilder</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">withNameResolver
       <li><a class="reference" href="#withNameResolver%2CSwitchBuilder%2CNameResolver"
     title="withNameResolver(b: SwitchBuilder; nameResolver: NameResolver): SwitchBuilder">withNameResolver(b: SwitchBuilder; nameResolver: NameResolver): SwitchBuilder</a></li>
@@ -354,11 +347,6 @@ window.addEventListener("DOMContentLoaded", main2);
   <ul class="simple nested-toc-section">withTransport
       <li><a class="reference" href="#withTransport%2CSwitchBuilder%2CTransportProvider"
     title="withTransport(b: SwitchBuilder; prov: TransportProvider): SwitchBuilder">withTransport(b: SwitchBuilder; prov: TransportProvider): SwitchBuilder</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">withYamux
-      <li><a class="reference" href="#withYamux%2CSwitchBuilder"
-    title="withYamux(b: SwitchBuilder): SwitchBuilder">withYamux(b: SwitchBuilder): SwitchBuilder</a></li>
 
   </ul>
 
@@ -584,20 +572,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="withMplex,SwitchBuilder,int" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#withMplex%2CSwitchBuilder%2Cint"><span class="Identifier">withMplex</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">inTimeout</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">.</span><span class="Identifier">minutes</span><span class="Other">;</span> <span class="Identifier">outTimeout</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">.</span><span class="Identifier">minutes</span><span class="Other">;</span>
-               <span class="Identifier">maxChannCount</span> <span class="Other">=</span> <span class="DecNumber">200</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-<p>Uses <a class="reference external" href="https://docs.libp2p.io/concepts/stream-multiplexing/#mplex">Mplex</a> as a multiplexer<br/><tt class="docutils literal"><span class="pre"><span class="Identifier">Timeout</span></span></tt> is the duration after which a inactive connection will be closed<br/></p>
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/muxersManagement/libp2p/builders.nim#L104"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L104" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="withNameResolver,SwitchBuilder,NameResolver" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withNameResolver%2CSwitchBuilder%2CNameResolver"><span class="Identifier">withNameResolver</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
     <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -733,18 +707,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="withYamux,SwitchBuilder" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#withYamux%2CSwitchBuilder"><span class="Identifier">withYamux</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/muxersManagement/libp2p/builders.nim#L122"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L122" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 
 </dl></div>
 <div class="section" id="19">
@@ -760,7 +722,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-18 13:46:33 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-18 14:04:20 UTC</small>
       </div>
     </div>
   </div>
