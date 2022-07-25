@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://status-im.github.io/nim-libp2p/docs/go-daemon/daemonapi/">
+        <link rel="canonical" href="https://status-im.github.io/nim-libp2p/docs/">
       
       <link rel="icon" href="https://docs.libp2p.io/images/logo_small.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Table of Contents - nim-libp2p</title>
+        <title>nim-libp2p</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -38,7 +38,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#table-of-contents" class="md-skip">
+        <a href="#nim-libp2p-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="nim-libp2p" class="md-header__button md-logo" aria-label="nim-libp2p" data-md-component="logo">
+    <a href="." title="nim-libp2p" class="md-header__button md-logo" aria-label="nim-libp2p" data-md-component="logo">
       
   <img src="https://docs.libp2p.io/images/logo_small.png" alt="logo">
 
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Table of Contents
+              Introduction
             
           </span>
         </div>
@@ -199,7 +199,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="nim-libp2p" class="md-nav__button md-logo" aria-label="nim-libp2p" data-md-component="logo">
+    <a href="." title="nim-libp2p" class="md-nav__button md-logo" aria-label="nim-libp2p" data-md-component="logo">
       
   <img src="https://docs.libp2p.io/images/logo_small.png" alt="logo">
 
@@ -227,11 +227,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
         Introduction
       </a>
+      
     </li>
   
 
@@ -270,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial_1_connect/" class="md-nav__link">
+      <a href="tutorial_1_connect/" class="md-nav__link">
         Part I: Simple connection
       </a>
     </li>
@@ -284,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial_2_customproto/" class="md-nav__link">
+      <a href="tutorial_2_customproto/" class="md-nav__link">
         Part II: Custom protocol
       </a>
     </li>
@@ -343,54 +353,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/status-im/nim-libp2p/edit/master/docs/go-daemon/daemonapi.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/status-im/nim-libp2p/edit/master/docs/README.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="table-of-contents">Table of Contents</h1>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#example">Example</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
-</ul>
-<h1 id="introduction">Introduction</h1>
-<p>This is a libp2p-backed daemon wrapping the functionalities of go-libp2p for use in Nim. <br>
-For more information about the go daemon, check out <a href="https://github.com/libp2p/go-libp2p-daemon">this repository</a>.</p>
-<h1 id="installation">Installation</h1>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># clone and install dependencies</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git clone https://github.com/status-im/nim-libp2p
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span> nim-libp2p
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>nimble install
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># perform unit tests</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>nimble <span class="nb">test</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># update the git submodule to install the go daemon </span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git submodule update --init --recursive
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>go version
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>git clone https://github.com/libp2p/go-libp2p-daemon
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">cd</span> go-libp2p-daemon
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>git checkout v0.0.1
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>go install ./...
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">cd</span> ..
-</code></pre></div>
-<h1 id="usage">Usage</h1>
-<h2 id="example">Example</h2>
-<p>Examples can be found in the <a href="https://github.com/status-im/nim-libp2p/tree/readme/examples/go-daemon">examples folder</a></p>
-<h2 id="getting-started">Getting Started</h2>
-<p>Try out the chat example. Full code can be found <a href="https://github.com/status-im/nim-libp2p/blob/master/examples/chat.nim">here</a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nim c -r --threads:on examples/directchat.nim
-</code></pre></div>
-<p>This will output a peer ID such as <code>QmbmHfVvouKammmQDJck4hz33WvVktNEe7pasxz2HgseRu</code> which you can use in another instance to connect to it.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./examples/directchat
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/connect QmbmHfVvouKammmQDJck4hz33WvVktNEe7pasxz2HgseRu
-</code></pre></div>
-<p>You can now chat between the instances!</p>
-<p><img alt="Chat example" src="https://imgur.com/caYRu8K.gif" /></p>
+<h1 id="nim-libp2p-documentation">nim-libp2p documentation</h1>
+<p>Welcome to the nim-libp2p documentation!</p>
+<p>Here, you'll find <a href="tutorial_1_connect/">tutorials</a> to help you started, as well as <a href="directchat.nim">examples</a> and
+the <a href="nim-libp2p/master/libp2p.html">full reference</a>.</p>
 
               
             </article>
@@ -401,6 +373,27 @@ For more information about the go daemon, check out <a href="https://github.com/
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="tutorial_1_connect/" class="md-footer__link md-footer__link--next" aria-label="Next: Part I: Simple connection" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Part I: Simple connection
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -422,10 +415,10 @@ For more information about the go daemon, check out <a href="https://github.com/
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "search.highlight"], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
