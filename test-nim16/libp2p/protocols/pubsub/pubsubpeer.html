@@ -210,7 +210,7 @@ window.addEventListener("DOMContentLoaded", main2);
   <li><a class="reference" href="#GetConn"
     title="GetConn = proc (): Future[Connection] {.gcsafe, raises: [Defect].}">GetConn</a></li>
   <li><a class="reference" href="#OnEvent"
-    title="OnEvent = proc (peer: PubSubPeer; event: PubsubPeerEvent) {.gcsafe,
+    title="OnEvent = proc (peer: PubSubPeer; event: PubSubPeerEvent) {.gcsafe,
     raises: [Defect].}">OnEvent</a></li>
   <li><a class="reference" href="#PubSubObserver"
     title="PubSubObserver = ref object
@@ -235,9 +235,9 @@ window.addEventListener("DOMContentLoaded", main2);
   behaviourPenalty*: float64
   when defined(libp2p_agents_metrics):
       shortAgent*: string">PubSubPeer</a></li>
-  <li><a class="reference" href="#PubsubPeerEvent"
-    title="PubsubPeerEvent = object
-  kind*: PubSubPeerEventKind">PubsubPeerEvent</a></li>
+  <li><a class="reference" href="#PubSubPeerEvent"
+    title="PubSubPeerEvent = object
+  kind*: PubSubPeerEventKind">PubSubPeerEvent</a></li>
   <li><a class="reference" href="#PubSubPeerEventKind"
     title="PubSubPeerEventKind {.pure.} = enum
   Connected, Disconnected">PubSubPeerEventKind</a></li>
@@ -373,7 +373,7 @@ class="link-seesrc" target="_blank">Source</a>
 </dd>
 </div>
 <div id="OnEvent" class="tohide">
-<dt><pre><a href="pubsubpeer.html#OnEvent"><span class="Identifier">OnEvent</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">peer</span><span class="Other">:</span> <a href="pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <a href="pubsubpeer.html#PubsubPeerEvent"><span class="Identifier">PubsubPeerEvent</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
+<dt><pre><a href="pubsubpeer.html#OnEvent"><span class="Identifier">OnEvent</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">peer</span><span class="Other">:</span> <a href="pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <a href="pubsubpeer.html#PubSubPeerEvent"><span class="Identifier">PubSubPeerEvent</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
@@ -431,8 +431,8 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="PubsubPeerEvent" class="tohide">
-<dt><pre><a href="pubsubpeer.html#PubsubPeerEvent"><span class="Identifier">PubsubPeerEvent</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+<div id="PubSubPeerEvent" class="tohide">
+<dt><pre><a href="pubsubpeer.html#PubSubPeerEvent"><span class="Identifier">PubSubPeerEvent</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="pubsubpeer.html#PubSubPeerEventKind"><span class="Identifier">PubSubPeerEventKind</span></a>
 </pre></dt>
 <dd>
@@ -645,7 +645,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-27 08:24:31 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-29 16:09:37 UTC</small>
       </div>
     </div>
   </div>
