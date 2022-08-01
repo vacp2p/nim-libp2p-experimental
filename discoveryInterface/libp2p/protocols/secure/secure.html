@@ -248,6 +248,11 @@ window.addEventListener("DOMContentLoaded", main2);
     title="closeImpl(s: SecureConn): Future[void]">closeImpl(s: SecureConn): Future[void]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">getWrapped
+      <li><a class="reference" href="#getWrapped.e%2CSecureConn"
+    title="getWrapped(s: SecureConn): Connection">getWrapped(s: SecureConn): Connection</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">handshake
       <li><a class="reference" href="#handshake.e%2CSecure%2CConnection%2Cbool"
     title="handshake(s: Secure; conn: Connection; initiator: bool): Future[SecureConn]">handshake(s: Secure; conn: Connection; initiator: bool): Future[SecureConn]</a></li>
@@ -413,6 +418,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="getWrapped.e,SecureConn" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#getWrapped.e%2CSecureConn"><span class="Identifier">getWrapped</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="secure.html#SecureConn"><span class="Identifier">SecureConn</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L75"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="handshake.e,Secure,Connection,bool" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#handshake.e%2CSecure%2CConnection%2Cbool"><span class="Identifier">handshake</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="secure.html#Secure"><span class="Identifier">Secure</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">initiator</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
     <a href="secure.html#SecureConn"><span class="Identifier">SecureConn</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span>
@@ -421,9 +438,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L77"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L79"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L77" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L79" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -433,9 +450,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L111"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L113"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L113" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -473,9 +490,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L140"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L142"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L140" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L142" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -486,9 +503,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L131"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/secure/secure.nim#L133"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L131" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/secure/secure.nim#L133" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -524,7 +541,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-01 14:45:05 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-01 14:47:04 UTC</small>
       </div>
     </div>
   </div>
