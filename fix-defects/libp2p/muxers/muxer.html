@@ -223,6 +223,8 @@ window.addEventListener("DOMContentLoaded", main2);
   muxerHandler*: MuxerHandler">MuxerProvider</a></li>
   <li><a class="reference" href="#StreamHandler"
     title="StreamHandler = proc (conn: Connection): Future[void] {.gcsafe, raises: [Defect].}">StreamHandler</a></li>
+  <li><a class="reference" href="#TooManyChannels"
+    title="TooManyChannels = object of MuxerError">TooManyChannels</a></li>
 
   </ul>
 </li>
@@ -312,9 +314,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L32"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L33"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L33" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -325,9 +327,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L37"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L38"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -349,9 +351,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L30"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -365,9 +367,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L40"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L41"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L40" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -377,9 +379,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L29"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L30"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="TooManyChannels" class="tohide">
+<dt><pre><a href="muxer.html#TooManyChannels"><span class="Identifier">TooManyChannels</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="muxer.html#MuxerError"><span class="Identifier">MuxerError</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L28"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -412,9 +426,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L54"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L55"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -424,9 +438,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L46"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L46" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -443,9 +457,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L51"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L52"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L51" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -457,9 +471,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L52"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L53"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -471,9 +485,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L50"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L51"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L51" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -488,9 +502,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L46"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/muxers/muxer.nim#L47"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L46" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -504,7 +518,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-27 12:46:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 15:18:46 UTC</small>
       </div>
     </div>
   </div>

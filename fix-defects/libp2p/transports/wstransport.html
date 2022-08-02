@@ -274,6 +274,11 @@ window.addEventListener("DOMContentLoaded", main2);
     title="closeImpl(s: WsStream): Future[void]">closeImpl(s: WsStream): Future[void]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">getWrapped
+      <li><a class="reference" href="#getWrapped.e%2CWsStream"
+    title="getWrapped(s: WsStream): Connection">getWrapped(s: WsStream): Connection</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">handles
       <li><a class="reference" href="#handles.e%2CWsTransport%2CMultiAddress"
     title="handles(t: WsTransport; address: MultiAddress): bool">handles(t: WsTransport; address: MultiAddress): bool</a></li>
@@ -347,9 +352,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L94"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L96"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L94" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L96" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -398,9 +403,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Creates a clear-text WebSocket transport
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L335"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L337"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L335" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L337" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -414,9 +419,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Creates a secure WebSocket transport
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L313"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L315"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L313" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L315" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -426,9 +431,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L109"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L111"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L109" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -444,9 +449,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 accept a new WS connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L233"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L235"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L233" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L235" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -463,6 +468,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="getWrapped.e,WsStream" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#getWrapped.e%2CWsStream"><span class="Identifier">getWrapped</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">WsStream</span><span class="Other">)</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L93"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L93" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="handles.e,WsTransport,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#handles.e%2CWsTransport%2CMultiAddress"><span class="Identifier">handles</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="wstransport.html#WsTransport"><span class="Identifier">WsTransport</span></a><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -470,9 +487,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L308"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L310"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L308" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L310" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -496,9 +513,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 listen on the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L114"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L116"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L114" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L116" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -509,9 +526,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 stop the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L168"
+href="https://github.com/status-im/nim-libp2p/tree/fix-defects/libp2p/transports/wstransport.nim#L170"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L168" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/wstransport.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -543,7 +560,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-07-27 12:46:32 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 15:18:48 UTC</small>
       </div>
     </div>
   </div>
