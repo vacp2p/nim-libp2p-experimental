@@ -263,60 +263,48 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="defaultMsgIdProvider,Message" class="tohide">
 <dt><pre><span class="Keyword">func</span> <a href="#defaultMsgIdProvider%2CMessage"><span class="Identifier">defaultMsgIdProvider</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Result</span><span class="Other">[</span><a href="messages.html#MessageId"><span class="Identifier">MessageId</span></a><span class="Other">,</span> <a href="../errors.html#ValidationResult"><span class="Identifier">ValidationResult</span></a><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L32"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L35"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="init,typeMessage,Option[PeerInfo],seq[byte],string,Option[uint64],bool" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#init%2CtypeMessage%2COption%5BPeerInfo%5D%2Cseq%5Bbyte%5D%2Cstring%2COption%5Buint64%5D%2Cbool"><span class="Identifier">init</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Keyword">type</span> <span class="Identifier">Message</span><span class="Other">;</span> <span class="Identifier">peer</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="../../../peerinfo.html#PeerInfo"><span class="Identifier">PeerInfo</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">;</span>
           <span class="Identifier">topic</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">seqno</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><span class="Identifier">uint64</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">sign</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="../../../errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="../../../errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L59"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L62"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="init,typeMessage,PeerId,seq[byte],string,Option[uint64]" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#init%2CtypeMessage%2CPeerId%2Cseq%5Bbyte%5D%2Cstring%2COption%5Buint64%5D"><span class="Identifier">init</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Keyword">type</span> <span class="Identifier">Message</span><span class="Other">;</span> <span class="Identifier">peerId</span><span class="Other">:</span> <a href="../../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">topic</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span>
           <span class="Identifier">seqno</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><span class="Identifier">uint64</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="../../../errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L85"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L88"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L88" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="sign,Message,PrivateKey" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#sign%2CMessage%2CPrivateKey"><span class="Identifier">sign</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">;</span> <span class="Identifier">privateKey</span><span class="Other">:</span> <a href="../../../crypto/crypto.html#PrivateKey"><span class="Identifier">PrivateKey</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../../../crypto/crypto.html#CryptoResult"><span class="Identifier">CryptoResult</span></a><span class="Other">[</span><span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L39"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="verify,Message" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#verify%2CMessage"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -324,6 +312,18 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L42"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="verify,Message" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#verify%2CMessage"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/pubsub/rpc/message.nim#L45"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/message.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -342,7 +342,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 17:09:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-03 11:35:44 UTC</small>
       </div>
     </div>
   </div>

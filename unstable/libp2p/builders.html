@@ -392,9 +392,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L38"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L41"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -421,9 +421,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L42"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L45"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -434,9 +434,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L36"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L39"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -446,14 +446,14 @@ class="link-seesrc" target="_blank">Source</a>
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <div id="new,type[SwitchBuilder]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#new%2Ctype%5BSwitchBuilder%5D"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">type</span><span class="Other">[</span><a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T:type</span> {.<span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#new%2Ctype%5BSwitchBuilder%5D"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">type</span><span class="Other">[</span><a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T:type</span> {.<span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Creates a SwitchBuilder
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L60"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L63"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L63" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -468,189 +468,214 @@ class="link-seesrc" target="_blank">Source</a>
                        <span class="Identifier">maxConnsPerPeer</span> <span class="Other">=</span> <span class="Identifier">MaxConnectionsPerPeer</span><span class="Other">;</span>
                        <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span>
                        <span class="Identifier">sendSignedPeerRecord</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">peerStoreCapacity</span> <span class="Other">=</span> <span class="DecNumber">1000</span><span class="Other">)</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Helper for common switch configurations.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L254"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L257"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L254" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L257" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withAddress,SwitchBuilder,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withAddress%2CSwitchBuilder%2CMultiAddress"><span class="Identifier">withAddress</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Set the listening address of the switch<br/>Calling it multiple time will override the value<br/></p>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L85"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L88"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L88" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withAddresses,SwitchBuilder,seq[MultiAddress]" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withAddresses%2CSwitchBuilder%2Cseq%5BMultiAddress%5D"><span class="Identifier">withAddresses</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">addresses</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Set the listening addresses of the switch<br/>Calling it multiple time will override the value<br/></p>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L92"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L95"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L92" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L95" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withAgentVersion,SwitchBuilder,string" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withAgentVersion%2CSwitchBuilder%2Cstring"><span class="Identifier">withAgentVersion</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">agentVersion</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L177"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L180"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L177" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withCircuitRelay,SwitchBuilder,Relay" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withCircuitRelay%2CSwitchBuilder%2CRelay"><span class="Identifier">withCircuitRelay</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">r</span><span class="Other">:</span> <a href="protocols/relay/relay.html#Relay"><span class="Identifier">Relay</span></a> <span class="Other">=</span> <a href="protocols/relay/relay.html#Relay"><span class="Identifier">Relay</span></a><span class="Other">.</span><span class="Identifier">new</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L185"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L188"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L185" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L188" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withMaxConnections,SwitchBuilder,int" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withMaxConnections%2CSwitchBuilder%2Cint"><span class="Identifier">withMaxConnections</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">maxConnections</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Maximum concurrent connections of the switch. You should either use this, or <a class="reference external" href="#withMaxIn,SwitchBuilder,int">withMaxIn</a> &amp; <a class="reference external" href="#withMaxOut,SwitchBuilder,int">withMaxOut</a>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L149"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L152"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L152" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withMaxConnsPerPeer,SwitchBuilder,int" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withMaxConnsPerPeer%2CSwitchBuilder%2Cint"><span class="Identifier">withMaxConnsPerPeer</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">maxConnsPerPeer</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L165"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L168"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L165" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L168" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withMaxIn,SwitchBuilder,int" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withMaxIn%2CSwitchBuilder%2Cint"><span class="Identifier">withMaxIn</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">maxIn</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Maximum concurrent incoming connections. Should be used with <a class="reference external" href="#withMaxOut,SwitchBuilder,int">withMaxOut</a>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L155"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L158"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L155" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L158" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withMaxOut,SwitchBuilder,int" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withMaxOut%2CSwitchBuilder%2Cint"><span class="Identifier">withMaxOut</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">maxOut</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Maximum concurrent outgoing connections. Should be used with <a class="reference external" href="#withMaxIn,SwitchBuilder,int">withMaxIn</a>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L160"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L163"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L160" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L163" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withNameResolver,SwitchBuilder,NameResolver" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withNameResolver%2CSwitchBuilder%2CNameResolver"><span class="Identifier">withNameResolver</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L181"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L184"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L181" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withNoise,SwitchBuilder" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#withNoise%2CSwitchBuilder"><span class="Identifier">withNoise</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#withNoise%2CSwitchBuilder"><span class="Identifier">withNoise</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L128"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L131"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L128" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L131" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withPeerStore,SwitchBuilder,int" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withPeerStore%2CSwitchBuilder%2Cint"><span class="Identifier">withPeerStore</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">capacity</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.<span class="Identifier">public</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L169"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L172"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L169" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L172" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withPrivateKey,SwitchBuilder,PrivateKey" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withPrivateKey%2CSwitchBuilder%2CPrivateKey"><span class="Identifier">withPrivateKey</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">privateKey</span><span class="Other">:</span> <a href="crypto/crypto.html#PrivateKey"><span class="Identifier">PrivateKey</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Set the private key of the switch. Will be used to generate a PeerId
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L78"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L81"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L78" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L81" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withProtoVersion,SwitchBuilder,string" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withProtoVersion%2CSwitchBuilder%2Cstring"><span class="Identifier">withProtoVersion</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">protoVersion</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L173"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L176"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="withRng,SwitchBuilder,ref.HmacDrbgContext" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withRng%2CSwitchBuilder%2Cref.HmacDrbgContext"><span class="Identifier">withRng</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">rng</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Identifier">HmacDrbgContext</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L148"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L148" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="withSignedPeerRecord,SwitchBuilder" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#withSignedPeerRecord%2CSwitchBuilder"><span class="Identifier">withSignedPeerRecord</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">sendIt</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L102"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L102" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="withTcpTransport,SwitchBuilder,set[ServerFlags]" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#withTcpTransport%2CSwitchBuilder%2Cset%5BServerFlags%5D"><span class="Identifier">withTcpTransport</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">ServerFlags</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">{</span><span class="Other">}</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -661,35 +686,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="withSignedPeerRecord,SwitchBuilder" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#withSignedPeerRecord%2CSwitchBuilder"><span class="Identifier">withSignedPeerRecord</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">sendIt</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L99"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L99" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="withTcpTransport,SwitchBuilder,set[ServerFlags]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#withTcpTransport%2CSwitchBuilder%2Cset%5BServerFlags%5D"><span class="Identifier">withTcpTransport</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">ServerFlags</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">{</span><span class="Other">}</span><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L142"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L142" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="withTransport,SwitchBuilder,TransportProvider" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#withTransport%2CSwitchBuilder%2CTransportProvider"><span class="Identifier">withTransport</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a><span class="Other">;</span> <span class="Identifier">prov</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#TransportProvider"><span class="Identifier">TransportProvider</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxers/mplex/mplex.html#SwitchBuilder"><span class="Identifier">SwitchBuilder</span></a> {.
-    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Use a custom transport
@@ -699,9 +698,9 @@ Use a custom transport
   <span class="Operator">.</span><span class="Identifier">withTransport</span><span class="Punctuation">(</span><span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Identifier">upgr</span><span class="Punctuation">:</span> <span class="Identifier">Upgrade</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">Transport</span> <span class="Operator">=</span> <span class="Identifier">TcpTransport</span><span class="Operator">.</span><span class="Identifier">new</span><span class="Punctuation">(</span><span class="Identifier">flags</span><span class="Punctuation">,</span> <span class="Identifier">upgr</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
   <span class="Operator">.</span><span class="Identifier">build</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L132"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/builders.nim#L135"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/builders.nim#L135" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -720,7 +719,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 17:09:48 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-03 11:35:43 UTC</small>
       </div>
     </div>
   </div>
