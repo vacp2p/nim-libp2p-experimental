@@ -689,6 +689,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="StatusV2.ConnectionFailed" href="libp2p/protocols/relay/messages.html#ConnectionFailed">StatusV2.ConnectionFailed</a></li>
           </ul></dd>
+<dt><a name="ConnectionSlot" href="#ConnectionSlot"><span>ConnectionSlot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: ConnectionSlot" href="libp2p/connmanager.html#ConnectionSlot">connmanager: ConnectionSlot</a></li>
+          </ul></dd>
 <dt><a name="ConnectionTrackerName" href="#ConnectionTrackerName"><span>ConnectionTrackerName:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="connection: ConnectionTrackerName" href="libp2p/stream/connection.html#ConnectionTrackerName">connection: ConnectionTrackerName</a></li>
@@ -714,10 +718,6 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="ConnManager" href="#ConnManager"><span>ConnManager:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="connmanager: ConnManager" href="libp2p/connmanager.html#ConnManager">connmanager: ConnManager</a></li>
-          </ul></dd>
-<dt><a name="ConnProvider" href="#ConnProvider"><span>ConnProvider:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: ConnProvider" href="libp2p/connmanager.html#ConnProvider">connmanager: ConnProvider</a></li>
           </ul></dd>
 <dt><a name="consume" href="#consume"><span>consume:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1547,6 +1547,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="nameresolver: getHostname(ma: MultiAddress): string" href="libp2p/nameresolving/nameresolver.html#getHostname%2CMultiAddress">nameresolver: getHostname(ma: MultiAddress): string</a></li>
           </ul></dd>
+<dt><a name="getIncomingSlot" href="#getIncomingSlot"><span>getIncomingSlot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: getIncomingSlot(c: ConnManager): Future[ConnectionSlot]" href="libp2p/connmanager.html#getIncomingSlot%2CConnManager">connmanager: getIncomingSlot(c: ConnManager): Future[ConnectionSlot]</a></li>
+          </ul></dd>
 <dt><a name="getLen" href="#getLen"><span>getLen:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="minprotobuf: getLen(pb: ProtoBuffer): int" href="libp2p/protobuf/minprotobuf.html#getLen.t%2CProtoBuffer">minprotobuf: getLen(pb: ProtoBuffer): int</a></li>
@@ -1564,6 +1568,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="crypto: getOrder(remotePubkey, localNonce: openArray[byte];
          localPubkey, remoteNonce: openArray[byte]): CryptoResult[int]" href="libp2p/crypto/crypto.html#getOrder%2CopenArray%5Bbyte%5D%2CopenArray%5Bbyte%5D%2CopenArray%5Bbyte%5D%2CopenArray%5Bbyte%5D">crypto: getOrder(remotePubkey, localNonce: openArray[byte];
          localPubkey, remoteNonce: openArray[byte]): CryptoResult[int]</a></li>
+          </ul></dd>
+<dt><a name="getOutgoingSlot" href="#getOutgoingSlot"><span>getOutgoingSlot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: getOutgoingSlot(c: ConnManager; forceDial = false): Future[ConnectionSlot]" href="libp2p/connmanager.html#getOutgoingSlot%2CConnManager">connmanager: getOutgoingSlot(c: ConnManager; forceDial = false): Future[ConnectionSlot]</a></li>
           </ul></dd>
 <dt><a name="getPackedRepeatedField" href="#getPackedRepeatedField"><span>getPackedRepeatedField:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3623,6 +3631,8 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="release" href="#release"><span>release:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="connmanager: release(cs: ConnectionSlot)" href="libp2p/connmanager.html#release%2CConnectionSlot">connmanager: release(cs: ConnectionSlot)</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="semaphore: release(s: AsyncSemaphore)" href="libp2p/utils/semaphore.html#release%2CAsyncSemaphore">semaphore: release(s: AsyncSemaphore)</a></li>
           </ul></dd>
 <dt><a name="Reliable" href="#Reliable"><span>Reliable:</span></a></dt><dd><ul class="simple">
@@ -4373,15 +4383,9 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: toString(value: MultiAddress): MaResult[string]" href="libp2p/multiaddress.html#toString%2CMultiAddress">multiaddress: toString(value: MultiAddress): MaResult[string]</a></li>
           </ul></dd>
-<dt><a name="trackIncomingConn" href="#trackIncomingConn"><span>trackIncomingConn:</span></a></dt><dd><ul class="simple">
+<dt><a name="trackConnection" href="#trackConnection"><span>trackConnection:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: trackIncomingConn(c: ConnManager; provider: ConnProvider): Future[Connection]" href="libp2p/connmanager.html#trackIncomingConn%2CConnManager%2CConnProvider">connmanager: trackIncomingConn(c: ConnManager; provider: ConnProvider): Future[Connection]</a></li>
-          </ul></dd>
-<dt><a name="trackOutgoingConn" href="#trackOutgoingConn"><span>trackOutgoingConn:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: trackOutgoingConn(c: ConnManager; provider: ConnProvider; forceDial = false): Future[
-    Connection]" href="libp2p/connmanager.html#trackOutgoingConn%2CConnManager%2CConnProvider">connmanager: trackOutgoingConn(c: ConnManager; provider: ConnProvider; forceDial = false): Future[
-    Connection]</a></li>
+          data-doc-search-tag="connmanager: trackConnection(cs: ConnectionSlot; conn: Connection)" href="libp2p/connmanager.html#trackConnection%2CConnectionSlot%2CConnection">connmanager: trackConnection(cs: ConnectionSlot; conn: Connection)</a></li>
           </ul></dd>
 <dt><a name="Transcoder" href="#Transcoder"><span>Transcoder:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4900,7 +4904,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 11:03:12 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-03 15:24:14 UTC</small>
       </div>
     </div>
   </div>

@@ -392,9 +392,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L22"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L25"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L22" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -439,9 +439,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L28"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -452,36 +452,36 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="bindAsyncSocket,AsyncFD,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#bindAsyncSocket%2CAsyncFD%2CMultiAddress"><span class="Identifier">bindAsyncSocket</span></a><span class="Other">(</span><span class="Identifier">sock</span><span class="Other">:</span> <span class="Identifier">AsyncFD</span><span class="Other">;</span> <span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Bind socket <tt class="docutils literal"><span class="pre">sock</span></tt> to MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.</p>
 <p>Note: This procedure only used in <tt class="docutils literal"><span class="pre"><span class="Identifier">go</span><span class="Operator">-</span><span class="Identifier">libp2p</span><span class="Operator">-</span><span class="Identifier">daemon</span></span></tt> wrapper. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L177"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L180"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L177" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="connect,MultiAddress,StreamTransport" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#connect%2CMultiAddress%2CStreamTransport"><span class="Identifier">connect</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">;</span> <span class="Identifier">bufferSize</span> <span class="Other">=</span> <span class="Identifier">DefaultStreamBufferSize</span><span class="Other">;</span>
              <span class="Identifier">child</span><span class="Other">:</span> <span class="Identifier">StreamTransport</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">StreamTransport</span><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Open new connection to remote peer with address <tt class="docutils literal"><span class="pre">ma</span></tt> and create new transport object <tt class="docutils literal"><span class="pre">StreamTransport</span></tt> for established connection. <tt class="docutils literal"><span class="pre">bufferSize</span></tt> is size of internal buffer for transport. 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L73"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L76"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L73" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L76" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="createAsyncSocket,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#createAsyncSocket%2CMultiAddress"><span class="Identifier">createAsyncSocket</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">AsyncFD</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Create new asynchronous socket using MultiAddress' <tt class="docutils literal"><span class="pre">ma</span></tt> socket type and protocol information.</p>
@@ -489,9 +489,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>Note: This procedure only used in <tt class="docutils literal"><span class="pre"><span class="Identifier">go</span><span class="Operator">-</span><span class="Identifier">libp2p</span><span class="Operator">-</span><span class="Identifier">daemon</span></span></tt> wrapper. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L144"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L147"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L144" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L147" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -503,14 +503,14 @@ class="link-seesrc" target="_blank">Source</a>
                            <span class="Identifier">bufferSize</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">DefaultStreamBufferSize</span><span class="Other">;</span>
                            <span class="Identifier">child</span><span class="Other">:</span> <span class="Identifier">StreamServer</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span>
                            <span class="Identifier">init</span><span class="Other">:</span> <span class="Identifier">TransportInitCallback</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">StreamServer</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Create new TCP stream server which bounds to <tt class="docutils literal"><span class="pre">ma</span></tt> address.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L88"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L91"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L88" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -521,44 +521,43 @@ class="link-seesrc" target="_blank">Source</a>
                            <span class="Identifier">bufferSize</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">DefaultStreamBufferSize</span><span class="Other">;</span>
                            <span class="Identifier">child</span><span class="Other">:</span> <span class="Identifier">StreamServer</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span>
                            <span class="Identifier">init</span><span class="Other">:</span> <span class="Identifier">TransportInitCallback</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">StreamServer</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Create new TCP stream server which bounds to <tt class="docutils literal"><span class="pre">ma</span></tt> address. 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L116"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L119"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L116" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L119" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="getLocalAddress,AsyncFD" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#getLocalAddress%2CAsyncFD"><span class="Identifier">getLocalAddress</span></a><span class="Other">(</span><span class="Identifier">sock</span><span class="Other">:</span> <span class="Identifier">AsyncFD</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#getLocalAddress%2CAsyncFD"><span class="Identifier">getLocalAddress</span></a><span class="Other">(</span><span class="Identifier">sock</span><span class="Other">:</span> <span class="Identifier">AsyncFD</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Retrieve local socket <tt class="docutils literal"><span class="pre">sock</span></tt> address.</p>
 <p>Note: This procedure only used in <tt class="docutils literal"><span class="pre"><span class="Identifier">go</span><span class="Operator">-</span><span class="Identifier">libp2p</span><span class="Operator">-</span><span class="Identifier">daemon</span></span></tt> wrapper.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L196"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L199"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L196" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L199" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="initTAddress,MultiAddress" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#initTAddress%2CMultiAddress"><span class="Identifier">initTAddress</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <a href="multiaddress.html#MaResult"><span class="Identifier">MaResult</span></a><span class="Other">[</span><span class="Identifier">TransportAddress</span><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#initTAddress%2CMultiAddress"><span class="Identifier">initTAddress</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <a href="multiaddress.html#MaResult"><span class="Identifier">MaResult</span></a><span class="Other">[</span><span class="Identifier">TransportAddress</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Initialize <tt class="docutils literal"><span class="pre">TransportAddress</span></tt> with MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.</p>
 <p>MultiAddress must be wire address, e.g. <tt class="docutils literal"><span class="pre">{IP4, IP6, UNIX}/{TCP, UDP}</span></tt>. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L34"
+href="https://github.com/status-im/nim-libp2p/tree/autonat/libp2p/wire.nim#L37"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/wire.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -572,7 +571,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-02 11:03:10 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-03 15:24:11 UTC</small>
       </div>
     </div>
   </div>
