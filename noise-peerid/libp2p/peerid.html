@@ -232,11 +232,6 @@ window.addEventListener("DOMContentLoaded", main2);
     title="cmp(a, b: PeerId): int">cmp(a, b: PeerId): int</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">empty
-      <li><a class="reference" href="#empty%2CPeerId"
-    title="empty(pid: PeerId): bool">empty(pid: PeerId): bool</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">extractPublicKey
       <li><a class="reference" href="#extractPublicKey%2CPeerId%2CPublicKey"
     title="extractPublicKey(pid: PeerId; pubkey: var PublicKey): bool">extractPublicKey(pid: PeerId; pubkey: var PublicKey): bool</a></li>
@@ -442,18 +437,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="empty,PeerId" class="tohide">
-<dt><pre><span class="Keyword">func</span> <a href="#empty%2CPeerId"><span class="Identifier">empty</span></a><span class="Other">(</span><span class="Identifier">pid</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L156"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L156" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="extractPublicKey,PeerId,PublicKey" class="tohide">
 <dt><pre><span class="Keyword">func</span> <a href="#extractPublicKey%2CPeerId%2CPublicKey"><span class="Identifier">extractPublicKey</span></a><span class="Other">(</span><span class="Identifier">pid</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">pubkey</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="crypto/crypto.html#PublicKey"><span class="Identifier">PublicKey</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     </span><span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
@@ -476,9 +459,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Read <tt class="docutils literal"><span class="pre">PeerId</span></tt> from ProtoBuf's message and validate it
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L216"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L213"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L216" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L213" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -542,9 +525,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create new peer id from raw binary representation <tt class="docutils literal"><span class="pre">data</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L159"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L156"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L159" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L156" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -555,9 +538,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create new peer id from base58 encoded string representation <tt class="docutils literal"><span class="pre">data</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L167"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L164"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L167" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -568,9 +551,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create new peer id from public key <tt class="docutils literal"><span class="pre">pubkey</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L175"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L172"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L175" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L172" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -581,9 +564,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create new peer id from private key <tt class="docutils literal"><span class="pre">seckey</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L186"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L183"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L186" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L183" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -594,9 +577,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">pid</span></tt> matches public key <tt class="docutils literal"><span class="pre">pubkey</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L190"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L187"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L190" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L187" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -607,9 +590,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">pid</span></tt> matches private key <tt class="docutils literal"><span class="pre">seckey</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L198"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L195"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L198" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L195" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -659,9 +642,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write PeerId value <tt class="docutils literal"><span class="pre">peerid</span></tt> to object <tt class="docutils literal"><span class="pre">pb</span></tt> using ProtoBuf's encoding.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L212"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L209"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L212" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L209" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -671,9 +654,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write PeerId value <tt class="docutils literal"><span class="pre">peerid</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L208"
+href="https://github.com/status-im/nim-libp2p/tree/noise-peerid/libp2p/peerid.nim#L205"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L208" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L205" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -805,7 +788,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 13:32:40 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 14:44:13 UTC</small>
       </div>
     </div>
   </div>

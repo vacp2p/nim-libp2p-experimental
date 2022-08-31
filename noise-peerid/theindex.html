@@ -1251,10 +1251,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="ed25519: EdSignatureSize" href="libp2p/crypto/ed25519/ed25519.html#EdSignatureSize">ed25519: EdSignatureSize</a></li>
           </ul></dd>
-<dt><a name="empty" href="#empty"><span>empty:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="peerid: empty(pid: PeerId): bool" href="libp2p/peerid.html#empty%2CPeerId">peerid: empty(pid: PeerId): bool</a></li>
-          </ul></dd>
 <dt><a name="encode" href="#encode"><span>encode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: encode(mbtype: typedesc[MultiBase]; encoding: string; ma: MultiAddress): string" href="libp2p/multiaddress.html#encode%2Ctypedesc%5BMultiBase%5D%2Cstring%2CMultiAddress">multiaddress: encode(mbtype: typedesc[MultiBase]; encoding: string; ma: MultiAddress): string</a></li>
@@ -1825,9 +1821,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="handshake" href="#handshake"><span>handshake:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="noise: handshake(p: Noise; conn: Connection; initiator: bool): Future[SecureConn]" href="libp2p/protocols/secure/noise.html#handshake.e%2CNoise%2CConnection%2Cbool">noise: handshake(p: Noise; conn: Connection; initiator: bool): Future[SecureConn]</a></li>
+          data-doc-search-tag="noise: handshake(p: Noise; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]" href="libp2p/protocols/secure/noise.html#handshake.e%2CNoise%2CConnection%2Cbool%2COpt%5BPeerId%5D">noise: handshake(p: Noise; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="secure: handshake(s: Secure; conn: Connection; initiator: bool): Future[SecureConn]" href="libp2p/protocols/secure/secure.html#handshake.e%2CSecure%2CConnection%2Cbool">secure: handshake(s: Secure; conn: Connection; initiator: bool): Future[SecureConn]</a></li>
+          data-doc-search-tag="secure: handshake(s: Secure; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]" href="libp2p/protocols/secure/secure.html#handshake.e%2CSecure%2CConnection%2Cbool%2COpt%5BPeerId%5D">secure: handshake(s: Secure; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]</a></li>
           </ul></dd>
 <dt><a name="hash" href="#hash"><span>hash:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3901,11 +3901,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="secure" href="#secure"><span>secure:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="secure: secure(s: Secure; conn: Connection; initiator: bool): Future[Connection]" href="libp2p/protocols/secure/secure.html#secure.e%2CSecure%2CConnection%2Cbool">secure: secure(s: Secure; conn: Connection; initiator: bool): Future[Connection]</a></li>
+          data-doc-search-tag="secure: secure(s: Secure; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    Connection]" href="libp2p/protocols/secure/secure.html#secure.e%2CSecure%2CConnection%2Cbool%2COpt%5BPeerId%5D">secure: secure(s: Secure; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    Connection]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstransport: secure(self: WsTransport): bool" href="libp2p/transports/wstransport.html#secure%2CWsTransport">wstransport: secure(self: WsTransport): bool</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="upgrade: secure(self: Upgrade; conn: Connection): Future[Connection]" href="libp2p/upgrademngrs/upgrade.html#secure%2CUpgrade%2CConnection">upgrade: secure(self: Upgrade; conn: Connection): Future[Connection]</a></li>
+          data-doc-search-tag="upgrade: secure(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[Connection]" href="libp2p/upgrademngrs/upgrade.html#secure%2CUpgrade%2CConnection%2COpt%5BPeerId%5D">upgrade: secure(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[Connection]</a></li>
           </ul></dd>
 <dt><a name="SecureConn" href="#SecureConn"><span>SecureConn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4549,11 +4551,17 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="upgradeOutgoing" href="#upgradeOutgoing"><span>upgradeOutgoing:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="transport: upgradeOutgoing(self: Transport; conn: Connection): Future[Connection]" href="libp2p/transports/transport.html#upgradeOutgoing.e%2CTransport%2CConnection">transport: upgradeOutgoing(self: Transport; conn: Connection): Future[Connection]</a></li>
+          data-doc-search-tag="transport: upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]" href="libp2p/transports/transport.html#upgradeOutgoing.e%2CTransport%2CConnection%2COpt%5BPeerId%5D">transport: upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection): Future[Connection]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeOutgoing.e%2CMuxedUpgrade%2CConnection">muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection): Future[Connection]</a></li>
+          data-doc-search-tag="muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeOutgoing.e%2CMuxedUpgrade%2CConnection%2COpt%5BPeerId%5D">muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="upgrade: upgradeOutgoing(self: Upgrade; conn: Connection): Future[Connection]" href="libp2p/upgrademngrs/upgrade.html#upgradeOutgoing.e%2CUpgrade%2CConnection">upgrade: upgradeOutgoing(self: Upgrade; conn: Connection): Future[Connection]</a></li>
+          data-doc-search-tag="upgrade: upgradeOutgoing(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]" href="libp2p/upgrademngrs/upgrade.html#upgradeOutgoing.e%2CUpgrade%2CConnection%2COpt%5BPeerId%5D">upgrade: upgradeOutgoing(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Connection]</a></li>
           </ul></dd>
 <dt><a name="UTP" href="#UTP"><span>UTP:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4908,7 +4916,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 13:32:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 14:44:17 UTC</small>
       </div>
     </div>
   </div>

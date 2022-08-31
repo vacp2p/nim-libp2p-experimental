@@ -265,8 +265,10 @@ window.addEventListener("DOMContentLoaded", main2);
 
   </ul>
   <ul class="simple nested-toc-section">handshake
-      <li><a class="reference" href="#handshake.e%2CNoise%2CConnection%2Cbool"
-    title="handshake(p: Noise; conn: Connection; initiator: bool): Future[SecureConn]">handshake(p: Noise; conn: Connection; initiator: bool): Future[SecureConn]</a></li>
+      <li><a class="reference" href="#handshake.e%2CNoise%2CConnection%2Cbool%2COpt%5BPeerId%5D"
+    title="handshake(p: Noise; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]">handshake(p: Noise; conn: Connection; initiator: bool; peerId: Opt[PeerId]): Future[
+    SecureConn]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">init
@@ -479,9 +481,10 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="handshake.e,Noise,Connection,bool" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#handshake.e%2CNoise%2CConnection%2Cbool"><span class="Identifier">handshake</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="noise.html#Noise"><span class="Identifier">Noise</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">initiator</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="secure.html#SecureConn"><span class="Identifier">SecureConn</span></a><span class="Other">]</span> {.
-    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="handshake.e,Noise,Connection,bool,Opt[PeerId]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#handshake.e%2CNoise%2CConnection%2Cbool%2COpt%5BPeerId%5D"><span class="Identifier">handshake</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="noise.html#Noise"><span class="Identifier">Noise</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">initiator</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span>
+                 <span class="Identifier">peerId</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="secure.html#SecureConn"><span class="Identifier">SecureConn</span></a><span class="Other">]</span> {.<span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -557,7 +560,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 13:32:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 14:44:14 UTC</small>
       </div>
     </div>
   </div>
