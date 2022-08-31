@@ -210,7 +210,7 @@ window.addEventListener("DOMContentLoaded", main2);
   localPeerId*: PeerId
   ms: MultistreamSelect
   connManager: ConnManager
-  dialLock: Table[Opt[PeerId], AsyncLock]
+  dialLock: Table[PeerId, AsyncLock]
   transports: seq[Transport]
   nameResolver: NameResolver">Dialer</a></li>
   <li><a class="reference" href="#DialFailedError"
@@ -301,7 +301,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">localPeerId</span><span class="Operator">*</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a>
   <span class="Identifier">ms</span><span class="Other">:</span> <a href="multistream.html#MultistreamSelect"><span class="Identifier">MultistreamSelect</span></a>
   <span class="Identifier">connManager</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a>
-  <span class="Identifier">dialLock</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><span class="Identifier">Opt</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">AsyncLock</span><span class="Other">]</span>
+  <span class="Identifier">dialLock</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">AsyncLock</span><span class="Other">]</span>
   <span class="Identifier">transports</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">]</span>
   <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a>
 </pre></dt>
@@ -445,7 +445,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 15:18:28 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-31 15:35:19 UTC</small>
       </div>
     </div>
   </div>
