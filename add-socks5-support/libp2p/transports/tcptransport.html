@@ -208,7 +208,7 @@ window.addEventListener("DOMContentLoaded", main2);
       <li><a class="reference" href="#TcpTransport"
     title="TcpTransport = ref object of Transport
   servers*: seq[StreamServer]
-  clients: array[Direction, seq[StreamTransport]]
+  clients*: array[Direction, seq[StreamTransport]]
   flags: set[ServerFlags]
   acceptFuts: seq[Future[StreamTransport]]">TcpTransport</a></li>
   <li><a class="reference" href="#TcpTransportTracker"
@@ -307,7 +307,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="TcpTransport" class="tohide">
 <dt><pre><a href="tcptransport.html#TcpTransport"><span class="Identifier">TcpTransport</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a>
   <span class="Identifier">servers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">StreamServer</span><span class="Other">]</span>
-  <span class="Identifier">clients</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">Direction</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">StreamTransport</span><span class="Other">]</span><span class="Other">]</span>
+  <span class="Identifier">clients</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">Direction</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">StreamTransport</span><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">ServerFlags</span><span class="Other">]</span>
   <span class="Identifier">acceptFuts</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">StreamTransport</span><span class="Other">]</span><span class="Other">]</span>
 </pre></dt>
@@ -471,7 +471,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-08 19:06:15 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-15 12:24:19 UTC</small>
       </div>
     </div>
   </div>
