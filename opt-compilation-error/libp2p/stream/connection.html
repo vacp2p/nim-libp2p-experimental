@@ -212,7 +212,7 @@ window.addEventListener("DOMContentLoaded", main2);
   timerTaskFut: Future[void]
   timeoutHandler*: TimeoutHandler
   peerId*: PeerId
-  observedAddr*: Option[MultiAddress]
+  observedAddr*: Opt[MultiAddress]
   upgraded*: Future[void]
   protocol*: string
   transportDir*: Direction
@@ -247,14 +247,14 @@ window.addEventListener("DOMContentLoaded", main2);
 
   </ul>
   <ul class="simple nested-toc-section">new
-      <li><a class="reference" href="#new%2CtypeConnection%2CPeerId%2CDirection%2CDuration%2CTimeoutHandler%2COption%5BMultiAddress%5D"
+      <li><a class="reference" href="#new%2CtypeConnection%2CPeerId%2CDirection%2COpt%5BMultiAddress%5D%2CDuration%2CTimeoutHandler"
     title="new(C: type Connection; peerId: PeerId; dir: Direction;
+    observedAddr: Opt[MultiAddress];
     timeout: Duration = DefaultConnectionTimeout;
-    timeoutHandler: TimeoutHandler = nil;
-    observedAddr: Option[MultiAddress] = none(MultiAddress)): Connection">new(C: type Connection; peerId: PeerId; dir: Direction;
+    timeoutHandler: TimeoutHandler = nil): Connection">new(C: type Connection; peerId: PeerId; dir: Direction;
+    observedAddr: Opt[MultiAddress];
     timeout: Duration = DefaultConnectionTimeout;
-    timeoutHandler: TimeoutHandler = nil;
-    observedAddr: Option[MultiAddress] = none(MultiAddress)): Connection</a></li>
+    timeoutHandler: TimeoutHandler = nil): Connection</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onUpgrade
@@ -341,7 +341,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">timerTaskFut</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span>
   <span class="Identifier">timeoutHandler</span><span class="Operator">*</span><span class="Other">:</span> <a href="connection.html#TimeoutHandler"><span class="Identifier">TimeoutHandler</span></a>
   <span class="Identifier">peerId</span><span class="Operator">*</span><span class="Other">:</span> <a href="../peerid.html#PeerId"><span class="Identifier">PeerId</span></a>
-  <span class="Identifier">observedAddr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span>
+  <span class="Identifier">observedAddr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span>
   <span class="Identifier">upgraded</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span>
   <span class="Identifier">protocol</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
   <span class="Identifier">transportDir</span><span class="Operator">*</span><span class="Other">:</span> <a href="lpstream.html#Direction"><span class="Identifier">Direction</span></a>
@@ -429,12 +429,11 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="new,typeConnection,PeerId,Direction,Duration,TimeoutHandler,Option[MultiAddress]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#new%2CtypeConnection%2CPeerId%2CDirection%2CDuration%2CTimeoutHandler%2COption%5BMultiAddress%5D"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">C</span><span class="Other">:</span> <span class="Keyword">type</span> <span class="Identifier">Connection</span><span class="Other">;</span> <span class="Identifier">peerId</span><span class="Other">:</span> <a href="../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">dir</span><span class="Other">:</span> <a href="lpstream.html#Direction"><span class="Identifier">Direction</span></a><span class="Other">;</span>
+<div id="new,typeConnection,PeerId,Direction,Opt[MultiAddress],Duration,TimeoutHandler" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#new%2CtypeConnection%2CPeerId%2CDirection%2COpt%5BMultiAddress%5D%2CDuration%2CTimeoutHandler"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">C</span><span class="Other">:</span> <span class="Keyword">type</span> <span class="Identifier">Connection</span><span class="Other">;</span> <span class="Identifier">peerId</span><span class="Other">:</span> <a href="../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">dir</span><span class="Other">:</span> <a href="lpstream.html#Direction"><span class="Identifier">Direction</span></a><span class="Other">;</span>
+         <span class="Identifier">observedAddr</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">;</span>
          <span class="Identifier">timeout</span><span class="Other">:</span> <span class="Identifier">Duration</span> <span class="Other">=</span> <span class="Identifier">DefaultConnectionTimeout</span><span class="Other">;</span>
-         <span class="Identifier">timeoutHandler</span><span class="Other">:</span> <a href="connection.html#TimeoutHandler"><span class="Identifier">TimeoutHandler</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span>
-         <span class="Identifier">observedAddr</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">none</span><span class="Other">(</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="connection.html#Connection"><span class="Identifier">Connection</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+         <span class="Identifier">timeoutHandler</span><span class="Other">:</span> <a href="connection.html#TimeoutHandler"><span class="Identifier">TimeoutHandler</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <a href="connection.html#Connection"><span class="Identifier">Connection</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -556,7 +555,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-21 12:29:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-21 16:06:54 UTC</small>
       </div>
     </div>
   </div>
