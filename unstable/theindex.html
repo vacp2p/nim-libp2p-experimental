@@ -717,9 +717,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="connHandler" href="#connHandler"><span>connHandler:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="tcptransport: connHandler(self: TcpTransport; client: StreamTransport; dir: Direction): Future[
-    Connection]" href="libp2p/transports/tcptransport.html#connHandler%2CTcpTransport%2CStreamTransport%2CDirection">tcptransport: connHandler(self: TcpTransport; client: StreamTransport; dir: Direction): Future[
-    Connection]</a></li>
+          data-doc-search-tag="tcptransport: connHandler(self: TcpTransport; client: StreamTransport;
+            observedAddr: Opt[MultiAddress]; dir: Direction): Future[Connection]" href="libp2p/transports/tcptransport.html#connHandler%2CTcpTransport%2CStreamTransport%2COpt%5BMultiAddress%5D%2CDirection">tcptransport: connHandler(self: TcpTransport; client: StreamTransport;
+            observedAddr: Opt[MultiAddress]; dir: Direction): Future[Connection]</a></li>
           </ul></dd>
 <dt><a name="ConnManager" href="#ConnManager"><span>ConnManager:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2246,10 +2246,8 @@ window.addEventListener('DOMContentLoaded', main);
     SignedPayload[T], CryptoError]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="chronosstream: init(C: type ChronosStream; client: StreamTransport; dir: Direction;
-     timeout = DefaultChronosStreamTimeout;
-     observedAddr: MultiAddress = MultiAddress()): ChronosStream" href="libp2p/stream/chronosstream.html#init%2CtypeChronosStream%2CStreamTransport%2CDirection%2CMultiAddress">chronosstream: init(C: type ChronosStream; client: StreamTransport; dir: Direction;
-     timeout = DefaultChronosStreamTimeout;
-     observedAddr: MultiAddress = MultiAddress()): ChronosStream</a></li>
+     timeout = DefaultChronosStreamTimeout; observedAddr: Opt[MultiAddress]): ChronosStream" href="libp2p/stream/chronosstream.html#init%2CtypeChronosStream%2CStreamTransport%2CDirection%2COpt%5BMultiAddress%5D">chronosstream: init(C: type ChronosStream; client: StreamTransport; dir: Direction;
+     timeout = DefaultChronosStreamTimeout; observedAddr: Opt[MultiAddress]): ChronosStream</a></li>
           </ul></dd>
 <dt><a name="init58" href="#init58"><span>init58:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2970,18 +2968,20 @@ window.addEventListener('DOMContentLoaded', main);
     outgoing: bool = true; commonPrologue: seq[byte] = @[]): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="secure: new(T: type SecureConn; conn: Connection; peerId: PeerId;
-    observedAddr: MultiAddress; timeout: Duration = DefaultConnectionTimeout): T:type" href="libp2p/protocols/secure/secure.html#new%2CtypeSecureConn%2CConnection%2CPeerId%2CMultiAddress%2CDuration">secure: new(T: type SecureConn; conn: Connection; peerId: PeerId;
-    observedAddr: MultiAddress; timeout: Duration = DefaultConnectionTimeout): T:type</a></li>
+    observedAddr: Opt[MultiAddress];
+    timeout: Duration = DefaultConnectionTimeout): T:type" href="libp2p/protocols/secure/secure.html#new%2CtypeSecureConn%2CConnection%2CPeerId%2COpt%5BMultiAddress%5D%2CDuration">secure: new(T: type SecureConn; conn: Connection; peerId: PeerId;
+    observedAddr: Opt[MultiAddress];
+    timeout: Duration = DefaultConnectionTimeout): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="bufferstream: new(T: typedesc[BufferStream]; timeout: Duration = DefaultConnectionTimeout): T:type" href="libp2p/stream/bufferstream.html#new%2Ctypedesc%5BBufferStream%5D%2CDuration">bufferstream: new(T: typedesc[BufferStream]; timeout: Duration = DefaultConnectionTimeout): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="connection: new(C: type Connection; peerId: PeerId; dir: Direction;
+    observedAddr: Opt[MultiAddress];
     timeout: Duration = DefaultConnectionTimeout;
-    timeoutHandler: TimeoutHandler = nil;
-    observedAddr: MultiAddress = MultiAddress()): Connection" href="libp2p/stream/connection.html#new%2CtypeConnection%2CPeerId%2CDirection%2CDuration%2CTimeoutHandler%2CMultiAddress">connection: new(C: type Connection; peerId: PeerId; dir: Direction;
+    timeoutHandler: TimeoutHandler = nil): Connection" href="libp2p/stream/connection.html#new%2CtypeConnection%2CPeerId%2CDirection%2COpt%5BMultiAddress%5D%2CDuration%2CTimeoutHandler">connection: new(C: type Connection; peerId: PeerId; dir: Direction;
+    observedAddr: Opt[MultiAddress];
     timeout: Duration = DefaultConnectionTimeout;
-    timeoutHandler: TimeoutHandler = nil;
-    observedAddr: MultiAddress = MultiAddress()): Connection</a></li>
+    timeoutHandler: TimeoutHandler = nil): Connection</a></li>
           <li><a class="reference external"
           data-doc-search-tag="tcptransport: new(T: typedesc[TcpTransport]; flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type" href="libp2p/transports/tcptransport.html#new%2Ctypedesc%5BTcpTransport%5D%2Cset%5BServerFlags%5D%2CUpgrade">tcptransport: new(T: typedesc[TcpTransport]; flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type</a></li>
           <li><a class="reference external"
@@ -2999,9 +2999,9 @@ window.addEventListener('DOMContentLoaded', main);
     flags: set[ServerFlags] = {}; factories: openArray[ExtFactory] = [];
     rng: Rng = nil; handshakeTimeout = DefaultHeadersTimeout): T:type</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="wstransport: new(T: type WsStream; session: WSSession; dir: Direction; timeout = 10.minutes;
-    observedAddr: MultiAddress = MultiAddress()): T:type" href="libp2p/transports/wstransport.html#new%2CtypeWsStream%2CWSSession%2CDirection%2CMultiAddress">wstransport: new(T: type WsStream; session: WSSession; dir: Direction; timeout = 10.minutes;
-    observedAddr: MultiAddress = MultiAddress()): T:type</a></li>
+          data-doc-search-tag="wstransport: new(T: type WsStream; session: WSSession; dir: Direction;
+    observedAddr: Opt[MultiAddress]; timeout = 10.minutes): T:type" href="libp2p/transports/wstransport.html#new%2CtypeWsStream%2CWSSession%2CDirection%2COpt%5BMultiAddress%5D">wstransport: new(T: type WsStream; session: WSSession; dir: Direction;
+    observedAddr: Opt[MultiAddress]; timeout = 10.minutes): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="muxedupgrade: new(T: type MuxedUpgrade; identity: Identify; muxers: seq[MuxerProvider];
     secureManagers: openArray[Secure] = []; connManager: ConnManager;
@@ -4506,12 +4506,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="tryDial" href="#tryDial"><span>tryDial:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="dial: tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]" href="libp2p/dial.html#tryDial.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D">dial: tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]</a></li>
+    Opt[MultiAddress]]" href="libp2p/dial.html#tryDial.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D">dial: tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
+    Opt[MultiAddress]]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="dialer: tryDial(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]" href="libp2p/dialer.html#tryDial.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: tryDial(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]</a></li>
+    Opt[MultiAddress]]" href="libp2p/dialer.html#tryDial.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: tryDial(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress]): Future[
+    Opt[MultiAddress]]</a></li>
           </ul></dd>
 <dt><a name="UDP" href="#UDP"><span>UDP:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4950,7 +4950,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-15 10:18:37 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-22 19:58:10 UTC</small>
       </div>
     </div>
   </div>

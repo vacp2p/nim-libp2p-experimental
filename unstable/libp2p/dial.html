@@ -239,8 +239,8 @@ window.addEventListener("DOMContentLoaded", main2);
   <ul class="simple nested-toc-section">tryDial
       <li><a class="reference" href="#tryDial.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D"
     title="tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]">tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
-    MultiAddress]</a></li>
+    Opt[MultiAddress]]">tryDial(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]): Future[
+    Opt[MultiAddress]]</a></li>
 
   </ul>
 
@@ -273,9 +273,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L21"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L24"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L21" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L24" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -291,9 +291,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L64"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L67"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L64" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L67" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -304,9 +304,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Connects to a peer and retrieve its PeerId
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L36"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L39"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -318,9 +318,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 connect remote peer without negotiating a protocol 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L27"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L30"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L27" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -332,9 +332,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 create a protocol stream and establish a connection if one doesn't exist already 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L57"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L60"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -345,23 +345,23 @@ class="link-seesrc" target="_blank">Source</a>
 
 create a protocol stream over an existing connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L48"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L48" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="tryDial.e,Dial,PeerId,seq[MultiAddress]" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#tryDial.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D"><span class="Identifier">tryDial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="dial.html#Dial"><span class="Identifier">Dial</span></a><span class="Other">;</span> <span class="Identifier">peerId</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">addrs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">Opt</span><span class="Other">[</span><a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                         <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L72"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/dial.nim#L75"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L72" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/dial.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -375,7 +375,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-15 10:18:34 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-22 19:58:08 UTC</small>
       </div>
     </div>
   </div>
