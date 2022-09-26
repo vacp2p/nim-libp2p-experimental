@@ -208,7 +208,7 @@ window.addEventListener("DOMContentLoaded", main2);
       <li><a class="reference" href="#RendezVous"
     title="RendezVous = ref object of LPProtocol
   registered: OffsettedSeq[RegisteredData]
-  indexes: Table[string, seq[int]]
+  namespaces: Table[string, seq[int]]
   rng: ref HmacDrbgContext
   salt: string
   defaultDT: Moment
@@ -217,6 +217,8 @@ window.addEventListener("DOMContentLoaded", main2);
   peers: seq[PeerId]
   cookiesSaved: Table[PeerId, Table[string, seq[byte]]]
   switch: Switch">RendezVous</a></li>
+  <li><a class="reference" href="#RendezVousError"
+    title="RendezVousError = object of LPError">RendezVousError</a></li>
 
   </ul>
 </li>
@@ -315,7 +317,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="RendezVous" class="tohide">
 <dt><pre><a href="rendezvous.html#RendezVous"><span class="Identifier">RendezVous</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="protocol.html#LPProtocol"><span class="Identifier">LPProtocol</span></a>
   <span class="Identifier">registered</span><span class="Other">:</span> <a href="../utils/offsettedseq.html#OffsettedSeq"><span class="Identifier">OffsettedSeq</span></a><span class="Other">[</span><span class="Identifier">RegisteredData</span><span class="Other">]</span>
-  <span class="Identifier">indexes</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">]</span>
+  <span class="Identifier">namespaces</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">rng</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Identifier">HmacDrbgContext</span>
   <span class="Identifier">salt</span><span class="Other">:</span> <span class="Identifier">string</span>
   <span class="Identifier">defaultDT</span><span class="Other">:</span> <span class="Identifier">Moment</span>
@@ -329,9 +331,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L292"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L293"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L292" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L293" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="RendezVousError" class="tohide">
+<dt><pre><a href="rendezvous.html#RendezVousError"><span class="Identifier">RendezVousError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../errors.html#LPError"><span class="Identifier">LPError</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L283"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L283" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -365,9 +379,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L478"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L481"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L478" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L481" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -378,9 +392,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L608"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L619"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L608" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L619" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -391,9 +405,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L643"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L654"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L643" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L654" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -405,9 +419,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L507"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L513"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L507" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L513" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -418,9 +432,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L493"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L499"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L493" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L499" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -430,9 +444,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L598"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L609"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L598" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L609" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -443,9 +457,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L580"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L589"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L580" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L589" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -455,9 +469,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L571"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L580"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L571" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L580" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -473,9 +487,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L657"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L668"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L657" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L668" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -486,9 +500,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L663"
+href="https://github.com/status-im/nim-libp2p/tree/discoveryInterface/libp2p/protocols/rendezvous.nim#L674"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L663" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/rendezvous.nim#L674" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -502,7 +516,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-26 10:20:01 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-26 14:34:27 UTC</small>
       </div>
     </div>
   </div>
