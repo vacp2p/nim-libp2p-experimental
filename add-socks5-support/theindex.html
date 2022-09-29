@@ -201,9 +201,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="%60%5B%5D%60" href="#%60%5B%5D%60"><span>`[]`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="multiaddress: `[]`(ma: MultiAddress; slice: HSlice): MaResult[MultiAddress]" href="libp2p/multiaddress.html#%5B%5D%2CMultiAddress%2CHSlice">multiaddress: `[]`(ma: MultiAddress; slice: HSlice): MaResult[MultiAddress]</a></li>
+          data-doc-search-tag="multiaddress: `[]`(ma: MultiAddress; i: int | BackwardsIndex): MaResult[MultiAddress]" href="libp2p/multiaddress.html#%5B%5D%2CMultiAddress%2C">multiaddress: `[]`(ma: MultiAddress; i: int | BackwardsIndex): MaResult[MultiAddress]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="multiaddress: `[]`(ma: MultiAddress; i: int): MaResult[MultiAddress]" href="libp2p/multiaddress.html#%5B%5D%2CMultiAddress%2Cint">multiaddress: `[]`(ma: MultiAddress; i: int): MaResult[MultiAddress]</a></li>
+          data-doc-search-tag="multiaddress: `[]`(ma: MultiAddress; slice: HSlice): MaResult[MultiAddress]" href="libp2p/multiaddress.html#%5B%5D%2CMultiAddress%2CHSlice">multiaddress: `[]`(ma: MultiAddress; slice: HSlice): MaResult[MultiAddress]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="multiaddress: `[]`(ma: MultiAddress; codec: MultiCodec): MaResult[MultiAddress]" href="libp2p/multiaddress.html#%5B%5D%2CMultiAddress%2CMultiCodec">multiaddress: `[]`(ma: MultiAddress; codec: MultiCodec): MaResult[MultiAddress]</a></li>
           </ul></dd>
@@ -3349,6 +3349,8 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="protoArgument" href="#protoArgument"><span>protoArgument:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="multiaddress: protoArgument(ma: MultiAddress): MaResult[seq[byte]]" href="libp2p/multiaddress.html#protoArgument%2CMultiAddress">multiaddress: protoArgument(ma: MultiAddress): MaResult[seq[byte]]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="multiaddress: protoArgument(ma: MultiAddress; value: var openArray[byte]): MaResult[int]" href="libp2p/multiaddress.html#protoArgument%2CMultiAddress%2CopenArray%5Bbyte%5D">multiaddress: protoArgument(ma: MultiAddress; value: var openArray[byte]): MaResult[int]</a></li>
           </ul></dd>
 <dt><a name="ProtoBuffer" href="#ProtoBuffer"><span>ProtoBuffer:</span></a></dt><dd><ul class="simple">
@@ -3734,6 +3736,12 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="client: reserve(cl: RelayClient; peerId: PeerId; addrs: seq[MultiAddress] = @[]): Future[
     Rsvp]" href="libp2p/protocols/connectivity/relay/client.html#reserve%2CRelayClient%2CPeerId%2Cseq%5BMultiAddress%5D">client: reserve(cl: RelayClient; peerId: PeerId; addrs: seq[MultiAddress] = @[]): Future[
     Rsvp]</a></li>
+          </ul></dd>
+<dt><a name="resolveDnsAddr" href="#resolveDnsAddr"><span>resolveDnsAddr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="nameresolver: resolveDnsAddr(self: NameResolver; ma: MultiAddress; depth: int = 0): Future[
+    seq[MultiAddress]]" href="libp2p/nameresolving/nameresolver.html#resolveDnsAddr%2CNameResolver%2CMultiAddress%2Cint">nameresolver: resolveDnsAddr(self: NameResolver; ma: MultiAddress; depth: int = 0): Future[
+    seq[MultiAddress]]</a></li>
           </ul></dd>
 <dt><a name="resolveIp" href="#resolveIp"><span>resolveIp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4988,7 +4996,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-29 12:05:55 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-29 18:07:45 UTC</small>
       </div>
     </div>
   </div>
