@@ -205,20 +205,27 @@ window.addEventListener("DOMContentLoaded", main2);
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#TorTransport"
+      <li><a class="reference" href="#Socks5AddressType"
+    title="Socks5AddressType {.pure.} = enum
+  IPv4 = 1, FQDN = 3, IPv6 = 4">Socks5AddressType</a></li>
+  <li><a class="reference" href="#Socks5AuthFailedError"
+    title="Socks5AuthFailedError = object of Socks5Error">Socks5AuthFailedError</a></li>
+  <li><a class="reference" href="#Socks5AuthMethod"
+    title="Socks5AuthMethod {.pure.} = enum
+  NoAuth = 0, GSSAPI = 1, UsernamePassword = 2, NoAcceptableMethod = 255">Socks5AuthMethod</a></li>
+  <li><a class="reference" href="#Socks5Error"
+    title="Socks5Error = object of CatchableError">Socks5Error</a></li>
+  <li><a class="reference" href="#Socks5RequestCommand"
+    title="Socks5RequestCommand {.pure.} = enum
+  Connect = 1, Bind = 2, UdpAssoc = 3">Socks5RequestCommand</a></li>
+  <li><a class="reference" href="#Socks5VersionError"
+    title="Socks5VersionError = object of Socks5Error">Socks5VersionError</a></li>
+  <li><a class="reference" href="#TorTransport"
     title="TorTransport = ref object of Transport
   transportAddress: TransportAddress
   tcpTransport: TcpTransport">TorTransport</a></li>
   <li><a class="reference" href="#TransportStartError"
     title="TransportStartError = object of transport.TransportError">TransportStartError</a></li>
-
-  </ul>
-</li>
-<li>
-  <a class="reference reference-toplevel" href="#10" id="60">Consts</a>
-  <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#Socks5TransportTrackerName"
-    title="Socks5TransportTrackerName = &quot;libp2p.tortransport&quot;">Socks5TransportTrackerName</a></li>
 
   </ul>
 </li>
@@ -280,15 +287,90 @@ class="link-seesrc" target="_blank">Source</a>
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"></p>
+  <p class="module-desc">Tor transport implementation</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="transport.html">transport</a>, <a class="reference external" href="tcptransport.html">tcptransport</a>, <a class="reference external" href="../wire.html">../wire</a>, <a class="reference external" href="../stream/lpstream.html">../stream/lpstream</a>, <a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../stream/chronosstream.html">../stream/chronosstream</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
+<a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="transport.html">transport</a>, <a class="reference external" href="tcptransport.html">tcptransport</a>, <a class="reference external" href="../stream/lpstream.html">../stream/lpstream</a>, <a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../stream/chronosstream.html">../stream/chronosstream</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
+<div id="Socks5AddressType" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5AddressType"><span class="Identifier">Socks5AddressType</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">IPv4</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">FQDN</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">IPv6</span> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L47"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Socks5AuthFailedError" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5AuthFailedError"><span class="Identifier">Socks5AuthFailedError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="tortransport.html#Socks5Error"><span class="Identifier">Socks5Error</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L53"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Socks5AuthMethod" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5AuthMethod"><span class="Identifier">Socks5AuthMethod</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">NoAuth</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">GSSAPI</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">UsernamePassword</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">NoAcceptableMethod</span> <span class="Other">=</span> <span class="DecNumber">255</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L38"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Socks5Error" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5Error"><span class="Identifier">Socks5Error</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">CatchableError</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L52"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Socks5RequestCommand" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5RequestCommand"><span class="Identifier">Socks5RequestCommand</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">Connect</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">Bind</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">UdpAssoc</span> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L44"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L44" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Socks5VersionError" class="tohide">
+<dt><pre><a href="tortransport.html#Socks5VersionError"><span class="Identifier">Socks5VersionError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="tortransport.html#Socks5Error"><span class="Identifier">Socks5Error</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L54"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="TorTransport" class="tohide">
 <dt><pre><a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a>
   <span class="Identifier">transportAddress</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span>
@@ -298,9 +380,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L27"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L34"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L27" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -310,26 +392,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L25"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L50"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-
-</dl></div>
-<div class="section" id="10">
-<h1><a class="toc-backref" href="#10">Consts</a></h1>
-<dl class="item">
-<div id="Socks5TransportTrackerName" class="tohide">
-<dt><pre><a href="tortransport.html#Socks5TransportTrackerName"><span class="Identifier">Socks5TransportTrackerName</span></a> <span class="Other">=</span> <span class="StringLit">&quot;libp2p.tortransport&quot;</span></pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L19"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L19" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -346,9 +411,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Creates a Tor transport
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L31"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L56"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L56" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -362,11 +427,11 @@ class="link-seesrc" target="_blank">Source</a>
     </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
-accept a new TCP connection 
+accept a new Tor connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L125"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L165"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L125" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L165" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -378,9 +443,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 dial a peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L87"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L127"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L87" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L127" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -391,9 +456,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L136"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L176"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L136" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -404,9 +469,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 listen on the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L103"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L143"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L103" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L143" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -417,9 +482,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 stop the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L130"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L170"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L130" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -433,7 +498,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-09-29 18:07:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-10-06 04:40:59 UTC</small>
       </div>
     </div>
   </div>
