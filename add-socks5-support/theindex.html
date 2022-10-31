@@ -304,6 +304,8 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="dialer: addTransport(self: Dialer; t: Transport)" href="libp2p/dialer.html#addTransport.e%2CDialer%2CTransport">dialer: addTransport(self: Dialer; t: Transport)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="switch: addTransport(s: Switch; t: Transport)" href="libp2p/switch.html#addTransport.e%2CSwitch%2CTransport">switch: addTransport(s: Switch; t: Transport)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="tortransport: addTransport(s: TorSwitch; t: Transport)" href="libp2p/transports/tortransport.html#addTransport.e%2CTorSwitch%2CTransport">tortransport: addTransport(s: TorSwitch; t: Transport)</a></li>
           </ul></dd>
 <dt><a name="addValidator" href="#addValidator"><span>addValidator:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1721,6 +1723,10 @@ window.addEventListener('DOMContentLoaded', main);
            outval: var (PBZigVarint | PBSomeSVarint)): VarintResult[void]" href="libp2p/varint.html#getSVarint%2CopenArray%5Bbyte%5D%2Cint%2C">varint: getSVarint(pbytes: openArray[byte]; outsize: var int;
            outval: var (PBZigVarint | PBSomeSVarint)): VarintResult[void]</a></li>
           </ul></dd>
+<dt><a name="getTorTransport" href="#getTorTransport"><span>getTorTransport:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tortransport: getTorTransport(s: TorSwitch): Transport" href="libp2p/transports/tortransport.html#getTorTransport.e%2CTorSwitch">tortransport: getTorTransport(s: TorSwitch): Transport</a></li>
+          </ul></dd>
 <dt><a name="getUVarint" href="#getUVarint"><span>getUVarint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="varint: getUVarint[T: PB | LP](vtype: typedesc[T]; pbytes: openArray[byte];
@@ -3059,9 +3065,11 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="tcptransport: new(T: typedesc[TcpTransport]; flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type" href="libp2p/transports/tcptransport.html#new%2Ctypedesc%5BTcpTransport%5D%2Cset%5BServerFlags%5D%2CUpgrade">tcptransport: new(T: typedesc[TcpTransport]; flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="tortransport: new(T: typedesc[TorTransport]; transportAddress: TransportAddress;
-    flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type" href="libp2p/transports/tortransport.html#new%2Ctypedesc%5BTorTransport%5D%2CTransportAddress%2Cset%5BServerFlags%5D%2CUpgrade">tortransport: new(T: typedesc[TorTransport]; transportAddress: TransportAddress;
-    flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type</a></li>
+          data-doc-search-tag="tortransport: new(T: typedesc[TorSwitch]; torServer: TransportAddress;
+    rng: ref HmacDrbgContext; addresses: seq[MultiAddress] = @[];
+    flags: set[ServerFlags] = {}): TorSwitch" href="libp2p/transports/tortransport.html#new%2Ctypedesc%5BTorSwitch%5D%2CTransportAddress%2Cref.HmacDrbgContext%2Cseq%5BMultiAddress%5D%2Cset%5BServerFlags%5D">tortransport: new(T: typedesc[TorSwitch]; torServer: TransportAddress;
+    rng: ref HmacDrbgContext; addresses: seq[MultiAddress] = @[];
+    flags: set[ServerFlags] = {}): TorSwitch</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstransport: new(T: typedesc[WsTransport]; upgrade: Upgrade; flags: set[ServerFlags] = {};
     factories: openArray[ExtFactory] = []; rng: Rng = nil;
@@ -4573,9 +4581,9 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="ecnist: toRawBytes(sig: EcSignature; data: var openArray[byte]): int" href="libp2p/crypto/ecnist.html#toRawBytes%2CEcSignature%2CopenArray%5Bbyte%5D">ecnist: toRawBytes(sig: EcSignature; data: var openArray[byte]): int</a></li>
           </ul></dd>
-<dt><a name="TorTransport" href="#TorTransport"><span>TorTransport:</span></a></dt><dd><ul class="simple">
+<dt><a name="TorSwitch" href="#TorSwitch"><span>TorSwitch:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="tortransport: TorTransport" href="libp2p/transports/tortransport.html#TorTransport">tortransport: TorTransport</a></li>
+          data-doc-search-tag="tortransport: TorSwitch" href="libp2p/transports/tortransport.html#TorSwitch">tortransport: TorSwitch</a></li>
           </ul></dd>
 <dt><a name="toSecret" href="#toSecret"><span>toSecret:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4943,12 +4951,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="builders: withTcpTransport(b: SwitchBuilder; flags: set[ServerFlags] = {}): SwitchBuilder" href="libp2p/builders.html#withTcpTransport%2CSwitchBuilder%2Cset%5BServerFlags%5D">builders: withTcpTransport(b: SwitchBuilder; flags: set[ServerFlags] = {}): SwitchBuilder</a></li>
           </ul></dd>
-<dt><a name="withTorTransport" href="#withTorTransport"><span>withTorTransport:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="builders: withTorTransport(b: SwitchBuilder; torServerForDialing: TransportAddress;
-                 flags: set[ServerFlags] = {}): SwitchBuilder" href="libp2p/builders.html#withTorTransport%2CSwitchBuilder%2CTransportAddress%2Cset%5BServerFlags%5D">builders: withTorTransport(b: SwitchBuilder; torServerForDialing: TransportAddress;
-                 flags: set[ServerFlags] = {}): SwitchBuilder</a></li>
-          </ul></dd>
 <dt><a name="withTransport" href="#withTransport"><span>withTransport:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="builders: withTransport(b: SwitchBuilder; prov: TransportProvider): SwitchBuilder" href="libp2p/builders.html#withTransport%2CSwitchBuilder%2CTransportProvider">builders: withTransport(b: SwitchBuilder; prov: TransportProvider): SwitchBuilder</a></li>
@@ -5136,7 +5138,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-10-28 09:26:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-10-31 15:33:32 UTC</small>
       </div>
     </div>
   </div>

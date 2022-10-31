@@ -232,10 +232,8 @@ window.addEventListener("DOMContentLoaded", main2);
     title="Socks5ServerReplyError = object of Socks5Error">Socks5ServerReplyError</a></li>
   <li><a class="reference" href="#Socks5VersionError"
     title="Socks5VersionError = object of Socks5Error">Socks5VersionError</a></li>
-  <li><a class="reference" href="#TorTransport"
-    title="TorTransport = ref object of Transport
-  transportAddress: TransportAddress
-  tcpTransport: TcpTransport">TorTransport</a></li>
+  <li><a class="reference" href="#TorSwitch"
+    title="TorSwitch = ref object of Switch">TorSwitch</a></li>
   <li><a class="reference" href="#TransportStartError"
     title="TransportStartError = object of transport.TransportError">TransportStartError</a></li>
 
@@ -245,10 +243,12 @@ window.addEventListener("DOMContentLoaded", main2);
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">new
-      <li><a class="reference" href="#new%2Ctypedesc%5BTorTransport%5D%2CTransportAddress%2Cset%5BServerFlags%5D%2CUpgrade"
-    title="new(T: typedesc[TorTransport]; transportAddress: TransportAddress;
-    flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type">new(T: typedesc[TorTransport]; transportAddress: TransportAddress;
-    flags: set[ServerFlags] = {}; upgrade: Upgrade): T:type</a></li>
+      <li><a class="reference" href="#new%2Ctypedesc%5BTorSwitch%5D%2CTransportAddress%2Cref.HmacDrbgContext%2Cseq%5BMultiAddress%5D%2Cset%5BServerFlags%5D"
+    title="new(T: typedesc[TorSwitch]; torServer: TransportAddress;
+    rng: ref HmacDrbgContext; addresses: seq[MultiAddress] = @[];
+    flags: set[ServerFlags] = {}): TorSwitch">new(T: typedesc[TorSwitch]; torServer: TransportAddress;
+    rng: ref HmacDrbgContext; addresses: seq[MultiAddress] = @[];
+    flags: set[ServerFlags] = {}): TorSwitch</a></li>
 
   </ul>
 
@@ -262,11 +262,21 @@ window.addEventListener("DOMContentLoaded", main2);
     title="accept(self: TorTransport): Future[Connection]">accept(self: TorTransport): Future[Connection]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">addTransport
+      <li><a class="reference" href="#addTransport.e%2CTorSwitch%2CTransport"
+    title="addTransport(s: TorSwitch; t: Transport)">addTransport(s: TorSwitch; t: Transport)</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">dial
       <li><a class="reference" href="#dial.e%2CTorTransport%2Cstring%2CMultiAddress"
     title="dial(self: TorTransport; hostname: string; address: MultiAddress): Future[
     Connection]">dial(self: TorTransport; hostname: string; address: MultiAddress): Future[
     Connection]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getTorTransport
+      <li><a class="reference" href="#getTorTransport.e%2CTorSwitch"
+    title="getTorTransport(s: TorSwitch): Transport">getTorTransport(s: TorSwitch): Transport</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">handles
@@ -303,7 +313,7 @@ class="link-seesrc" target="_blank">Source</a>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="transport.html">transport</a>, <a class="reference external" href="tcptransport.html">tcptransport</a>, <a class="reference external" href="../stream/lpstream.html">../stream/lpstream</a>, <a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../stream/chronosstream.html">../stream/chronosstream</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
+<a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="transport.html">transport</a>, <a class="reference external" href="tcptransport.html">tcptransport</a>, <a class="reference external" href="../switch.html">../switch</a>, <a class="reference external" href="../builders.html">../builders</a>, <a class="reference external" href="../stream/lpstream.html">../stream/lpstream</a>, <a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../stream/chronosstream.html">../stream/chronosstream</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
@@ -315,9 +325,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L47"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -327,9 +337,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L58"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L60"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L58" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -340,9 +350,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L36"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L38"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -352,9 +362,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L57"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L59"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -372,9 +382,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L48"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L50"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L48" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -385,9 +395,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L42"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L44"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L44" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -397,9 +407,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L60"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L62"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -409,24 +419,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L59"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L61"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L61" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
-<div id="TorTransport" class="tohide">
-<dt><pre><a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a>
-  <span class="Identifier">transportAddress</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span>
-  <span class="Identifier">tcpTransport</span><span class="Other">:</span> <a href="tcptransport.html#TcpTransport"><span class="Identifier">TcpTransport</span></a>
-</pre></dt>
+<div id="TorSwitch" class="tohide">
+<dt><pre><a href="tortransport.html#TorSwitch"><span class="Identifier">TorSwitch</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="transport.html#Switch"><span class="Identifier">Switch</span></a></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L32"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L211"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L211" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -436,9 +443,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L55"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L57"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -447,17 +454,18 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<div id="new,typedesc[TorTransport],TransportAddress,set[ServerFlags],Upgrade" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#new%2Ctypedesc%5BTorTransport%5D%2CTransportAddress%2Cset%5BServerFlags%5D%2CUpgrade"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">transportAddress</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span><span class="Other">;</span>
-         <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">ServerFlags</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">{</span><span class="Other">}</span><span class="Other">;</span> <span class="Identifier">upgrade</span><span class="Other">:</span> <a href="../peerstore.html#Upgrade"><span class="Identifier">Upgrade</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T:type</span> {.<span class="Identifier">public</span><span class="Other">,</span>
+<div id="new,typedesc[TorSwitch],TransportAddress,ref.HmacDrbgContext,seq[MultiAddress],set[ServerFlags]" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#new%2Ctypedesc%5BTorSwitch%5D%2CTransportAddress%2Cref.HmacDrbgContext%2Cseq%5BMultiAddress%5D%2Cset%5BServerFlags%5D"><span class="Identifier">new</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="tortransport.html#TorSwitch"><span class="Identifier">TorSwitch</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">torServer</span><span class="Other">:</span> <span class="Identifier">TransportAddress</span><span class="Other">;</span>
+         <span class="Identifier">rng</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Identifier">HmacDrbgContext</span><span class="Other">;</span> <span class="Identifier">addresses</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Operator">@</span><span class="Other">[</span><span class="Other">]</span><span class="Other">;</span>
+         <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">ServerFlags</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">{</span><span class="Other">}</span><span class="Other">)</span><span class="Other">:</span> <a href="tortransport.html#TorSwitch"><span class="Identifier">TorSwitch</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="../errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
-Creates a Tor transport
+
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L62"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L213"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L213" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -467,68 +475,92 @@ class="link-seesrc" target="_blank">Source</a>
 <h1><a class="toc-backref" href="#14">Methods</a></h1>
 <dl class="item">
 <div id="accept.e,TorTransport" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#accept.e%2CTorTransport"><span class="Identifier">accept</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
+<dt><pre><span class="Keyword">method</span> <a href="#accept.e%2CTorTransport"><span class="Identifier">accept</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">TorTransport</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
     </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 accept a new Tor connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L191"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L193"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L191" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="addTransport.e,TorSwitch,Transport" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#addTransport.e%2CTorSwitch%2CTransport"><span class="Identifier">addTransport</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="tortransport.html#TorSwitch"><span class="Identifier">TorSwitch</span></a><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L240"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L240" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="dial.e,TorTransport,string,MultiAddress" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#dial.e%2CTorTransport%2Cstring%2CMultiAddress"><span class="Identifier">dial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+<dt><pre><span class="Keyword">method</span> <a href="#dial.e%2CTorTransport%2Cstring%2CMultiAddress"><span class="Identifier">dial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">TorTransport</span><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
     <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                   <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 dial a peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L152"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L154"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L152" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L154" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="getTorTransport.e,TorSwitch" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#getTorTransport.e%2CTorSwitch"><span class="Identifier">getTorTransport</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="tortransport.html#TorSwitch"><span class="Identifier">TorSwitch</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L243"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L243" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="handles.e,TorTransport,MultiAddress" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#handles.e%2CTorTransport%2CMultiAddress"><span class="Identifier">handles</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
+<dt><pre><span class="Keyword">method</span> <a href="#handles.e%2CTorTransport%2CMultiAddress"><span class="Identifier">handles</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">TorTransport</span><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L204"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L206"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L204" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L206" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="start.e,TorTransport,seq[MultiAddress]" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#start.e%2CTorTransport%2Cseq%5BMultiAddress%5D"><span class="Identifier">start</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">;</span> <span class="Identifier">addrs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.
+<dt><pre><span class="Keyword">method</span> <a href="#start.e%2CTorTransport%2Cseq%5BMultiAddress%5D"><span class="Identifier">start</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">TorTransport</span><span class="Other">;</span> <span class="Identifier">addrs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.
     <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 listen on the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L169"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L171"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L169" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L171" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="stop.e,TorTransport" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#stop.e%2CTorTransport"><span class="Identifier">stop</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="tortransport.html#TorTransport"><span class="Identifier">TorTransport</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span>
+<dt><pre><span class="Keyword">method</span> <a href="#stop.e%2CTorTransport"><span class="Identifier">stop</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">TorTransport</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 stop the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L198"
+href="https://github.com/status-im/nim-libp2p/tree/add-socks5-support/libp2p/transports/tortransport.nim#L200"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L198" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/tortransport.nim#L200" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -542,7 +574,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-10-28 09:26:15 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-10-31 15:33:29 UTC</small>
       </div>
     </div>
   </div>
