@@ -354,6 +354,8 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
                           (operator: Eq, args: [], value: 478)], value: 0)],
     value: 0)], value: 0), (operator: Eq, args: [], value: 421)], value: 0)">IPFS</a></li>
+  <li><a class="reference" href="#Onion3"
+    title="Onion3 = (operator: Eq, args: [], value: 445)">Onion3</a></li>
   <li><a class="reference" href="#P2PPattern"
     title="P2PPattern = (operator: Eq, args: [], value: 421)">P2PPattern</a></li>
   <li><a class="reference" href="#QUIC"
@@ -422,6 +424,18 @@ window.addEventListener("DOMContentLoaded", main2);
     operator: Or, args: [(operator: Eq, args: [], value: 4),
                          (operator: Eq, args: [], value: 41)], value: 0),
     (operator: Eq, args: [], value: 6)], value: 0)], value: 0)">TCP</a></li>
+  <li><a class="reference" href="#TcpOnion3"
+    title="TcpOnion3 = (operator: And, args: [(operator: Or, args: [(operator: And, args: [(
+    operator: Or, args: [(operator: Eq, args: [], value: 53),
+                         (operator: Eq, args: [], value: 54),
+                         (operator: Eq, args: [], value: 55),
+                         (operator: Eq, args: [], value: 56)], value: 0),
+    (operator: Eq, args: [], value: 6)], value: 0), (operator: And, args: [(
+    operator: Or, args: [(operator: Eq, args: [], value: 4),
+                         (operator: Eq, args: [], value: 41)], value: 0),
+    (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
+                                   (operator: Eq, args: [], value: 445)],
+             value: 0)">TcpOnion3</a></li>
   <li><a class="reference" href="#TranscoderDNS"
     title="TranscoderDNS = (stringToBuffer: dnsStB, bufferToString: dnsBtS,
                  validateBuffer: dnsVB)">TranscoderDNS</a></li>
@@ -946,9 +960,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L499"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L501"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L499" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L501" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1038,9 +1052,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L482"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L484"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L482" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L484" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1067,9 +1081,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L488"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L490"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L488" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L490" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1164,9 +1178,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L480"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L482"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L480" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L482" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="Onion3" class="tohide">
+<dt><pre><a href="multiaddress.html#Onion3"><span class="Identifier">Onion3</span></a> <span class="Other">=</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">445</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L473"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L473" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1176,9 +1202,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L478"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L480"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L478" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L480" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1254,9 +1280,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L476"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L478"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L476" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L478" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1275,6 +1301,28 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L465"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L465" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="TcpOnion3" class="tohide">
+<dt><pre><a href="multiaddress.html#TcpOnion3"><span class="Identifier">TcpOnion3</span></a> <span class="Other">=</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
+    <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">53</span><span class="Other">)</span><span class="Other">,</span>
+                         <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">54</span><span class="Other">)</span><span class="Other">,</span>
+                         <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">55</span><span class="Other">)</span><span class="Other">,</span>
+                         <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">56</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
+    <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span>
+                         <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
+                                   <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">445</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+             <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L474"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L474" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1439,9 +1487,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L474"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L476"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L474" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L476" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1511,9 +1559,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L494"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L496"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L494" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L496" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1600,9 +1648,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return pattern <tt class="docutils literal"><span class="pre">pat</span></tt> as string.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1075"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1077"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1075" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1077" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1613,9 +1661,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L758"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L760"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L758" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L760" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1628,9 +1676,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This procedure performs validation of concatenated result and can raise exception on error. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1015"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1017"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1015" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1017" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1643,9 +1691,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This procedure performs validation of concatenated result and can raise exception on error. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1005"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1007"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1005" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1007" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1656,9 +1704,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Check of two MultiAddress are equal
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1025"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1027"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1025" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1027" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1669,9 +1717,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns partial MultiAddress with MultiCodec <tt class="docutils literal"><span class="pre">codec</span></tt> and present in MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L717"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L719"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L717" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L719" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1682,9 +1730,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns part with index <tt class="docutils literal"><span class="pre">i</span></tt> of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L653"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L655"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L653" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L655" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1695,9 +1743,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns parts with slice <tt class="docutils literal"><span class="pre">slice</span></tt> of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L661"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L663"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L661" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L663" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1708,9 +1756,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L998"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1000"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L998" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1000" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1720,9 +1768,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1087"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1089"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1087" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1089" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1733,9 +1781,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L989"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L991"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L989" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L991" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1746,9 +1794,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt>, if address with MultiCodec <tt class="docutils literal"><span class="pre">codec</span></tt> present in MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L708"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L710"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L708" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L710" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1759,9 +1807,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Get MultiBase encoded representation of <tt class="docutils literal"><span class="pre">ma</span></tt> using encoding <tt class="docutils literal"><span class="pre">encoding</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L779"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L781"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L779" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L781" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1772,9 +1820,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1093"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1095"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1093" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1095" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1785,9 +1833,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1108"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1110"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1108" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1110" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1809,9 +1857,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return hexadecimal string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L771"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L773"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L771" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L773" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1821,9 +1869,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize empty MultiAddress.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L931"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L933"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L931" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L933" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1834,9 +1882,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress using chronos.TransportAddress (IPv4/IPv6/Unix) and protocol information (UDP/TCP).
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L957"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L959"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L957" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L959" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1848,9 +1896,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L935"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L937"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L935" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L937" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1861,9 +1909,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress with array of bytes <tt class="docutils literal"><span class="pre">data</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L916"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L918"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L916" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L918" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1875,9 +1923,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and array of bytes <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L806"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L808"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L806" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L808" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1888,9 +1936,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and integer <tt class="docutils literal"><span class="pre">value</span></tt>. This procedure can be used to instantiate <tt class="docutils literal"><span class="pre">tcp</span></tt>, <tt class="docutils literal"><span class="pre">udp</span></tt>, <tt class="docutils literal"><span class="pre">dccp</span></tt> and <tt class="docutils literal"><span class="pre">sctp</span></tt> MultiAddresses.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L844"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L846"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L844" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L846" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1901,9 +1949,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and peer id <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L838"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L840"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L838" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L840" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1914,9 +1962,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from string representation <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L870"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L872"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L870" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L872" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1926,9 +1974,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt>, if MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> is empty or non initialized.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L985"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L987"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L985" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L987" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1938,9 +1986,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L701"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L703"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L701" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L703" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1987,9 +2035,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Match full <tt class="docutils literal"><span class="pre">address</span></tt> using pattern <tt class="docutils literal"><span class="pre">pat</span></tt> and return <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">address</span></tt> satisfies pattern.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1057"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1059"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1057" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1059" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2000,9 +2048,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Match prefix part of <tt class="docutils literal"><span class="pre">address</span></tt> using pattern <tt class="docutils literal"><span class="pre">pat</span></tt> and return <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">address</span></tt> starts with pattern.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1066"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1068"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1066" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1068" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2015,9 +2063,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result array will be empty.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L580"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L582"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L580" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L582" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2030,9 +2078,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result array will be empty.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L590"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L592"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L590" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L592" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2045,9 +2093,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result will be <tt class="docutils literal"><span class="pre">0</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L545"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L547"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L545" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L547" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2058,9 +2106,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> protocol code.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L519"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L521"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L519" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L521" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2071,9 +2119,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns list of protocol codecs inside of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L764"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L766"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L764" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L766" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2084,9 +2132,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> protocol name.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L532"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L534"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L532" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L534" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2097,9 +2145,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L726"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L728"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L726" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L728" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2109,9 +2157,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt> if MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> is valid.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L785"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L787"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L785" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L787" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2122,9 +2170,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1090"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1092"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1090" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1092" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2135,9 +2183,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write MultiAddress value <tt class="docutils literal"><span class="pre">ma</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L775"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L777"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L775" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L777" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2153,9 +2201,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Iterates over all addresses inside of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L665"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L667"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L665" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L667" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2174,7 +2222,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-04 10:21:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-04 18:34:09 UTC</small>
       </div>
     </div>
   </div>
