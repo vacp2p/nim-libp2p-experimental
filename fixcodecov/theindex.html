@@ -2317,11 +2317,15 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="initProtoBuffer" href="#initProtoBuffer"><span>initProtoBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="minprotobuf: initProtoBuffer(data: openArray[byte]; offset = 0; options: set[ProtoFlags] = {}): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2CopenArray%5Bbyte%5D%2Cint%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(data: openArray[byte]; offset = 0; options: set[ProtoFlags] = {}): ProtoBuffer</a></li>
+          data-doc-search-tag="minprotobuf: initProtoBuffer(data: openArray[byte]; offset = 0;
+                options: set[ProtoFlags] = {}; maxSize = MaxMessageSize): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2CopenArray%5Bbyte%5D%2Cint%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(data: openArray[byte]; offset = 0;
+                options: set[ProtoFlags] = {}; maxSize = MaxMessageSize): ProtoBuffer</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="minprotobuf: initProtoBuffer(data: seq[byte]; offset = 0; options: set[ProtoFlags] = {}): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2Cseq%5Bbyte%5D%2Cint%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(data: seq[byte]; offset = 0; options: set[ProtoFlags] = {}): ProtoBuffer</a></li>
+          data-doc-search-tag="minprotobuf: initProtoBuffer(data: seq[byte]; offset = 0; options: set[ProtoFlags] = {};
+                maxSize = MaxMessageSize): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2Cseq%5Bbyte%5D%2Cint%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(data: seq[byte]; offset = 0; options: set[ProtoFlags] = {};
+                maxSize = MaxMessageSize): ProtoBuffer</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="minprotobuf: initProtoBuffer(options: set[ProtoFlags] = {}): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(options: set[ProtoFlags] = {}): ProtoBuffer</a></li>
+          data-doc-search-tag="minprotobuf: initProtoBuffer(options: set[ProtoFlags] = {}; maxSize = MaxMessageSize): ProtoBuffer" href="libp2p/protobuf/minprotobuf.html#initProtoBuffer%2Cset%5BProtoFlags%5D">minprotobuf: initProtoBuffer(options: set[ProtoFlags] = {}; maxSize = MaxMessageSize): ProtoBuffer</a></li>
           </ul></dd>
 <dt><a name="initPubSub" href="#initPubSub"><span>initPubSub:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2786,10 +2790,6 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="maxInlineKeyLength" href="#maxInlineKeyLength"><span>maxInlineKeyLength:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="peerid: maxInlineKeyLength" href="libp2p/peerid.html#maxInlineKeyLength">peerid: maxInlineKeyLength</a></li>
-          </ul></dd>
-<dt><a name="MaxMessageSize" href="#MaxMessageSize"><span>MaxMessageSize:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="minprotobuf: MaxMessageSize" href="libp2p/protobuf/minprotobuf.html#MaxMessageSize">minprotobuf: MaxMessageSize</a></li>
           </ul></dd>
 <dt><a name="MaxMsgSize" href="#MaxMsgSize"><span>MaxMsgSize:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5088,7 +5088,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-16 10:31:48 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-16 11:16:54 UTC</small>
       </div>
     </div>
   </div>
