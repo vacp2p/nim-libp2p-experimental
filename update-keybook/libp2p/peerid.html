@@ -267,16 +267,16 @@ window.addEventListener("DOMContentLoaded", main2);
     title="init(t: typedesc[PeerId]; seckey: PrivateKey): Result[PeerId, cstring]">init(t: typedesc[PeerId]; seckey: PrivateKey): Result[PeerId, cstring]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">initRandom
-      <li><a class="reference" href="#initRandom%2Ctypedesc%5BPeerId%5D"
-    title="initRandom(t: typedesc[PeerId]): Result[PeerId, cstring]">initRandom(t: typedesc[PeerId]): Result[PeerId, cstring]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">match
       <li><a class="reference" href="#match%2CPeerId%2CPublicKey"
     title="match(pid: PeerId; pubkey: PublicKey): bool">match(pid: PeerId; pubkey: PublicKey): bool</a></li>
   <li><a class="reference" href="#match%2CPeerId%2CPrivateKey"
     title="match(pid: PeerId; seckey: PrivateKey): bool">match(pid: PeerId; seckey: PrivateKey): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">random
+      <li><a class="reference" href="#random%2Ctypedesc%5BPeerId%5D"
+    title="random(t: typedesc[PeerId]; rng = newRng()): Result[PeerId, cstring]">random(t: typedesc[PeerId]; rng = newRng()): Result[PeerId, cstring]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">shortLog
@@ -575,19 +575,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="initRandom,typedesc[PeerId]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#initRandom%2Ctypedesc%5BPeerId%5D"><span class="Identifier">initRandom</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Result</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">cstring</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    </span><span class="Identifier">public</span>.}</pre></dt>
-<dd>
-
-Create new peer id with random public key.
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/update-keybook/libp2p/peerid.nim#L187"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L187" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="match,PeerId,PublicKey" class="tohide">
 <dt><pre><span class="Keyword">func</span> <a href="#match%2CPeerId%2CPublicKey"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">pid</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span> <span class="Identifier">pubkey</span><span class="Other">:</span> <a href="crypto/crypto.html#PublicKey"><span class="Identifier">PublicKey</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
@@ -611,6 +598,19 @@ Returns <tt class="docutils literal"><span class="pre">true</span></tt> if <tt c
 href="https://github.com/status-im/nim-libp2p/tree/update-keybook/libp2p/peerid.nim#L200"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L200" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="random,typedesc[PeerId]" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#random%2Ctypedesc%5BPeerId%5D"><span class="Identifier">random</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">rng</span> <span class="Other">=</span> <span class="Identifier">newRng</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Result</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span>.}</pre></dt>
+<dd>
+
+Create new peer id with random public key.
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/update-keybook/libp2p/peerid.nim#L187"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/peerid.nim#L187" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -806,7 +806,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-18 16:04:01 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-21 08:01:14 UTC</small>
       </div>
     </div>
   </div>
