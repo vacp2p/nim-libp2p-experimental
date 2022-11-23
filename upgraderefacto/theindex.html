@@ -767,8 +767,6 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="contains" href="#contains"><span>contains:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: contains(c: ConnManager; conn: Connection): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CConnection">connmanager: contains(c: ConnManager; conn: Connection): bool</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="connmanager: contains(c: ConnManager; muxer: Muxer): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CMuxer">connmanager: contains(c: ConnManager; muxer: Muxer): bool</a></li>
           <li><a class="reference external"
           data-doc-search-tag="connmanager: contains(c: ConnManager; peerId: PeerId): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CPeerId">connmanager: contains(c: ConnManager; peerId: PeerId): bool</a></li>
@@ -1705,8 +1703,6 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="getStream" href="#getStream"><span>getStream:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: getStream(c: ConnManager; conn: Connection): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CConnection">connmanager: getStream(c: ConnManager; conn: Connection): Future[Connection]</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="connmanager: getStream(c: ConnManager; muxer: Muxer): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CMuxer">connmanager: getStream(c: ConnManager; muxer: Muxer): Future[Connection]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="connmanager: getStream(c: ConnManager; peerId: PeerId): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CPeerId">connmanager: getStream(c: ConnManager; peerId: PeerId): Future[Connection]</a></li>
@@ -4061,15 +4057,11 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="crypto: selectBest(order: int; p1, p2: string): string" href="libp2p/crypto/crypto.html#selectBest%2Cint%2Cstring%2Cstring">crypto: selectBest(order: int; p1, p2: string): string</a></li>
           </ul></dd>
-<dt><a name="selectConn" href="#selectConn"><span>selectConn:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: selectConn(c: ConnManager; peerId: PeerId): Connection" href="libp2p/connmanager.html#selectConn%2CConnManager%2CPeerId">connmanager: selectConn(c: ConnManager; peerId: PeerId): Connection</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="connmanager: selectConn(c: ConnManager; peerId: PeerId; dir: Direction): Connection" href="libp2p/connmanager.html#selectConn%2CConnManager%2CPeerId%2CDirection">connmanager: selectConn(c: ConnManager; peerId: PeerId; dir: Direction): Connection</a></li>
-          </ul></dd>
 <dt><a name="selectMuxer" href="#selectMuxer"><span>selectMuxer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; conn: Connection): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CConnection">connmanager: selectMuxer(c: ConnManager; conn: Connection): Muxer</a></li>
+          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; peerId: PeerId): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CPeerId">connmanager: selectMuxer(c: ConnManager; peerId: PeerId): Muxer</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; peerId: PeerId; dir: Direction): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CPeerId%2CDirection">connmanager: selectMuxer(c: ConnManager; peerId: PeerId; dir: Direction): Muxer</a></li>
           </ul></dd>
 <dt><a name="send" href="#send"><span>send:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4322,10 +4314,6 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="StopMessageType" href="#StopMessageType"><span>StopMessageType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="messages: StopMessageType" href="libp2p/protocols/connectivity/relay/messages.html#StopMessageType">messages: StopMessageType</a></li>
-          </ul></dd>
-<dt><a name="storeConn" href="#storeConn"><span>storeConn:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: storeConn(c: ConnManager; conn: Connection)" href="libp2p/connmanager.html#storeConn%2CConnManager%2CConnection">connmanager: storeConn(c: ConnManager; conn: Connection)</a></li>
           </ul></dd>
 <dt><a name="storeMuxer" href="#storeMuxer"><span>storeMuxer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5066,7 +5054,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-23 11:29:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-23 15:29:57 UTC</small>
       </div>
     </div>
   </div>
