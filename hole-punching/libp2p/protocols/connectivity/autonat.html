@@ -244,16 +244,7 @@ window.addEventListener("DOMContentLoaded", main2);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">dialMe
-      <li><a class="reference" href="#dialMe%2CAutonat%2CPeerId"
-    title="dialMe(a: Autonat; pid: PeerId;
-       ma: MultiAddress | seq[MultiAddress] = newSeq[MultiAddress]()): Future[
-    MultiAddress]">dialMe(a: Autonat; pid: PeerId;
-       ma: MultiAddress | seq[MultiAddress] = newSeq[MultiAddress]()): Future[
-    MultiAddress]</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">encode
+      <ul class="simple nested-toc-section">encode
       <li><a class="reference" href="#encode%2CAutonatDial"
     title="encode(d: AutonatDial): ProtoBuffer">encode(d: AutonatDial): ProtoBuffer</a></li>
   <li><a class="reference" href="#encode%2CAutonatMsg"
@@ -273,7 +264,14 @@ window.addEventListener("DOMContentLoaded", main2);
 <li>
   <a class="reference reference-toplevel" href="#14" id="64">Methods</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">init
+      <ul class="simple nested-toc-section">dialMe
+      <li><a class="reference" href="#dialMe.e%2CAutonat%2CPeerId%2Cseq%5BMultiAddress%5D"
+    title="dialMe(a: Autonat; pid: PeerId;
+       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[MultiAddress]">dialMe(a: Autonat; pid: PeerId;
+       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[MultiAddress]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">init
       <li><a class="reference" href="#init.e%2CAutonat"
     title="init(a: Autonat)">init(a: Autonat)</a></li>
 
@@ -423,20 +421,6 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<div id="dialMe,Autonat,PeerId" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#dialMe%2CAutonat%2CPeerId"><span class="Identifier">dialMe</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="autonat.html#Autonat"><span class="Identifier">Autonat</span></a><span class="Other">;</span> <span class="Identifier">pid</span><span class="Other">:</span> <a href="../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span>
-            <span class="Identifier">ma</span><span class="Other">:</span> <a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a> <span class="Operator">|</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> {.<span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L207"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L207" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="encode,AutonatDial" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#encode%2CAutonatDial"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">d</span><span class="Other">:</span> <a href="autonat.html#AutonatDial"><span class="Identifier">AutonatDial</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../../protobuf/minprotobuf.html#ProtoBuffer"><span class="Identifier">ProtoBuffer</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -480,9 +464,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L291"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L290"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L291" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L290" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -491,15 +475,30 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="14">
 <h1><a class="toc-backref" href="#14">Methods</a></h1>
 <dl class="item">
+<div id="dialMe.e,Autonat,PeerId,seq[MultiAddress]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#dialMe.e%2CAutonat%2CPeerId%2Cseq%5BMultiAddress%5D"><span class="Identifier">dialMe</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="autonat.html#Autonat"><span class="Identifier">Autonat</span></a><span class="Other">;</span> <span class="Identifier">pid</span><span class="Other">:</span> <a href="../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span>
+              <span class="Identifier">addrs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L207"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L207" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="init.e,Autonat" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#init.e%2CAutonat"><span class="Identifier">init</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="autonat.html#Autonat"><span class="Identifier">Autonat</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L296"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/protocols/connectivity/autonat.nim#L295"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L296" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L295" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -513,7 +512,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-23 11:21:16 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-29 13:25:31 UTC</small>
       </div>
     </div>
   </div>
