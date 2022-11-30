@@ -579,9 +579,7 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="connmanager: close(c: ConnManager): Future[void]" href="libp2p/connmanager.html#close%2CConnManager">connmanager: close(c: ConnManager): Future[void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxer: close(m: Muxer): Future[void]" href="libp2p/muxers/muxer.html#close.e%2CMuxer">muxer: close(m: Muxer): Future[void]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="yamux: close(m: Yamux): Future[void]" href="libp2p/muxers/yamux/yamux.html#close.e%2CYamux">yamux: close(m: Yamux): Future[void]</a></li>
+          data-doc-search-tag="muxer: close(m: Muxer): untyped" href="libp2p/muxers/muxer.html#close.t%2CMuxer">muxer: close(m: Muxer): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="lpstream: close(s: LPStream): untyped" href="libp2p/stream/lpstream.html#close.t%2CLPStream">lpstream: close(s: LPStream): untyped</a></li>
           </ul></dd>
@@ -617,6 +615,14 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="closeX" href="#closeX"><span>closeX:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="muxer: closeX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]" href="libp2p/muxers/muxer.html#closeX.e%2CMuxer%2Ctuple%5Bstring%2Cint%2Cint%5D">muxer: closeX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="yamux: closeX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]" href="libp2p/muxers/yamux/yamux.html#closeX.e%2CYamux%2Ctuple%5Bstring%2Cint%2Cint%5D">yamux: closeX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="lpstream: closeX(s: LPStream; info: tuple[filename: string, line: int, column: int]): Future[
     void]" href="libp2p/stream/lpstream.html#closeX.e%2CLPStream%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: closeX(s: LPStream; info: tuple[filename: string, line: int, column: int]): Future[
     void]</a></li>
@@ -3553,9 +3559,15 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="chronosstream: readOnce(s: ChronosStream; pbytes: pointer; nbytes: int): Future[int]" href="libp2p/stream/chronosstream.html#readOnce.e%2CChronosStream%2Cpointer%2Cint">chronosstream: readOnce(s: ChronosStream; pbytes: pointer; nbytes: int): Future[int]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]" href="libp2p/stream/lpstream.html#readOnce.e%2CLPStream%2Cpointer%2Cint">lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]</a></li>
+          data-doc-search-tag="lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]" href="libp2p/stream/lpstream.html#readOnce.t%2CLPStream%2Cpointer%2Cint">lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstransport: readOnce(s: WsStream; pbytes: pointer; nbytes: int): Future[int]" href="libp2p/transports/wstransport.html#readOnce.e%2CWsStream%2Cpointer%2Cint">wstransport: readOnce(s: WsStream; pbytes: pointer; nbytes: int): Future[int]</a></li>
+          </ul></dd>
+<dt><a name="readOnceX" href="#readOnceX"><span>readOnceX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="lpstream: readOnceX(s: LPStream; pbytes: pointer; nbytes: int;
+          info: tuple[filename: string, line: int, column: int]): Future[int]" href="libp2p/stream/lpstream.html#readOnceX.e%2CLPStream%2Cpointer%2Cint%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: readOnceX(s: LPStream; pbytes: pointer; nbytes: int;
+          info: tuple[filename: string, line: int, column: int]): Future[int]</a></li>
           </ul></dd>
 <dt><a name="readSeq" href="#readSeq"><span>readSeq:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4910,7 +4922,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-28 14:25:50 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 13:59:49 UTC</small>
       </div>
     </div>
   </div>
