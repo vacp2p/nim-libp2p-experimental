@@ -210,7 +210,7 @@ window.addEventListener("DOMContentLoaded", main2);
   codecs*: seq[string]
   handler*: LPProtoHandler   ## this handler gets invoked by the protocol negotiator
   started*: bool
-  maxIncomingStreams*: Opt[int]">LPProtocol</a></li>
+  maxIncomingStreams: Opt[int]">LPProtocol</a></li>
   <li><a class="reference" href="#LPProtoHandler"
     title="LPProtoHandler = proc (conn: Connection; proto: string): Future[void] {.gcsafe,
     raises: [Defect].}">LPProtoHandler</a></li>
@@ -236,6 +236,16 @@ window.addEventListener("DOMContentLoaded", main2);
   <ul class="simple nested-toc-section">codec=
       <li><a class="reference" href="#codec%3D%2CLPProtocol%2Cstring"
     title="codec=(p: LPProtocol; codec: string)">codec=(p: LPProtocol; codec: string)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">maxIncomingStreams
+      <li><a class="reference" href="#maxIncomingStreams%2CLPProtocol"
+    title="maxIncomingStreams(p: LPProtocol): int">maxIncomingStreams(p: LPProtocol): int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">maxIncomingStreams=
+      <li><a class="reference" href="#maxIncomingStreams%3D%2CLPProtocol%2Cint"
+    title="maxIncomingStreams=(p: LPProtocol; val: int)">maxIncomingStreams=(p: LPProtocol; val: int)</a></li>
 
   </ul>
 
@@ -288,7 +298,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">codecs</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span>
   <span class="Identifier">handler</span><span class="Operator">*</span><span class="Other">:</span> <a href="protocol.html#LPProtoHandler"><span class="Identifier">LPProtoHandler</span></a>   <span class="Comment">## this handler gets invoked by the protocol negotiator</span>
   <span class="Identifier">started</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-  <span class="Identifier">maxIncomingStreams</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span>
+  <span class="Identifier">maxIncomingStreams</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span>
 </pre></dt>
 <dd>
 
@@ -341,9 +351,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L38"
+href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L44"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L44" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -353,9 +363,33 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L42"
+href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L48"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L48" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="maxIncomingStreams,LPProtocol" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#maxIncomingStreams%2CLPProtocol"><span class="Identifier">maxIncomingStreams</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="protocol.html#LPProtocol"><span class="Identifier">LPProtocol</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L38"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="maxIncomingStreams=,LPProtocol,int" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#maxIncomingStreams%3D%2CLPProtocol%2Cint"><span class="Identifier">maxIncomingStreams=</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="protocol.html#LPProtocol"><span class="Identifier">LPProtocol</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/maxstreamsperproto/libp2p/protocols/protocol.nim#L41"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/protocol.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -412,7 +446,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 15:51:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 15:57:30 UTC</small>
       </div>
     </div>
   </div>
