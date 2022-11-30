@@ -240,9 +240,11 @@ window.addEventListener("DOMContentLoaded", main2);
     title="getWrapped(self: RelayConnection): Connection">getWrapped(self: RelayConnection): Connection</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">readOnce
-      <li><a class="reference" href="#readOnce.e%2CRelayConnection%2Cpointer%2Cint"
-    title="readOnce(self: RelayConnection; pbytes: pointer; nbytes: int): Future[int]">readOnce(self: RelayConnection; pbytes: pointer; nbytes: int): Future[int]</a></li>
+  <ul class="simple nested-toc-section">readOnceX
+      <li><a class="reference" href="#readOnceX.e%2CRelayConnection%2Cpointer%2Cint%2Ctuple%5Bstring%2Cint%2Cint%5D"
+    title="readOnceX(self: RelayConnection; pbytes: pointer; nbytes: int;
+          info: tuple[filename: string, line: int, column: int]): Future[int]">readOnceX(self: RelayConnection; pbytes: pointer; nbytes: int;
+          info: tuple[filename: string, line: int, column: int]): Future[int]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">write
@@ -303,9 +305,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L47"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L49"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -321,9 +323,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L41"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L43"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -333,22 +335,23 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L47"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
-<div id="readOnce.e,RelayConnection,pointer,int" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#readOnce.e%2CRelayConnection%2Cpointer%2Cint"><span class="Identifier">readOnce</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">pbytes</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">nbytes</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> {.
-    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="readOnceX.e,RelayConnection,pointer,int,tuple[string,int,int]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#readOnceX.e%2CRelayConnection%2Cpointer%2Cint%2Ctuple%5Bstring%2Cint%2Cint%5D"><span class="Identifier">readOnceX</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">pbytes</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">nbytes</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span>
+                 <span class="Identifier">info</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">line</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">column</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">int</span><span class="Other">]</span> {.<span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L29"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L30"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -359,9 +362,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L33"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L35"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L33" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -375,7 +378,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 13:59:48 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 16:26:25 UTC</small>
       </div>
     </div>
   </div>
