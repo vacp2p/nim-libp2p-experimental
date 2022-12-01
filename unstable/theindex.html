@@ -1029,6 +1029,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="relay: DefaultLimitDuration" href="libp2p/protocols/connectivity/relay/relay.html#DefaultLimitDuration">relay: DefaultLimitDuration</a></li>
           </ul></dd>
+<dt><a name="DefaultMaxIncomingStreams" href="#DefaultMaxIncomingStreams"><span>DefaultMaxIncomingStreams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: DefaultMaxIncomingStreams" href="libp2p/protocols/protocol.html#DefaultMaxIncomingStreams">protocol: DefaultMaxIncomingStreams</a></li>
+          </ul></dd>
 <dt><a name="defaultMsgIdProvider" href="#defaultMsgIdProvider"><span>defaultMsgIdProvider:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="message: defaultMsgIdProvider(m: Message): Result[MessageId, ValidationResult]" href="libp2p/protocols/pubsub/rpc/message.html#defaultMsgIdProvider%2CMessage">message: defaultMsgIdProvider(m: Message): Result[MessageId, ValidationResult]</a></li>
@@ -2789,6 +2793,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multihash: MaxHashSize" href="libp2p/multihash.html#MaxHashSize">multihash: MaxHashSize</a></li>
           </ul></dd>
+<dt><a name="maxIncomingStreams" href="#maxIncomingStreams"><span>maxIncomingStreams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: maxIncomingStreams(p: LPProtocol): int" href="libp2p/protocols/protocol.html#maxIncomingStreams%2CLPProtocol">protocol: maxIncomingStreams(p: LPProtocol): int</a></li>
+          </ul></dd>
+<dt><a name="maxIncomingStreams%3D" href="#maxIncomingStreams%3D"><span>maxIncomingStreams=:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: maxIncomingStreams=(p: LPProtocol; val: int)" href="libp2p/protocols/protocol.html#maxIncomingStreams%3D%2CLPProtocol%2Cint">protocol: maxIncomingStreams=(p: LPProtocol; val: int)</a></li>
+          </ul></dd>
 <dt><a name="maxInlineKeyLength" href="#maxInlineKeyLength"><span>maxInlineKeyLength:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="peerid: maxInlineKeyLength" href="libp2p/peerid.html#maxInlineKeyLength">peerid: maxInlineKeyLength</a></li>
@@ -3030,6 +3042,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="ping: new(T: typedesc[Ping]; handler: PingHandler = nil;
     rng: ref HmacDrbgContext = newRng()): T:type" href="libp2p/protocols/ping.html#new%2Ctypedesc%5BPing%5D%2CPingHandler%2Cref.HmacDrbgContext">ping: new(T: typedesc[Ping]; handler: PingHandler = nil;
     rng: ref HmacDrbgContext = newRng()): T:type</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
+    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type" href="libp2p/protocols/protocol.html#new%2CtypeLPProtocol%2Cseq%5Bstring%5D%2CLPProtoHandler">protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
+    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
     codec: string; maxMessageSize: int): T:type" href="libp2p/protocols/pubsub/pubsubpeer.html#new%2Ctypedesc%5BPubSubPeer%5D%2CPeerId%2CGetConn%2COnEvent%2Cstring%2Cint">pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
@@ -5088,7 +5104,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-01 11:22:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-01 11:36:06 UTC</small>
       </div>
     </div>
   </div>

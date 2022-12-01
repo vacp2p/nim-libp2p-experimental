@@ -206,10 +206,11 @@ window.addEventListener("DOMContentLoaded", main2);
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#HandlerHolder"
-    title="HandlerHolder = object
+    title="HandlerHolder = ref object
   protos*: seq[string]
   protocol*: LPProtocol
-  match*: Matcher">HandlerHolder</a></li>
+  match*: Matcher
+  openedStreams: CountTable[PeerId]">HandlerHolder</a></li>
   <li><a class="reference" href="#Matcher"
     title="Matcher = proc (proto: string): bool {.gcsafe, raises: [Defect].}">Matcher</a></li>
   <li><a class="reference" href="#MultiStreamError"
@@ -231,7 +232,7 @@ window.addEventListener("DOMContentLoaded", main2);
   <li><a class="reference" href="#MSCodec"
     title="MSCodec = &quot;\x13/multistream/1.0.0\n&quot;">MSCodec</a></li>
   <li><a class="reference" href="#MsgSize"
-    title="MsgSize = 65536">MsgSize</a></li>
+    title="MsgSize = 1024">MsgSize</a></li>
   <li><a class="reference" href="#Na"
     title="Na = &quot;\x03na\n&quot;">Na</a></li>
 
@@ -318,10 +319,11 @@ class="link-seesrc" target="_blank">Source</a>
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
 <div id="HandlerHolder" class="tohide">
-<dt><pre><a href="multistream.html#HandlerHolder"><span class="Identifier">HandlerHolder</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+<dt><pre><a href="multistream.html#HandlerHolder"><span class="Identifier">HandlerHolder</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span>
   <span class="Identifier">protos</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span>
   <span class="Identifier">protocol</span><span class="Operator">*</span><span class="Other">:</span> <a href="protocols/protocol.html#LPProtocol"><span class="Identifier">LPProtocol</span></a>
   <span class="Identifier">match</span><span class="Operator">*</span><span class="Other">:</span> <a href="multistream.html#Matcher"><span class="Identifier">Matcher</span></a>
+  <span class="Identifier">openedStreams</span><span class="Other">:</span> <span class="Identifier">CountTable</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span>
 </pre></dt>
 <dd>
 
@@ -366,9 +368,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L41"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L42"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -414,7 +416,7 @@ class="link-seesrc" target="_blank">Source</a>
 </dd>
 </div>
 <div id="MsgSize" class="tohide">
-<dt><pre><a href="multistream.html#MsgSize"><span class="Identifier">MsgSize</span></a> <span class="Other">=</span> <span class="DecNumber">65536</span></pre></dt>
+<dt><pre><a href="multistream.html#MsgSize"><span class="Identifier">MsgSize</span></a> <span class="Other">=</span> <span class="DecNumber">1024</span></pre></dt>
 <dd>
 
 
@@ -449,9 +451,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 helper to allow registering pure handlers
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L202"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L218"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L202" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L218" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -462,9 +464,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L196"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L212"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L196" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L212" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -475,9 +477,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L187"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L203"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L187" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L203" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -489,9 +491,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L129"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L132"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L129" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -502,9 +504,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 list remote protos requests on connection
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L114"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L117"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L114" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L117" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -514,9 +516,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L46"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L46" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -527,9 +529,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L110"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L113"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L110" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L113" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -541,9 +543,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L57"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L60"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -554,9 +556,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L104"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L107"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L104" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L107" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -567,9 +569,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L216"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L232"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L216" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L232" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -580,9 +582,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L219"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multistream.nim#L235"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L219" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multistream.nim#L235" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -596,7 +598,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-01 11:22:41 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-01 11:36:03 UTC</small>
       </div>
     </div>
   </div>
