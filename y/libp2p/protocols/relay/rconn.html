@@ -247,9 +247,27 @@ window.addEventListener("DOMContentLoaded", main2);
           info: tuple[filename: string, line: int, column: int]): Future[int]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">writeX
+      <li><a class="reference" href="#writeX.e%2CRelayConnection%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D"
+    title="writeX(self: RelayConnection; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]">writeX(self: RelayConnection; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+
+  </ul>
+
+  </ul>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#18" id="68">Templates</a>
+  <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">readOnce
+      <li><a class="reference" href="#readOnce.t%2CRelayConnection%2Cpointer%2Cint"
+    title="readOnce(s: RelayConnection; pbytes: pointer; nbytes: int): untyped">readOnce(s: RelayConnection; pbytes: pointer; nbytes: int): untyped</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">write
-      <li><a class="reference" href="#write.e%2CRelayConnection%2Cseq%5Bbyte%5D"
-    title="write(self: RelayConnection; msg: seq[byte]): Future[void]">write(self: RelayConnection; msg: seq[byte]): Future[void]</a></li>
+      <li><a class="reference" href="#write.t%2CRelayConnection%2Cseq%5Bbyte%5D"
+    title="write(s: RelayConnection; msg: seq[byte]): untyped">write(s: RelayConnection; msg: seq[byte]): untyped</a></li>
 
   </ul>
 
@@ -305,9 +323,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L49"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L61"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L61" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -323,9 +341,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L43"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L55"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -335,9 +353,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L47"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L59"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -355,9 +373,28 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="write.e,RelayConnection,seq[byte]" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#write.e%2CRelayConnection%2Cseq%5Bbyte%5D"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.
-    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="writeX.e,RelayConnection,seq[byte],tuple[string,int,int]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#writeX.e%2CRelayConnection%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D"><span class="Identifier">writeX</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">;</span>
+              <span class="Identifier">info</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">line</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">column</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+            <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L43"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+
+</dl></div>
+<div class="section" id="18">
+<h1><a class="toc-backref" href="#18">Templates</a></h1>
+<dl class="item">
+<div id="readOnce.t,RelayConnection,pointer,int" class="tohide">
+<dt><pre><span class="Keyword">template</span> <a href="#readOnce.t%2CRelayConnection%2Cpointer%2Cint"><span class="Identifier">readOnce</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">pbytes</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">nbytes</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
 
@@ -365,6 +402,18 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L35"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="write.t,RelayConnection,seq[byte]" class="tohide">
+<dt><pre><span class="Keyword">template</span> <a href="#write.t%2CRelayConnection%2Cseq%5Bbyte%5D"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="rconn.html#RelayConnection"><span class="Identifier">RelayConnection</span></a><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/protocols/relay/rconn.nim#L52"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/relay/rconn.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -378,7 +427,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 16:26:48 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 15:59:31 UTC</small>
       </div>
     </div>
   </div>

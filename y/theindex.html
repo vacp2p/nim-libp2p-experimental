@@ -579,7 +579,11 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="connmanager: close(c: ConnManager): Future[void]" href="libp2p/connmanager.html#close%2CConnManager">connmanager: close(c: ConnManager): Future[void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxer: close(m: Muxer): untyped" href="libp2p/muxers/muxer.html#close.t%2CMuxer">muxer: close(m: Muxer): untyped</a></li>
+          data-doc-search-tag="mplex: close(s: Mplex): untyped" href="libp2p/muxers/mplex/mplex.html#close.t%2CMplex">mplex: close(s: Mplex): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="muxer: close(s: Muxer): untyped" href="libp2p/muxers/muxer.html#close.t%2CMuxer">muxer: close(s: Muxer): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="yamux: close(s: Yamux): untyped" href="libp2p/muxers/yamux/yamux.html#close.t%2CYamux">yamux: close(s: Yamux): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="lpstream: close(s: LPStream): untyped" href="libp2p/stream/lpstream.html#close.t%2CLPStream">lpstream: close(s: LPStream): untyped</a></li>
           </ul></dd>
@@ -3535,7 +3539,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="readLp" href="#readLp"><span>readLp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="lpstream: readLp(s: LPStream; maxSize: int): Future[seq[byte]]" href="libp2p/stream/lpstream.html#readLp%2CLPStream%2Cint">lpstream: readLp(s: LPStream; maxSize: int): Future[seq[byte]]</a></li>
+          data-doc-search-tag="lpstream: readLp(s: LPStream; maxSize: int): untyped" href="libp2p/stream/lpstream.html#readLp.t%2CLPStream%2Cint">lpstream: readLp(s: LPStream; maxSize: int): untyped</a></li>
+          </ul></dd>
+<dt><a name="readLpX" href="#readLpX"><span>readLpX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="lpstream: readLpX(s: LPStream; maxSize: int;
+        info: tuple[filename: string, line: int, column: int]): Future[seq[byte]]" href="libp2p/stream/lpstream.html#readLpX%2CLPStream%2Cint%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: readLpX(s: LPStream; maxSize: int;
+        info: tuple[filename: string, line: int, column: int]): Future[seq[byte]]</a></li>
           </ul></dd>
 <dt><a name="readMessage" href="#readMessage"><span>readMessage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3549,7 +3559,19 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="readOnce" href="#readOnce"><span>readOnce:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]" href="libp2p/stream/lpstream.html#readOnce.t%2CLPStream%2Cpointer%2Cint">lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): Future[int]</a></li>
+          data-doc-search-tag="yamux: readOnce(s: YamuxChannel; pbytes: pointer; nbytes: int): untyped" href="libp2p/muxers/yamux/yamux.html#readOnce.t%2CYamuxChannel%2Cpointer%2Cint">yamux: readOnce(s: YamuxChannel; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="rconn: readOnce(s: RelayConnection; pbytes: pointer; nbytes: int): untyped" href="libp2p/protocols/relay/rconn.html#readOnce.t%2CRelayConnection%2Cpointer%2Cint">rconn: readOnce(s: RelayConnection; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="secure: readOnce(s: SecureConn; pbytes: pointer; nbytes: int): untyped" href="libp2p/protocols/secure/secure.html#readOnce.t%2CSecureConn%2Cpointer%2Cint">secure: readOnce(s: SecureConn; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="bufferstream: readOnce(s: BufferStream; pbytes: pointer; nbytes: int): untyped" href="libp2p/stream/bufferstream.html#readOnce.t%2CBufferStream%2Cpointer%2Cint">bufferstream: readOnce(s: BufferStream; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="chronosstream: readOnce(s: ChronosStream; pbytes: pointer; nbytes: int): untyped" href="libp2p/stream/chronosstream.html#readOnce.t%2CChronosStream%2Cpointer%2Cint">chronosstream: readOnce(s: ChronosStream; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): untyped" href="libp2p/stream/lpstream.html#readOnce.t%2CLPStream%2Cpointer%2Cint">lpstream: readOnce(s: LPStream; pbytes: pointer; nbytes: int): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="wstransport: readOnce(s: WsStream; pbytes: pointer; nbytes: int): untyped" href="libp2p/transports/wstransport.html#readOnce.t%2CWsStream%2Cpointer%2Cint">wstransport: readOnce(s: WsStream; pbytes: pointer; nbytes: int): untyped</a></li>
           </ul></dd>
 <dt><a name="readOnceX" href="#readOnceX"><span>readOnceX:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4795,7 +4817,7 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="multihash: write(vb: var VBuffer; mh: MultiHash)" href="libp2p/multihash.html#write%2CVBuffer%2CMultiHash">multihash: write(vb: var VBuffer; mh: MultiHash)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="yamux: write(channel: YamuxChannel; msg: seq[byte]): Future[void]" href="libp2p/muxers/yamux/yamux.html#write.e%2CYamuxChannel%2Cseq%5Bbyte%5D">yamux: write(channel: YamuxChannel; msg: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="yamux: write(s: YamuxChannel; msg: seq[byte]): untyped" href="libp2p/muxers/yamux/yamux.html#write.t%2CYamuxChannel%2Cseq%5Bbyte%5D">yamux: write(s: YamuxChannel; msg: seq[byte]): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="peerid: write(pb: var ProtoBuffer; field: int; pid: PeerId)" href="libp2p/peerid.html#write%2CProtoBuffer%2Cint%2CPeerId">peerid: write(pb: var ProtoBuffer; field: int; pid: PeerId)</a></li>
           <li><a class="reference external"
@@ -4823,19 +4845,19 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="protobuf: write(pb: var ProtoBuffer; field: int; subs: SubOpts)" href="libp2p/protocols/pubsub/rpc/protobuf.html#write%2CProtoBuffer%2Cint%2CSubOpts">protobuf: write(pb: var ProtoBuffer; field: int; subs: SubOpts)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="rconn: write(self: RelayConnection; msg: seq[byte]): Future[void]" href="libp2p/protocols/relay/rconn.html#write.e%2CRelayConnection%2Cseq%5Bbyte%5D">rconn: write(self: RelayConnection; msg: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="rconn: write(s: RelayConnection; msg: seq[byte]): untyped" href="libp2p/protocols/relay/rconn.html#write.t%2CRelayConnection%2Cseq%5Bbyte%5D">rconn: write(s: RelayConnection; msg: seq[byte]): untyped</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="noise: write(sconn: NoiseConnection; message: seq[byte]): Future[void]" href="libp2p/protocols/secure/noise.html#write.e%2CNoiseConnection%2Cseq%5Bbyte%5D">noise: write(sconn: NoiseConnection; message: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="noise: write(s: NoiseConnection; msg: seq[byte]): untyped" href="libp2p/protocols/secure/noise.html#write.t%2CNoiseConnection%2Cseq%5Bbyte%5D">noise: write(s: NoiseConnection; msg: seq[byte]): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="signed_envelope: write(pb: var ProtoBuffer; field: int; env: Envelope): Result[void, CryptoError]" href="libp2p/signed_envelope.html#write%2CProtoBuffer%2Cint%2CEnvelope">signed_envelope: write(pb: var ProtoBuffer; field: int; env: Envelope): Result[void, CryptoError]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="chronosstream: write(s: ChronosStream; msg: seq[byte]): Future[void]" href="libp2p/stream/chronosstream.html#write.e%2CChronosStream%2Cseq%5Bbyte%5D">chronosstream: write(s: ChronosStream; msg: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="chronosstream: write(s: ChronosStream; msg: seq[byte]): untyped" href="libp2p/stream/chronosstream.html#write.t%2CChronosStream%2Cseq%5Bbyte%5D">chronosstream: write(s: ChronosStream; msg: seq[byte]): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="lpstream: write(s: LPStream; msg: string): Future[void]" href="libp2p/stream/lpstream.html#write%2CLPStream%2Cstring">lpstream: write(s: LPStream; msg: string): Future[void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="lpstream: write(s: LPStream; msg: seq[byte]): Future[void]" href="libp2p/stream/lpstream.html#write.e%2CLPStream%2Cseq%5Bbyte%5D">lpstream: write(s: LPStream; msg: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="lpstream: write(s: LPStream; msg: seq[byte]): untyped" href="libp2p/stream/lpstream.html#write.t%2CLPStream%2Cseq%5Bbyte%5D">lpstream: write(s: LPStream; msg: seq[byte]): untyped</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="wstransport: write(s: WsStream; msg: seq[byte]): Future[void]" href="libp2p/transports/wstransport.html#write.e%2CWsStream%2Cseq%5Bbyte%5D">wstransport: write(s: WsStream; msg: seq[byte]): Future[void]</a></li>
+          data-doc-search-tag="wstransport: write(s: WsStream; msg: seq[byte]): untyped" href="libp2p/transports/wstransport.html#write.t%2CWsStream%2Cseq%5Bbyte%5D">wstransport: write(s: WsStream; msg: seq[byte]): untyped</a></li>
           </ul></dd>
 <dt><a name="writeArray" href="#writeArray"><span>writeArray:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4843,13 +4865,23 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="writeLp" href="#writeLp"><span>writeLp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="lpstream: writeLp(s: LPStream; msg: openArray[byte]): Future[void]" href="libp2p/stream/lpstream.html#writeLp%2CLPStream%2CopenArray%5Bbyte%5D">lpstream: writeLp(s: LPStream; msg: openArray[byte]): Future[void]</a></li>
+          data-doc-search-tag="lpstream: writeLp(s: LPStream; msg: openArray[byte]): untyped" href="libp2p/stream/lpstream.html#writeLp.t%2CLPStream%2CopenArray%5Bbyte%5D">lpstream: writeLp(s: LPStream; msg: openArray[byte]): untyped</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="lpstream: writeLp(s: LPStream; msg: string): Future[void]" href="libp2p/stream/lpstream.html#writeLp%2CLPStream%2Cstring">lpstream: writeLp(s: LPStream; msg: string): Future[void]</a></li>
+          data-doc-search-tag="lpstream: writeLp(s: LPStream; msg: string): untyped" href="libp2p/stream/lpstream.html#writeLp.t%2CLPStream%2Cstring">lpstream: writeLp(s: LPStream; msg: string): untyped</a></li>
           </ul></dd>
 <dt><a name="writeLPVarint" href="#writeLPVarint"><span>writeLPVarint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="vbuffer: writeLPVarint(vb: var VBuffer; value: LPSomeUVarint)" href="libp2p/vbuffer.html#writeLPVarint%2CVBuffer%2CLPSomeUVarint">vbuffer: writeLPVarint(vb: var VBuffer; value: LPSomeUVarint)</a></li>
+          </ul></dd>
+<dt><a name="writeLpX" href="#writeLpX"><span>writeLpX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="lpstream: writeLpX(s: LPStream; msg: openArray[byte];
+         info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/stream/lpstream.html#writeLpX%2CLPStream%2CopenArray%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: writeLpX(s: LPStream; msg: openArray[byte];
+         info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="lpstream: writeLpX(s: LPStream; msg: string;
+         info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/stream/lpstream.html#writeLpX%2CLPStream%2Cstring%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: writeLpX(s: LPStream; msg: string;
+         info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
           </ul></dd>
 <dt><a name="writeMsg" href="#writeMsg"><span>writeMsg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4876,6 +4908,32 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="writeVarint" href="#writeVarint"><span>writeVarint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="vbuffer: writeVarint(vb: var VBuffer; value: LPSomeUVarint)" href="libp2p/vbuffer.html#writeVarint%2CVBuffer%2CLPSomeUVarint">vbuffer: writeVarint(vb: var VBuffer; value: LPSomeUVarint)</a></li>
+          </ul></dd>
+<dt><a name="writeX" href="#writeX"><span>writeX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="yamux: writeX(channel: YamuxChannel; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/muxers/yamux/yamux.html#writeX.e%2CYamuxChannel%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">yamux: writeX(channel: YamuxChannel; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="rconn: writeX(self: RelayConnection; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/protocols/relay/rconn.html#writeX.e%2CRelayConnection%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">rconn: writeX(self: RelayConnection; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="noise: writeX(sconn: NoiseConnection; message: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/protocols/secure/noise.html#writeX.e%2CNoiseConnection%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">noise: writeX(sconn: NoiseConnection; message: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="chronosstream: writeX(s: ChronosStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/stream/chronosstream.html#writeX.e%2CChronosStream%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">chronosstream: writeX(s: ChronosStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="lpstream: writeX(s: LPStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/stream/lpstream.html#writeX.e%2CLPStream%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: writeX(s: LPStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="wstransport: writeX(s: WsStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/transports/wstransport.html#writeX.e%2CWsStream%2Cseq%5Bbyte%5D%2Ctuple%5Bstring%2Cint%2Cint%5D">wstransport: writeX(s: WsStream; msg: seq[byte];
+       info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
           </ul></dd>
 <dt><a name="WrongPingAckError" href="#WrongPingAckError"><span>WrongPingAckError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4934,7 +4992,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 16:26:51 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 15:59:33 UTC</small>
       </div>
     </div>
   </div>
