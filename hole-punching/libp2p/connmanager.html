@@ -289,6 +289,11 @@ window.addEventListener("DOMContentLoaded", main2);
     title="connCount(c: ConnManager; peerId: PeerId): int">connCount(c: ConnManager; peerId: PeerId): int</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">connectedPeers
+      <li><a class="reference" href="#connectedPeers%2CConnManager"
+    title="connectedPeers(c: ConnManager): seq[PeerId]">connectedPeers(c: ConnManager): seq[PeerId]</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">contains
       <li><a class="reference" href="#contains%2CConnManager%2CConnection"
     title="contains(c: ConnManager; conn: Connection): bool">contains(c: ConnManager; conn: Connection): bool</a></li>
@@ -590,9 +595,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Add peer event handler - handlers must not raise exceptions! 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L113"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L116"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L113" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L116" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -603,9 +608,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Add peer event handler - handlers must not raise exceptions! 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L159"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L162"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L159" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L162" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -616,9 +621,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 cleanup resources for the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L520"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L523"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L520" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L523" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -634,15 +639,27 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="connectedPeers,ConnManager" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#connectedPeers%2CConnManager"><span class="Identifier">connectedPeers</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L113"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L113" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="contains,ConnManager,Connection" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CConnManager%2CConnection"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 checks if a connection is being tracked by the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L216"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L219"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L216" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L219" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -652,9 +669,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 checks if a muxer is being tracked by the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L229"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L232"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L232" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -664,9 +681,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L226"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L229"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L226" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -677,9 +694,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 drop connections and cleanup resources for peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L496"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L499"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L496" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L499" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -690,9 +707,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L408"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L411"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L408" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L411" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -703,9 +720,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L412"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L415"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L412" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L415" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -716,9 +733,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L488"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L491"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L488" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L491" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -729,9 +746,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed peer from any connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L479"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L482"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L479" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L482" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -743,9 +760,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the provided peer with the given direction 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L469"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L472"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L469" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L472" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -769,9 +786,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L421"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L424"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L421" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L424" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -783,9 +800,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L129"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L132"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L129" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -797,9 +814,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L175"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L178"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L175" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L178" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -810,9 +827,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Select a connection for the provided giving priority to outgoing connections 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L355"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L358"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L355" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L358" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -823,9 +840,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Select a connection for the provided peer and direction 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L343"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L346"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L343" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L346" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -836,9 +853,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 select the muxer for the provided connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L368"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L371"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L368" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L371" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -849,9 +866,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 store a connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L380"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L383"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L380" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L383" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -862,9 +879,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 store the connection and muxer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L442"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L445"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L442" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L445" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -875,9 +892,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L427"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L430"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L427" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L430" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -889,9 +906,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L143"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L146"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L143" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L146" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -903,9 +920,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L189"
+href="https://github.com/status-im/nim-libp2p/tree/hole-punching/libp2p/connmanager.nim#L192"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L189" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L192" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -919,7 +936,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 11:15:36 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 14:08:34 UTC</small>
       </div>
     </div>
   </div>
