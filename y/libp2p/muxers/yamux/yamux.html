@@ -278,9 +278,11 @@ window.addEventListener("DOMContentLoaded", main2);
     void]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">handle
-      <li><a class="reference" href="#handle.e%2CYamux"
-    title="handle(m: Yamux): Future[void]">handle(m: Yamux): Future[void]</a></li>
+  <ul class="simple nested-toc-section">handleX
+      <li><a class="reference" href="#handleX.e%2CYamux%2Ctuple%5Bstring%2Cint%2Cint%5D"
+    title="handleX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]">handleX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newStream
@@ -311,6 +313,11 @@ window.addEventListener("DOMContentLoaded", main2);
       <ul class="simple nested-toc-section">close
       <li><a class="reference" href="#close.t%2CYamux"
     title="close(s: Yamux): untyped">close(s: Yamux): untyped</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">handle
+      <li><a class="reference" href="#handle.t%2CMuxer_2"
+    title="handle(m: Muxer): untyped">handle(m: Muxer): untyped</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">readOnce
@@ -440,9 +447,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/yamux/yamux.nim#L522"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/yamux/yamux.nim#L525"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/yamux/yamux.nim#L522" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/yamux/yamux.nim#L525" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -504,10 +511,10 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="handle.e,Yamux" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#handle.e%2CYamux"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="yamux.html#Yamux"><span class="Identifier">Yamux</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                        <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="handleX.e,Yamux,tuple[string,int,int]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#handleX.e%2CYamux%2Ctuple%5Bstring%2Cint%2Cint%5D"><span class="Identifier">handleX</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="yamux.html#Yamux"><span class="Identifier">Yamux</span></a><span class="Other">;</span> <span class="Identifier">info</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">line</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">column</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+            <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -526,9 +533,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/yamux/yamux.nim#L512"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/yamux/yamux.nim#L515"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/yamux/yamux.nim#L512" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/yamux/yamux.nim#L515" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -577,6 +584,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="handle.t,Muxer_2" class="tohide">
+<dt><pre><span class="Keyword">template</span> <a href="#handle.t%2CMuxer_2"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="../muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/yamux/yamux.nim#L509"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/yamux/yamux.nim#L509" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="readOnce.t,YamuxChannel,pointer,int" class="tohide">
 <dt><pre><span class="Keyword">template</span> <a href="#readOnce.t%2CYamuxChannel%2Cpointer%2Cint"><span class="Identifier">readOnce</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="yamux.html#YamuxChannel"><span class="Identifier">YamuxChannel</span></a><span class="Other">;</span> <span class="Identifier">pbytes</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">nbytes</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
@@ -606,7 +625,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="19">
 <h1><a class="toc-backref" href="#19">Exports</a></h1>
 <dl class="item">
-<a href="../muxer.html#formatItIMPL.t,Muxer"><span class="Identifier">formatItIMPL</span></a>, <a href="../muxer.html#new,typedesc[MuxerProvider],MuxerConstructor,string"><span class="Identifier">new</span></a>, <a href="../muxer.html#MuxerProvider"><span class="Identifier">MuxerProvider</span></a>, <a href="../muxer.html#closeX.e,Muxer,tuple[string,int,int]"><span class="Identifier">closeX</span></a>, <a href="../muxer.html#close.t,Muxer"><span class="Identifier">close</span></a>, <a href="../muxer.html#shortLog,Muxer"><span class="Identifier">shortLog</span></a>, <a href="../muxer.html#MuxerError"><span class="Identifier">MuxerError</span></a>, <a href="../muxer.html#MuxerConstructor"><span class="Identifier">MuxerConstructor</span></a>, <a href="../muxer.html#Muxer"><span class="Identifier">Muxer</span></a>, <a href="../muxer.html#newStream.e,Muxer,string,bool"><span class="Identifier">newStream</span></a>, <a href="../muxer.html#DefaultChanTimeout"><span class="Identifier">DefaultChanTimeout</span></a>, <a href="../muxer.html#MuxerHandler"><span class="Identifier">MuxerHandler</span></a>, <a href="../muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a>, <a href="../muxer.html#TooManyChannels"><span class="Identifier">TooManyChannels</span></a>, <a href="../muxer.html#handle.e,Muxer"><span class="Identifier">handle</span></a>
+<a href="../muxer.html#formatItIMPL.t,Muxer"><span class="Identifier">formatItIMPL</span></a>, <a href="../muxer.html#handleX.e,Muxer,tuple[string,int,int]"><span class="Identifier">handleX</span></a>, <a href="../muxer.html#MuxerProvider"><span class="Identifier">MuxerProvider</span></a>, <a href="../muxer.html#closeX.e,Muxer,tuple[string,int,int]"><span class="Identifier">closeX</span></a>, <a href="../muxer.html#close.t,Muxer"><span class="Identifier">close</span></a>, <a href="../muxer.html#shortLog,Muxer"><span class="Identifier">shortLog</span></a>, <a href="../muxer.html#MuxerError"><span class="Identifier">MuxerError</span></a>, <a href="../muxer.html#MuxerConstructor"><span class="Identifier">MuxerConstructor</span></a>, <a href="../muxer.html#Muxer"><span class="Identifier">Muxer</span></a>, <a href="../muxer.html#newStream.e,Muxer,string,bool"><span class="Identifier">newStream</span></a>, <a href="../muxer.html#DefaultChanTimeout"><span class="Identifier">DefaultChanTimeout</span></a>, <a href="../muxer.html#new,typedesc[MuxerProvider],MuxerConstructor,string"><span class="Identifier">new</span></a>, <a href="../muxer.html#MuxerHandler"><span class="Identifier">MuxerHandler</span></a>, <a href="../muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a>, <a href="../muxer.html#TooManyChannels"><span class="Identifier">TooManyChannels</span></a>, <a href="../muxer.html#handle.t,Muxer"><span class="Identifier">handle</span></a>
 </dl></div>
 
   </div>
@@ -616,7 +635,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 15:59:31 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-03 13:44:03 UTC</small>
       </div>
     </div>
   </div>

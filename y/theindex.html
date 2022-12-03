@@ -1769,9 +1769,11 @@ window.addEventListener('DOMContentLoaded', main);
     void]" href="libp2p/multistream.html#handle%2CMultistreamSelect%2CConnection%2Cbool">multistream: handle(m: MultistreamSelect; conn: Connection; active: bool = false): Future[
     void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxer: handle(m: Muxer): Future[void]" href="libp2p/muxers/muxer.html#handle.e%2CMuxer">muxer: handle(m: Muxer): Future[void]</a></li>
+          data-doc-search-tag="mplex: handle(m: Muxer): untyped" href="libp2p/muxers/mplex/mplex.html#handle.t%2CMuxer_2">mplex: handle(m: Muxer): untyped</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="yamux: handle(m: Yamux): Future[void]" href="libp2p/muxers/yamux/yamux.html#handle.e%2CYamux">yamux: handle(m: Yamux): Future[void]</a></li>
+          data-doc-search-tag="muxer: handle(m: Muxer): untyped" href="libp2p/muxers/muxer.html#handle.t%2CMuxer">muxer: handle(m: Muxer): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="yamux: handle(m: Muxer): untyped" href="libp2p/muxers/yamux/yamux.html#handle.t%2CMuxer_2">yamux: handle(m: Muxer): untyped</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: handle(p: PubSubPeer; conn: Connection): Future[void]" href="libp2p/protocols/pubsub/pubsubpeer.html#handle%2CPubSubPeer%2CConnection">pubsubpeer: handle(p: PubSubPeer; conn: Connection): Future[void]</a></li>
           </ul></dd>
@@ -1834,6 +1836,16 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="floodsub: handleSubscribe(f: FloodSub; peer: PubSubPeer; topic: string; subscribe: bool)" href="libp2p/protocols/pubsub/floodsub.html#handleSubscribe%2CFloodSub%2CPubSubPeer%2Cstring%2Cbool">floodsub: handleSubscribe(f: FloodSub; peer: PubSubPeer; topic: string; subscribe: bool)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="gossipsub: handleSubscribe(g: GossipSub; peer: PubSubPeer; topic: string; subscribe: bool)" href="libp2p/protocols/pubsub/gossipsub.html#handleSubscribe%2CGossipSub%2CPubSubPeer%2Cstring%2Cbool">gossipsub: handleSubscribe(g: GossipSub; peer: PubSubPeer; topic: string; subscribe: bool)</a></li>
+          </ul></dd>
+<dt><a name="handleX" href="#handleX"><span>handleX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="muxer: handleX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]" href="libp2p/muxers/muxer.html#handleX.e%2CMuxer%2Ctuple%5Bstring%2Cint%2Cint%5D">muxer: handleX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="yamux: handleX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]" href="libp2p/muxers/yamux/yamux.html#handleX.e%2CYamux%2Ctuple%5Bstring%2Cint%2Cint%5D">yamux: handleX(m: Yamux; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
           </ul></dd>
 <dt><a name="handshake" href="#handshake"><span>handshake:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3529,7 +3541,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="readExactly" href="#readExactly"><span>readExactly:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="lpstream: readExactly(s: LPStream; pbytes: pointer; nbytes: int): Future[void]" href="libp2p/stream/lpstream.html#readExactly%2CLPStream%2Cpointer%2Cint">lpstream: readExactly(s: LPStream; pbytes: pointer; nbytes: int): Future[void]</a></li>
+          data-doc-search-tag="lpstream: readExactly(s: LPStream; pbytes: pointer; nbytes: int): untyped" href="libp2p/stream/lpstream.html#readExactly.t%2CLPStream%2Cpointer%2Cint">lpstream: readExactly(s: LPStream; pbytes: pointer; nbytes: int): untyped</a></li>
+          </ul></dd>
+<dt><a name="readExactlyX" href="#readExactlyX"><span>readExactlyX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="lpstream: readExactlyX(s: LPStream; pbytes: pointer; nbytes: int;
+             info: tuple[filename: string, line: int, column: int]): Future[void]" href="libp2p/stream/lpstream.html#readExactlyX%2CLPStream%2Cpointer%2Cint%2Ctuple%5Bstring%2Cint%2Cint%5D">lpstream: readExactlyX(s: LPStream; pbytes: pointer; nbytes: int;
+             info: tuple[filename: string, line: int, column: int]): Future[void]</a></li>
           </ul></dd>
 <dt><a name="readLine" href="#readLine"><span>readLine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4992,7 +5010,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 15:59:33 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-03 13:44:06 UTC</small>
       </div>
     </div>
   </div>

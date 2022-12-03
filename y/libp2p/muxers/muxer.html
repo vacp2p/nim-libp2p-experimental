@@ -262,9 +262,11 @@ window.addEventListener("DOMContentLoaded", main2);
     void]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">handle
-      <li><a class="reference" href="#handle.e%2CMuxer"
-    title="handle(m: Muxer): Future[void]">handle(m: Muxer): Future[void]</a></li>
+  <ul class="simple nested-toc-section">handleX
+      <li><a class="reference" href="#handleX.e%2CMuxer%2Ctuple%5Bstring%2Cint%2Cint%5D"
+    title="handleX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]">handleX(m: Muxer; info: tuple[filename: string, line: int, column: int]): Future[
+    void]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newStream
@@ -286,6 +288,11 @@ window.addEventListener("DOMContentLoaded", main2);
   <ul class="simple nested-toc-section">formatItIMPL
       <li><a class="reference" href="#formatItIMPL.t%2CMuxer"
     title="formatItIMPL(it: Muxer): auto">formatItIMPL(it: Muxer): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">handle
+      <li><a class="reference" href="#handle.t%2CMuxer"
+    title="handle(m: Muxer): untyped">handle(m: Muxer): untyped</a></li>
 
   </ul>
 
@@ -433,9 +440,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/muxer.nim#L57"
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/muxer.nim#L59"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -470,10 +477,10 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="handle.e,Muxer" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#handle.e%2CMuxer"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                        <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="handleX.e,Muxer,tuple[string,int,int]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#handleX.e%2CMuxer%2Ctuple%5Bstring%2Cint%2Cint%5D"><span class="Identifier">handleX</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">;</span> <span class="Identifier">info</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">line</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">column</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+            <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -527,6 +534,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="handle.t,Muxer" class="tohide">
+<dt><pre><span class="Keyword">template</span> <a href="#handle.t%2CMuxer"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/y/libp2p/muxers/muxer.nim#L56"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L56" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 
 </dl></div>
 
@@ -537,7 +556,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-02 15:59:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-03 13:44:03 UTC</small>
       </div>
     </div>
   </div>
