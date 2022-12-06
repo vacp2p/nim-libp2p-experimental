@@ -223,9 +223,17 @@ window.addEventListener("DOMContentLoaded", main2);
     title="AutonatPeerInfo = object
   id: Option[PeerId]
   addrs: seq[MultiAddress]">AutonatPeerInfo</a></li>
+  <li><a class="reference" href="#DialMeResponse"
+    title="DialMeResponse = object
+  successfulAddress*: Option[MultiAddress]
+  text*: Option[string]
+  networkReachability*: NetworkReachability">DialMeResponse</a></li>
   <li><a class="reference" href="#MsgType"
     title="MsgType = enum
   Dial = 0, DialResponse = 1">MsgType</a></li>
+  <li><a class="reference" href="#NetworkReachability"
+    title="NetworkReachability {.pure.} = enum
+  NotReachable, Reachable, Unknown">NetworkReachability</a></li>
   <li><a class="reference" href="#ResponseStatus"
     title="ResponseStatus = enum
   Ok = 0, DialError = 100, DialRefused = 101, BadRequest = 200,
@@ -267,8 +275,8 @@ window.addEventListener("DOMContentLoaded", main2);
       <ul class="simple nested-toc-section">dialMe
       <li><a class="reference" href="#dialMe.e%2CAutonat%2CPeerId%2Cseq%5BMultiAddress%5D"
     title="dialMe(a: Autonat; pid: PeerId;
-       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[MultiAddress]">dialMe(a: Autonat; pid: PeerId;
-       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[MultiAddress]</a></li>
+       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[DialMeResponse]">dialMe(a: Autonat; pid: PeerId;
+       addrs: seq[MultiAddress] = newSeq[MultiAddress]()): Future[DialMeResponse]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">init
@@ -309,9 +317,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L202"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L210"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L202" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L210" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -372,6 +380,22 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="DialMeResponse" class="tohide">
+<dt><pre><a href="autonat.html#DialMeResponse"><span class="Identifier">DialMeResponse</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">successfulAddress</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span>
+  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span>
+  <span class="Identifier">networkReachability</span><span class="Operator">*</span><span class="Other">:</span> <a href="autonat.html#NetworkReachability"><span class="Identifier">NetworkReachability</span></a>
+</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L67"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L67" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="MsgType" class="tohide">
 <dt><pre><a href="autonat.html#MsgType"><span class="Identifier">MsgType</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">Dial</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">DialResponse</span> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
@@ -382,6 +406,19 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L36"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="NetworkReachability" class="tohide">
+<dt><pre><a href="autonat.html#NetworkReachability"><span class="Identifier">NetworkReachability</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">NotReachable</span><span class="Other">,</span> <span class="Identifier">Reachable</span><span class="Other">,</span> <span class="Identifier">Unknown</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L64"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L64" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -427,9 +464,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L92"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L100"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L92" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L100" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -439,9 +476,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L64"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L72"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L64" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L72" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -451,9 +488,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L109"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L117"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L109" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L117" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -464,9 +501,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L290"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L334"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L290" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L334" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -478,15 +515,15 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="dialMe.e,Autonat,PeerId,seq[MultiAddress]" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#dialMe.e%2CAutonat%2CPeerId%2Cseq%5BMultiAddress%5D"><span class="Identifier">dialMe</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="autonat.html#Autonat"><span class="Identifier">Autonat</span></a><span class="Other">;</span> <span class="Identifier">pid</span><span class="Other">:</span> <a href="../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">;</span>
               <span class="Identifier">addrs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">[</span><a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <a href="autonat.html#DialMeResponse"><span class="Identifier">DialMeResponse</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L207"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L252"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L207" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L252" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -496,9 +533,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L295"
+href="https://github.com/status-im/nim-libp2p/tree/autonat-service/libp2p/protocols/connectivity/autonat.nim#L339"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L295" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/autonat.nim#L339" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -512,7 +549,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-05 11:33:03 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-06 11:29:01 UTC</small>
       </div>
     </div>
   </div>
