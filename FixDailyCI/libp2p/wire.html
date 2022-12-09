@@ -452,7 +452,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="bindAsyncSocket,AsyncFD,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#bindAsyncSocket%2CAsyncFD%2CMultiAddress"><span class="Identifier">bindAsyncSocket</span></a><span class="Other">(</span><span class="Identifier">sock</span><span class="Other">:</span> <span class="Identifier">AsyncFD</span><span class="Other">;</span> <span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Bind socket <tt class="docutils literal"><span class="pre">sock</span></tt> to MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.</p>
@@ -468,7 +468,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="connect,MultiAddress,StreamTransport" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#connect%2CMultiAddress%2CStreamTransport"><span class="Identifier">connect</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">;</span> <span class="Identifier">bufferSize</span> <span class="Other">=</span> <span class="Identifier">DefaultStreamBufferSize</span><span class="Other">;</span>
              <span class="Identifier">child</span><span class="Other">:</span> <span class="Identifier">StreamTransport</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">StreamTransport</span><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">,</span> <a href="multiaddress.html#MaInvalidAddress"><span class="Identifier">MaInvalidAddress</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Open new connection to remote peer with address <tt class="docutils literal"><span class="pre">ma</span></tt> and create new transport object <tt class="docutils literal"><span class="pre">StreamTransport</span></tt> for established connection. <tt class="docutils literal"><span class="pre">bufferSize</span></tt> is size of internal buffer for transport. 
@@ -548,7 +548,7 @@ class="link-seesrc" target="_blank">Source</a>
 </div>
 <div id="initTAddress,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#initTAddress%2CMultiAddress"><span class="Identifier">initTAddress</span></a><span class="Other">(</span><span class="Identifier">ma</span><span class="Other">:</span> <a href="multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <a href="multiaddress.html#MaResult"><span class="Identifier">MaResult</span></a><span class="Other">[</span><span class="Identifier">TransportAddress</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <p>Initialize <tt class="docutils literal"><span class="pre">TransportAddress</span></tt> with MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.</p>
@@ -571,7 +571,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-09 13:15:59 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-09 13:56:44 UTC</small>
       </div>
     </div>
   </div>
