@@ -701,25 +701,31 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="connect" href="#connect"><span>connect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="dial: connect(self: Dial; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]" href="libp2p/dial.html#connect.e%2CDial%2CMultiAddress">dial: connect(self: Dial; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
     void]" href="libp2p/dial.html#connect.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D">dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
     void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="dial: connect(self: Dial; addrs: seq[MultiAddress]): Future[PeerId]" href="libp2p/dial.html#connect.e%2CDial%2Cseq%5BMultiAddress%5D">dial: connect(self: Dial; addrs: seq[MultiAddress]): Future[PeerId]</a></li>
+          data-doc-search-tag="dialer: connect(self: Dialer; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]" href="libp2p/dialer.html#connect.e%2CDialer%2CMultiAddress">dialer: connect(self: Dialer; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="dialer: connect(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress];
         forceDial = false): Future[void]" href="libp2p/dialer.html#connect.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: connect(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress];
         forceDial = false): Future[void]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="dialer: connect(self: Dialer; addrs: seq[MultiAddress]): Future[PeerId]" href="libp2p/dialer.html#connect.e%2CDialer%2Cseq%5BMultiAddress%5D">dialer: connect(self: Dialer; addrs: seq[MultiAddress]): Future[PeerId]</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: connect(p: PubSubPeer)" href="libp2p/protocols/pubsub/pubsubpeer.html#connect%2CPubSubPeer">pubsubpeer: connect(p: PubSubPeer)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="switch: connect(s: Switch; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]" href="libp2p/switch.html#connect.e%2CSwitch%2CMultiAddress">switch: connect(s: Switch; address: MultiAddress; allowUnknownPeerId = false): Future[
+    PeerId]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
     void]" href="libp2p/switch.html#connect.e%2CSwitch%2CPeerId%2Cseq%5BMultiAddress%5D">switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
     void]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="switch: connect(s: Switch; addrs: seq[MultiAddress]): Future[PeerId]" href="libp2p/switch.html#connect.e%2CSwitch%2Cseq%5BMultiAddress%5D">switch: connect(s: Switch; addrs: seq[MultiAddress]): Future[PeerId]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wire: connect(ma: MultiAddress; bufferSize = DefaultStreamBufferSize;
         child: StreamTransport = nil): Future[StreamTransport]" href="libp2p/wire.html#connect%2CMultiAddress%2CStreamTransport">wire: connect(ma: MultiAddress; bufferSize = DefaultStreamBufferSize;
@@ -1038,6 +1044,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="DefaultLimitDuration" href="#DefaultLimitDuration"><span>DefaultLimitDuration:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="relay: DefaultLimitDuration" href="libp2p/protocols/connectivity/relay/relay.html#DefaultLimitDuration">relay: DefaultLimitDuration</a></li>
+          </ul></dd>
+<dt><a name="DefaultMaxIncomingStreams" href="#DefaultMaxIncomingStreams"><span>DefaultMaxIncomingStreams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: DefaultMaxIncomingStreams" href="libp2p/protocols/protocol.html#DefaultMaxIncomingStreams">protocol: DefaultMaxIncomingStreams</a></li>
           </ul></dd>
 <dt><a name="defaultMsgIdProvider" href="#defaultMsgIdProvider"><span>defaultMsgIdProvider:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2799,6 +2809,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multihash: MaxHashSize" href="libp2p/multihash.html#MaxHashSize">multihash: MaxHashSize</a></li>
           </ul></dd>
+<dt><a name="maxIncomingStreams" href="#maxIncomingStreams"><span>maxIncomingStreams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: maxIncomingStreams(p: LPProtocol): int" href="libp2p/protocols/protocol.html#maxIncomingStreams%2CLPProtocol">protocol: maxIncomingStreams(p: LPProtocol): int</a></li>
+          </ul></dd>
+<dt><a name="maxIncomingStreams%3D" href="#maxIncomingStreams%3D"><span>maxIncomingStreams=:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocol: maxIncomingStreams=(p: LPProtocol; val: int)" href="libp2p/protocols/protocol.html#maxIncomingStreams%3D%2CLPProtocol%2Cint">protocol: maxIncomingStreams=(p: LPProtocol; val: int)</a></li>
+          </ul></dd>
 <dt><a name="maxInlineKeyLength" href="#maxInlineKeyLength"><span>maxInlineKeyLength:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="peerid: maxInlineKeyLength" href="libp2p/peerid.html#maxInlineKeyLength">peerid: maxInlineKeyLength</a></li>
@@ -3040,6 +3058,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="ping: new(T: typedesc[Ping]; handler: PingHandler = nil;
     rng: ref HmacDrbgContext = newRng()): T:type" href="libp2p/protocols/ping.html#new%2Ctypedesc%5BPing%5D%2CPingHandler%2Cref.HmacDrbgContext">ping: new(T: typedesc[Ping]; handler: PingHandler = nil;
     rng: ref HmacDrbgContext = newRng()): T:type</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
+    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type" href="libp2p/protocols/protocol.html#new%2CtypeLPProtocol%2Cseq%5Bstring%5D%2CLPProtoHandler">protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
+    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
     codec: string; maxMessageSize: int): T:type" href="libp2p/protocols/pubsub/pubsubpeer.html#new%2Ctypedesc%5BPubSubPeer%5D%2CPeerId%2CGetConn%2COnEvent%2Cstring%2Cint">pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
@@ -5114,7 +5136,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-12 18:09:47 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-13 14:39:47 UTC</small>
       </div>
     </div>
   </div>
