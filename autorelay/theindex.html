@@ -295,10 +295,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="floodsub: addSeen(f: FloodSub; msgId: MessageId): bool" href="libp2p/protocols/pubsub/floodsub.html#addSeen%2CFloodSub%2CMessageId">floodsub: addSeen(f: FloodSub; msgId: MessageId): bool</a></li>
           </ul></dd>
-<dt><a name="addService" href="#addService"><span>addService:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="switch: addService(switch: Switch; service: Service)" href="libp2p/switch.html#addService.e%2CSwitch%2CService">switch: addService(switch: Switch; service: Service)</a></li>
-          </ul></dd>
 <dt><a name="addTransport" href="#addTransport"><span>addTransport:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="dial: addTransport(self: Dial; transport: Transport)" href="libp2p/dial.html#addTransport.e%2CDial%2CTransport">dial: addTransport(self: Dial; transport: Transport)</a></li>
@@ -3180,10 +3176,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new()): Switch" href="libp2p/switch.html#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CIdentify%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CNameResolver">switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
+          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch" href="libp2p/switch.html#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CIdentify%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CNameResolver">switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new()): Switch</a></li>
+          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch</a></li>
           </ul></dd>
 <dt><a name="newTransportClosedError" href="#newTransportClosedError"><span>newTransportClosedError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4899,6 +4895,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="builders: withRng(b: SwitchBuilder; rng: ref HmacDrbgContext): SwitchBuilder" href="libp2p/builders.html#withRng%2CSwitchBuilder%2Cref.HmacDrbgContext">builders: withRng(b: SwitchBuilder; rng: ref HmacDrbgContext): SwitchBuilder</a></li>
           </ul></dd>
+<dt><a name="withServices" href="#withServices"><span>withServices:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="builders: withServices(b: SwitchBuilder; services: seq[Service]): SwitchBuilder" href="libp2p/builders.html#withServices%2CSwitchBuilder%2Cseq%5BService%5D">builders: withServices(b: SwitchBuilder; services: seq[Service]): SwitchBuilder</a></li>
+          </ul></dd>
 <dt><a name="withSignedPeerRecord" href="#withSignedPeerRecord"><span>withSignedPeerRecord:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="builders: withSignedPeerRecord(b: SwitchBuilder; sendIt = true): SwitchBuilder" href="libp2p/builders.html#withSignedPeerRecord%2CSwitchBuilder">builders: withSignedPeerRecord(b: SwitchBuilder; sendIt = true): SwitchBuilder</a></li>
@@ -5098,7 +5098,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-15 13:09:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 16:53:02 UTC</small>
       </div>
     </div>
   </div>

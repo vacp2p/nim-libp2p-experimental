@@ -278,10 +278,10 @@ window.addEventListener("DOMContentLoaded", main2);
     title="newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new()): Switch">newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
+          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch">newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new()): Switch</a></li>
+          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">removeConnEventHandler
@@ -305,12 +305,7 @@ window.addEventListener("DOMContentLoaded", main2);
 <li>
   <a class="reference reference-toplevel" href="#14" id="64">Methods</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">addService
-      <li><a class="reference" href="#addService.e%2CSwitch%2CService"
-    title="addService(switch: Switch; service: Service)">addService(switch: Switch; service: Service)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">addTransport
+      <ul class="simple nested-toc-section">addTransport
       <li><a class="reference" href="#addTransport.e%2CSwitch%2CTransport"
     title="addTransport(s: Switch; t: Transport)">addTransport(s: Switch; t: Transport)</a></li>
 
@@ -476,9 +471,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L135"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L132"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L135" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -489,9 +484,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Connected to a peer and open a stream with the specified <tt class="docutils literal"><span class="pre"><span class="Identifier">proto</span></span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L191"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L188"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L191" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L188" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -502,9 +497,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Open a stream to a connected peer with the specified <tt class="docutils literal"><span class="pre"><span class="Identifier">proto</span></span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L173"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L170"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -515,9 +510,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Disconnect from a peer, waiting for the connection(s) to be dropped
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L145"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L142"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L145" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L142" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -527,9 +522,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 returns true if the peer has one or more associated connections 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L138"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L135"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L138" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L135" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -540,9 +535,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 mount a protocol to the switch
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L201"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L198"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L201" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L198" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -550,15 +545,16 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CIdentify%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CNameResolver"><span class="Identifier">newSwitch</span></a><span class="Other">(</span><span class="Identifier">peerInfo</span><span class="Other">:</span> <a href="peerinfo.html#PeerInfo"><span class="Identifier">PeerInfo</span></a><span class="Other">;</span> <span class="Identifier">transports</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">]</span><span class="Other">;</span>
                <span class="Identifier">identity</span><span class="Other">:</span> <a href="protocols/identify.html#Identify"><span class="Identifier">Identify</span></a><span class="Other">;</span> <span class="Identifier">secureManagers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><a href="protocols/secure/secure.html#Secure"><span class="Identifier">Secure</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">;</span>
                <span class="Identifier">connManager</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span> <span class="Identifier">ms</span><span class="Other">:</span> <a href="multistream.html#MultistreamSelect"><span class="Identifier">MultistreamSelect</span></a><span class="Other">;</span>
-               <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span> <span class="Identifier">peerStore</span> <span class="Other">=</span> <a href="peerstore.html#PeerStore"><span class="Identifier">PeerStore</span></a><span class="Other">.</span><span class="Identifier">new</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a> {.
+               <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span> <span class="Identifier">peerStore</span> <span class="Other">=</span> <a href="peerstore.html#PeerStore"><span class="Identifier">PeerStore</span></a><span class="Other">.</span><span class="Identifier">new</span><span class="Other">(</span><span class="Other">)</span><span class="Other">;</span>
+               <span class="Identifier">services</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">[</span><a href="transports/transport.html#Service"><span class="Identifier">Service</span></a><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">public</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L360"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L365"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L360" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L365" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -598,9 +594,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Start listening on every transport
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L323"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L324"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L323" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L324" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -609,18 +605,6 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="14">
 <h1><a class="toc-backref" href="#14">Methods</a></h1>
 <dl class="item">
-<div id="addService.e,Switch,Service" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#addService.e%2CSwitch%2CService"><span class="Identifier">addService</span></a><span class="Other">(</span><span class="Identifier">switch</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a><span class="Other">;</span> <span class="Identifier">service</span><span class="Other">:</span> <a href="transports/transport.html#Service"><span class="Identifier">Service</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L132"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="addTransport.e,Switch,Transport" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#addTransport.e%2CSwitch%2CTransport"><span class="Identifier">addTransport</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -640,9 +624,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Connects to a peer and retrieve its PeerId
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L158"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L155"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L158" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L155" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -654,9 +638,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Connects to a peer without opening a stream to it
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L149"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L146"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L146" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -668,9 +652,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Connected to a peer and open a stream with the specified <tt class="docutils literal"><span class="pre"><span class="Identifier">protos</span></span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L180"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L177"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L177" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -681,9 +665,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Open a stream to a connected peer with the specified <tt class="docutils literal"><span class="pre"><span class="Identifier">protos</span></span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L165"
+href="https://github.com/status-im/nim-libp2p/tree/autorelay/libp2p/switch.nim#L162"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L165" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/switch.nim#L162" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -744,7 +728,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-15 13:09:23 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 16:53:00 UTC</small>
       </div>
     </div>
   </div>
