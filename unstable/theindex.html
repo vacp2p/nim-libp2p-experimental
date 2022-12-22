@@ -489,6 +489,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="autonat: AutonatError" href="libp2p/protocols/connectivity/autonat.html#AutonatError">autonat: AutonatError</a></li>
           </ul></dd>
+<dt><a name="AutonatMsg" href="#AutonatMsg"><span>AutonatMsg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="autonat: AutonatMsg" href="libp2p/protocols/connectivity/autonat.html#AutonatMsg">autonat: AutonatMsg</a></li>
+          </ul></dd>
 <dt><a name="AutonatPeerInfo" href="#AutonatPeerInfo"><span>AutonatPeerInfo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="autonat: AutonatPeerInfo" href="libp2p/protocols/connectivity/autonat.html#AutonatPeerInfo">autonat: AutonatPeerInfo</a></li>
@@ -932,6 +936,8 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="multihash: decode(mhtype: typedesc[MultiHash]; data: openArray[byte]; mhash: var MultiHash): MhResult[
     int]" href="libp2p/multihash.html#decode%2Ctypedesc%5BMultiHash%5D%2CopenArray%5Bbyte%5D%2CMultiHash">multihash: decode(mhtype: typedesc[MultiHash]; data: openArray[byte]; mhash: var MultiHash): MhResult[
     int]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="autonat: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Option[AutonatMsg]" href="libp2p/protocols/connectivity/autonat.html#decode%2Ctypedesc%5BAutonatMsg%5D%2Cseq%5Bbyte%5D">autonat: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Option[AutonatMsg]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]</a></li>
           <li><a class="reference external"
@@ -3017,7 +3023,9 @@ window.addEventListener('DOMContentLoaded', main);
     protocols: openArray[string] = []; protoVersion: string = &quot;&quot;;
     agentVersion: string = &quot;&quot;; addressMappers = newSeq[AddressMapper]()): PeerInfo</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="autonat: new(T: typedesc[Autonat]; switch: Switch; semSize: int = 1): T:type" href="libp2p/protocols/connectivity/autonat.html#new%2Ctypedesc%5BAutonat%5D%2CSwitch%2Cint">autonat: new(T: typedesc[Autonat]; switch: Switch; semSize: int = 1): T:type</a></li>
+          data-doc-search-tag="autonat: new(T: typedesc[Autonat]; switch: Switch; semSize: int = 1;
+    dialTimeout = 15.seconds): T:type" href="libp2p/protocols/connectivity/autonat.html#new%2Ctypedesc%5BAutonat%5D%2CSwitch%2Cint">autonat: new(T: typedesc[Autonat]; switch: Switch; semSize: int = 1;
+    dialTimeout = 15.seconds): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="client: new(T: typedesc[RelayClient]; canHop: bool = false;
     reservationTTL: times.Duration = DefaultReservationTTL;
@@ -5136,7 +5144,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-22 16:36:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-22 19:31:42 UTC</small>
       </div>
     </div>
   </div>
