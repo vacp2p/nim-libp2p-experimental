@@ -334,6 +334,11 @@ window.addEventListener("DOMContentLoaded", main2);
     maxConnections = MaxConnections; maxIn = -1; maxOut = -1): ConnManager</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">onConnUpgraded
+      <li><a class="reference" href="#onConnUpgraded%2CConnManager%2CConnection"
+    title="onConnUpgraded(c: ConnManager; conn: Connection): Future[void]">onConnUpgraded(c: ConnManager; conn: Connection): Future[void]</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">release
       <li><a class="reference" href="#release%2CConnectionSlot"
     title="release(cs: ConnectionSlot)">release(cs: ConnectionSlot)</a></li>
@@ -621,9 +626,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 cleanup resources for the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L527"
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L525"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L527" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L525" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -695,9 +700,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 drop connections and cleanup resources for peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L503"
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L501"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L503" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L501" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -734,9 +739,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L495"
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L493"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L495" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L493" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -747,9 +752,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed peer from any connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L486"
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L484"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L486" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L484" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -761,9 +766,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the provided peer with the given direction 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L476"
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L474"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L476" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L474" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -778,6 +783,19 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L91"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="onConnUpgraded,ConnManager,Connection" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#onConnUpgraded%2CConnManager%2CConnection"><span class="Identifier">onConnUpgraded</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.
+    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/move-storemuxer/libp2p/connmanager.nim#L297"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L297" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -875,7 +893,7 @@ class="link-seesrc" target="_blank">Source</a>
 </div>
 <div id="storeMuxer,ConnManager,Muxer,Future[void]" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#storeMuxer%2CConnManager%2CMuxer%2CFuture%5Bvoid%5D"><span class="Identifier">storeMuxer</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span> <span class="Identifier">muxer</span><span class="Other">:</span> <a href="muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">;</span> <span class="Identifier">handle</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">CatchableError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">CatchableError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 store the connection and muxer 
@@ -937,7 +955,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-23 12:53:19 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-02 13:01:23 UTC</small>
       </div>
     </div>
   </div>
