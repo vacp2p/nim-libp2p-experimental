@@ -231,6 +231,7 @@ window.addEventListener("DOMContentLoaded", main2);
   muxed: Table[PeerId, seq[Muxer]]
   connEvents: array[ConnEventKind, OrderedSet[ConnEventHandler]]
   peerEvents: array[PeerEventKind, OrderedSet[PeerEventHandler]]
+  expectedConnections: Table[PeerId, Future[Muxer]]
   peerStore*: PeerStore">ConnManager</a></li>
   <li><a class="reference" href="#PeerEvent"
     title="PeerEvent = object
@@ -303,6 +304,11 @@ window.addEventListener("DOMContentLoaded", main2);
   <ul class="simple nested-toc-section">dropPeer
       <li><a class="reference" href="#dropPeer%2CConnManager%2CPeerId"
     title="dropPeer(c: ConnManager; peerId: PeerId): Future[void]">dropPeer(c: ConnManager; peerId: PeerId): Future[void]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">expectConnection
+      <li><a class="reference" href="#expectConnection%2CConnManager%2CPeerId"
+    title="expectConnection(c: ConnManager; p: PeerId): Future[Muxer]">expectConnection(c: ConnManager; p: PeerId): Future[Muxer]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getIncomingSlot
@@ -415,9 +421,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L78"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L79"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L78" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L79" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -475,6 +481,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">muxed</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">connEvents</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">ConnEventKind</span><span class="Other">,</span> <span class="Identifier">OrderedSet</span><span class="Other">[</span><a href="connmanager.html#ConnEventHandler"><span class="Identifier">ConnEventHandler</span></a><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">peerEvents</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">PeerEventKind</span><span class="Other">,</span> <span class="Identifier">OrderedSet</span><span class="Other">[</span><a href="connmanager.html#PeerEventHandler"><span class="Identifier">PeerEventHandler</span></a><span class="Other">]</span><span class="Other">]</span>
+  <span class="Identifier">expectedConnections</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">peerStore</span><span class="Operator">*</span><span class="Other">:</span> <a href="peerstore.html#PeerStore"><span class="Identifier">PeerStore</span></a>
 </pre></dt>
 <dd>
@@ -586,9 +593,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Add peer event handler - handlers must not raise exceptions! 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L114"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L115"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L114" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L115" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -599,9 +606,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Add peer event handler - handlers must not raise exceptions! 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L160"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L161"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L160" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L161" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -612,9 +619,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 cleanup resources for the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L414"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L433"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L414" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L433" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -624,9 +631,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L104"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L105"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L104" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L105" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -637,9 +644,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L107"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L108"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L107" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L108" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -649,9 +656,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 checks if a muxer is being tracked by the connection manager 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L212"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L226"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L212" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L226" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -661,9 +668,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L209"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L223"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L209" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L223" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -674,9 +681,22 @@ class="link-seesrc" target="_blank">Source</a>
 
 drop connections and cleanup resources for peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L403"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L422"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L403" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L422" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="expectConnection,ConnManager,PeerId" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#expectConnection%2CConnManager%2CPeerId"><span class="Identifier">expectConnection</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span> <span class="Identifier">p</span><span class="Other">:</span> <a href="peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">]</span> {.
+    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+Wait for a peer to connect to us. This will bypass the <tt class="docutils literal"><span class="pre"><span class="Identifier">MaxConnectionsPerPeer</span></span></tt>
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L210"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L210" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -687,9 +707,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L339"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L358"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L339" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L358" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -700,9 +720,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L343"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L362"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L343" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L362" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -713,9 +733,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed muxer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L380"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L399"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L380" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L399" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -726,9 +746,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed peer from any connection 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L388"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L407"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L388" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L407" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -740,9 +760,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get a muxed stream for the passed peer from a connection with <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span></span></tt> 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L396"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L415"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L396" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L415" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -754,9 +774,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L85"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L86"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -766,9 +786,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L352"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L371"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L352" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L371" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -780,9 +800,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L130"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L131"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L130" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L131" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -794,9 +814,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L176"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L177"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L177" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -806,9 +826,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Select a connection for the provided giving priority to outgoing connections 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L284"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L298"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L284" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L298" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -819,9 +839,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Select a connection for the provided peer and direction 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L272"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L286"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L272" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L286" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -833,9 +853,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 store the connection and muxer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L296"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L310"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L296" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L310" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -846,9 +866,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L358"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L377"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L358" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L377" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -858,9 +878,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L373"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L392"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L373" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L392" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -872,9 +892,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L144"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L145"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L144" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L145" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -886,9 +906,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L190"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/connmanager.nim#L191"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L190" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/connmanager.nim#L191" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -902,7 +922,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-10 10:45:09 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-24 14:47:26 UTC</small>
       </div>
     </div>
   </div>
