@@ -713,17 +713,17 @@ window.addEventListener('DOMContentLoaded', main);
     PeerId]" href="libp2p/dial.html#connect.e%2CDial%2CMultiAddress">dial: connect(self: Dial; address: MultiAddress; allowUnknownPeerId = false): Future[
     PeerId]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
-    void]" href="libp2p/dial.html#connect.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D">dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
-    void]</a></li>
+          data-doc-search-tag="dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false;
+        reuseConnection = true): Future[void]" href="libp2p/dial.html#connect.e%2CDial%2CPeerId%2Cseq%5BMultiAddress%5D">dial: connect(self: Dial; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false;
+        reuseConnection = true): Future[void]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="dialer: connect(self: Dialer; address: MultiAddress; allowUnknownPeerId = false): Future[
     PeerId]" href="libp2p/dialer.html#connect.e%2CDialer%2CMultiAddress">dialer: connect(self: Dialer; address: MultiAddress; allowUnknownPeerId = false): Future[
     PeerId]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="dialer: connect(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress];
-        forceDial = false): Future[void]" href="libp2p/dialer.html#connect.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: connect(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress];
-        forceDial = false): Future[void]</a></li>
+        forceDial = false; reuseConnection = true): Future[void]" href="libp2p/dialer.html#connect.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: connect(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress];
+        forceDial = false; reuseConnection = true): Future[void]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: connect(p: PubSubPeer)" href="libp2p/protocols/pubsub/pubsubpeer.html#connect%2CPubSubPeer">pubsubpeer: connect(p: PubSubPeer)</a></li>
           <li><a class="reference external"
@@ -731,9 +731,9 @@ window.addEventListener('DOMContentLoaded', main);
     PeerId]" href="libp2p/switch.html#connect.e%2CSwitch%2CMultiAddress">switch: connect(s: Switch; address: MultiAddress; allowUnknownPeerId = false): Future[
     PeerId]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
-    void]" href="libp2p/switch.html#connect.e%2CSwitch%2CPeerId%2Cseq%5BMultiAddress%5D">switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false): Future[
-    void]</a></li>
+          data-doc-search-tag="switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false;
+        reuseConnection = true): Future[void]" href="libp2p/switch.html#connect.e%2CSwitch%2CPeerId%2Cseq%5BMultiAddress%5D">switch: connect(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; forceDial = false;
+        reuseConnection = true): Future[void]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wire: connect(ma: MultiAddress; bufferSize = DefaultStreamBufferSize;
         child: StreamTransport = nil): Future[StreamTransport]" href="libp2p/wire.html#connect%2CMultiAddress%2CStreamTransport">wire: connect(ma: MultiAddress; bufferSize = DefaultStreamBufferSize;
@@ -1424,6 +1424,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="expandItIMPL" href="#expandItIMPL"><span>expandItIMPL:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="identify: expandItIMPL(record: auto; it_name: static string; it: IdentifyInfo)" href="libp2p/protocols/identify.html#expandItIMPL.t%2Cauto%2Cstaticstring%2CIdentifyInfo">identify: expandItIMPL(record: auto; it_name: static string; it: IdentifyInfo)</a></li>
+          </ul></dd>
+<dt><a name="expectConnection" href="#expectConnection"><span>expectConnection:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: expectConnection(c: ConnManager; p: PeerId): Future[Connection]" href="libp2p/connmanager.html#expectConnection%2CConnManager%2CPeerId">connmanager: expectConnection(c: ConnManager; p: PeerId): Future[Connection]</a></li>
           </ul></dd>
 <dt><a name="expire" href="#expire"><span>expire:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4321,6 +4325,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="secp: SkSignature" href="libp2p/crypto/secp.html#SkSignature">secp: SkSignature</a></li>
           </ul></dd>
+<dt><a name="slotsAvailable" href="#slotsAvailable"><span>slotsAvailable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: slotsAvailable(c: ConnManager; dir: Direction): int" href="libp2p/connmanager.html#slotsAvailable%2CConnManager%2CDirection">connmanager: slotsAvailable(c: ConnManager; dir: Direction): int</a></li>
+          </ul></dd>
 <dt><a name="SomeUVarint" href="#SomeUVarint"><span>SomeUVarint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="varint: SomeUVarint" href="libp2p/varint.html#SomeUVarint">varint: SomeUVarint</a></li>
@@ -5140,7 +5148,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-18 15:34:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-25 16:03:28 UTC</small>
       </div>
     </div>
   </div>
