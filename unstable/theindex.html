@@ -1101,9 +1101,9 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="rtransport: dial(self: RelayTransport; ma: MultiAddress): Future[Connection]" href="libp2p/protocols/connectivity/relay/rtransport.html#dial%2CRelayTransport%2CMultiAddress">rtransport: dial(self: RelayTransport; ma: MultiAddress): Future[Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="rtransport: dial(self: RelayTransport; hostname: string; address: MultiAddress): Future[
-    Connection]" href="libp2p/protocols/connectivity/relay/rtransport.html#dial.e%2CRelayTransport%2Cstring%2CMultiAddress">rtransport: dial(self: RelayTransport; hostname: string; address: MultiAddress): Future[
-    Connection]</a></li>
+          data-doc-search-tag="rtransport: dial(self: RelayTransport; hostname: string; ma: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]" href="libp2p/protocols/connectivity/relay/rtransport.html#dial.e%2CRelayTransport%2Cstring%2CMultiAddress%2COpt%5BPeerId%5D">rtransport: dial(self: RelayTransport; hostname: string; ma: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="switch: dial(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; proto: string): Future[
     Connection]" href="libp2p/switch.html#dial%2CSwitch%2CPeerId%2Cseq%5BMultiAddress%5D%2Cstring">switch: dial(s: Switch; peerId: PeerId; addrs: seq[MultiAddress]; proto: string): Future[
@@ -1117,15 +1117,17 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="switch: dial(s: Switch; peerId: PeerId; protos: seq[string]): Future[Connection]" href="libp2p/switch.html#dial.e%2CSwitch%2CPeerId%2Cseq%5Bstring%5D">switch: dial(s: Switch; peerId: PeerId; protos: seq[string]): Future[Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="tcptransport: dial(self: TcpTransport; hostname: string; address: MultiAddress): Future[
-    Connection]" href="libp2p/transports/tcptransport.html#dial.e%2CTcpTransport%2Cstring%2CMultiAddress">tcptransport: dial(self: TcpTransport; hostname: string; address: MultiAddress): Future[
-    Connection]</a></li>
+          data-doc-search-tag="tcptransport: dial(self: TcpTransport; hostname: string; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]" href="libp2p/transports/tcptransport.html#dial.e%2CTcpTransport%2Cstring%2CMultiAddress%2COpt%5BPeerId%5D">tcptransport: dial(self: TcpTransport; hostname: string; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="transport: dial(self: Transport; address: MultiAddress): Future[Connection]" href="libp2p/transports/transport.html#dial%2CTransport%2CMultiAddress">transport: dial(self: Transport; address: MultiAddress): Future[Connection]</a></li>
+          data-doc-search-tag="transport: dial(self: Transport; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]" href="libp2p/transports/transport.html#dial%2CTransport%2CMultiAddress%2COpt%5BPeerId%5D">transport: dial(self: Transport; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="transport: dial(self: Transport; hostname: string; address: MultiAddress): Future[
-    Connection]" href="libp2p/transports/transport.html#dial.e%2CTransport%2Cstring%2CMultiAddress">transport: dial(self: Transport; hostname: string; address: MultiAddress): Future[
-    Connection]</a></li>
+          data-doc-search-tag="transport: dial(self: Transport; hostname: string; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]" href="libp2p/transports/transport.html#dial.e%2CTransport%2Cstring%2CMultiAddress%2COpt%5BPeerId%5D">transport: dial(self: Transport; hostname: string; address: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]</a></li>
           </ul></dd>
 <dt><a name="Dialer" href="#Dialer"><span>Dialer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5148,7 +5150,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-25 10:21:32 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-31 11:48:19 UTC</small>
       </div>
     </div>
   </div>
