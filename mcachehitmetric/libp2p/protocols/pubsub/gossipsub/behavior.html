@@ -237,13 +237,6 @@ window.addEventListener("DOMContentLoaded", main2);
     title="handleIHave(g: GossipSub; peer: PubSubPeer; ihaves: seq[ControlIHave]): ControlIWant">handleIHave(g: GossipSub; peer: PubSubPeer; ihaves: seq[ControlIHave]): ControlIWant</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">handleIWant
-      <li><a class="reference" href="#handleIWant%2CGossipSub%2CPubSubPeer%2Cseq%5BControlIWant%5D"
-    title="handleIWant(g: GossipSub; peer: PubSubPeer; iwants: seq[ControlIWant]): seq[
-    Message]">handleIWant(g: GossipSub; peer: PubSubPeer; iwants: seq[ControlIWant]): seq[
-    Message]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">handlePrune
       <li><a class="reference" href="#handlePrune%2CGossipSub%2CPubSubPeer%2Cseq%5BControlPrune%5D"
     title="handlePrune(g: GossipSub; peer: PubSubPeer; prunes: seq[ControlPrune])">handlePrune(g: GossipSub; peer: PubSubPeer; prunes: seq[ControlPrune])</a></li>
@@ -306,9 +299,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L539"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L540"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L539" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L540" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -319,9 +312,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 gossip iHave messages to peers 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L568"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L569"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L568" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L569" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -377,19 +370,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="handleIWant,GossipSub,PubSubPeer,seq[ControlIWant]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#handleIWant%2CGossipSub%2CPubSubPeer%2Cseq%5BControlIWant%5D"><span class="Identifier">handleIWant</span></a><span class="Other">(</span><span class="Identifier">g</span><span class="Other">:</span> <a href="types.html#GossipSub"><span class="Identifier">GossipSub</span></a><span class="Other">;</span> <span class="Identifier">peer</span><span class="Other">:</span> <a href="../pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">;</span> <span class="Identifier">iwants</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../rpc/messages.html#ControlIWant"><span class="Identifier">ControlIWant</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span>
-    <a href="../rpc/messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L272"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L272" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="handlePrune,GossipSub,PubSubPeer,seq[ControlPrune]" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#handlePrune%2CGossipSub%2CPubSubPeer%2Cseq%5BControlPrune%5D"><span class="Identifier">handlePrune</span></a><span class="Other">(</span><span class="Identifier">g</span><span class="Other">:</span> <a href="types.html#GossipSub"><span class="Identifier">GossipSub</span></a><span class="Other">;</span> <span class="Identifier">peer</span><span class="Other">:</span> <a href="../pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">;</span> <span class="Identifier">prunes</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../rpc/messages.html#ControlPrune"><span class="Identifier">ControlPrune</span></a><span class="Other">]</span><span class="Other">)</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
@@ -410,9 +390,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L688"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L689"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L688" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L689" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -449,9 +429,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L310"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L311"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L310" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L311" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -462,9 +442,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 get fanout peers for a topic
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L552"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L553"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L552" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L553" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -478,7 +458,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-07 10:49:53 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-07 11:13:08 UTC</small>
       </div>
     </div>
   </div>
