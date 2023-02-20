@@ -210,11 +210,6 @@ window.addEventListener("DOMContentLoaded", main2);
     title="dropFanoutPeers(g: GossipSub)">dropFanoutPeers(g: GossipSub)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">getGossipPeers
-      <li><a class="reference" href="#getGossipPeers%2CGossipSub"
-    title="getGossipPeers(g: GossipSub): Table[PubSubPeer, ControlMessage]">getGossipPeers(g: GossipSub): Table[PubSubPeer, ControlMessage]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">grafted
       <li><a class="reference" href="#grafted%2CGossipSub%2CPubSubPeer%2Cstring"
     title="grafted(g: GossipSub; p: PubSubPeer; topic: string)">grafted(g: GossipSub; p: PubSubPeer; topic: string)</a></li>
@@ -305,19 +300,6 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="getGossipPeers,GossipSub" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#getGossipPeers%2CGossipSub"><span class="Identifier">getGossipPeers</span></a><span class="Other">(</span><span class="Identifier">g</span><span class="Other">:</span> <a href="types.html#GossipSub"><span class="Identifier">GossipSub</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><a href="../pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">,</span> <a href="../rpc/messages.html#ControlMessage"><span class="Identifier">ControlMessage</span></a><span class="Other">]</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-gossip iHave messages to peers 
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L569"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L569" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="grafted,GossipSub,PubSubPeer,string" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#grafted%2CGossipSub%2CPubSubPeer%2Cstring"><span class="Identifier">grafted</span></a><span class="Other">(</span><span class="Identifier">g</span><span class="Other">:</span> <a href="types.html#GossipSub"><span class="Identifier">GossipSub</span></a><span class="Other">;</span> <span class="Identifier">p</span><span class="Other">:</span> <a href="../pubsubpeer.html#PubSubPeer"><span class="Identifier">PubSubPeer</span></a><span class="Other">;</span> <span class="Identifier">topic</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
@@ -390,9 +372,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L689"
+href="https://github.com/status-im/nim-libp2p/tree/mcachehitmetric/libp2p/protocols/pubsub/gossipsub/behavior.nim#L690"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L689" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/behavior.nim#L690" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -458,7 +440,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-09 17:23:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-20 12:44:00 UTC</small>
       </div>
     </div>
   </div>

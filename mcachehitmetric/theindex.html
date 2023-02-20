@@ -1621,10 +1621,6 @@ window.addEventListener('DOMContentLoaded', main);
     bool]" href="libp2p/signed_envelope.html#getField%2CProtoBuffer%2Cint%2CSignedPayload%5BT%5D">signed_envelope: getField[T](pb: ProtoBuffer; field: int; value: var SignedPayload[T]): ProtoResult[
     bool]</a></li>
           </ul></dd>
-<dt><a name="getGossipPeers" href="#getGossipPeers"><span>getGossipPeers:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="behavior: getGossipPeers(g: GossipSub): Table[PubSubPeer, ControlMessage]" href="libp2p/protocols/pubsub/gossipsub/behavior.html#getGossipPeers%2CGossipSub">behavior: getGossipPeers(g: GossipSub): Table[PubSubPeer, ControlMessage]</a></li>
-          </ul></dd>
 <dt><a name="getHostname" href="#getHostname"><span>getHostname:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="nameresolver: getHostname(ma: MultiAddress): string" href="libp2p/nameresolving/nameresolver.html#getHostname%2CMultiAddress">nameresolver: getHostname(ma: MultiAddress): string</a></li>
@@ -3613,6 +3609,14 @@ window.addEventListener('DOMContentLoaded', main);
                       nbytes: var int; value: SomeVarint): VarintResult[void]" href="libp2p/varint.html#putVarint%2Ctypedesc%5BT%5D%2CopenArray%5Bbyte%5D%2Cint%2CSomeVarint">varint: putVarint[T: PB | LP](vtype: typedesc[T]; pbytes: var openArray[byte];
                       nbytes: var int; value: SomeVarint): VarintResult[void]</a></li>
           </ul></dd>
+<dt><a name="queuedSendBytes" href="#queuedSendBytes"><span>queuedSendBytes:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="yamux: queuedSendBytes(channel: YamuxChannel): int" href="libp2p/muxers/yamux/yamux.html#queuedSendBytes.e%2CYamuxChannel">yamux: queuedSendBytes(channel: YamuxChannel): int</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="pubsubpeer: queuedSendBytes(p: PubSubPeer): int" href="libp2p/protocols/pubsub/pubsubpeer.html#queuedSendBytes%2CPubSubPeer">pubsubpeer: queuedSendBytes(p: PubSubPeer): int</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="lpstream: queuedSendBytes(s: LPStream): int" href="libp2p/stream/lpstream.html#queuedSendBytes.e%2CLPStream">lpstream: queuedSendBytes(s: LPStream): int</a></li>
+          </ul></dd>
 <dt><a name="QUIC" href="#QUIC"><span>QUIC:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: QUIC" href="libp2p/multiaddress.html#QUIC">multiaddress: QUIC</a></li>
@@ -5134,7 +5138,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-09 17:23:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-20 12:44:01 UTC</small>
       </div>
     </div>
   </div>
