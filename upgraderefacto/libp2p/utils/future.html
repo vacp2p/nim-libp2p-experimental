@@ -17,10 +17,10 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>libp2p/transcoder</title>
-<link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
+<title>libp2p/utils/future</title>
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css">
 
-<script type="text/javascript" src="../dochack.js"></script>
+<script type="text/javascript" src="../../dochack.js"></script>
 
 <script type="text/javascript">
 function main() {
@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', main);
 <body>
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">libp2p/transcoder</h1>
+    <h1 class="title">libp2p/utils/future</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="global-links">
     <ul class="simple">
     <li>
-      <a href="../theindex.html">Index</a>
+      <a href="../../theindex.html">Index</a>
     </li>
     </ul>
   </div>
@@ -197,22 +197,21 @@ window.addEventListener("DOMContentLoaded", main2);
 </script>
 <ul class="simple simple-toc" id="toc-list">
 <li>
-  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
-    
+      <li><a class="reference" href="#AllFuturesFailedError"
+    title="AllFuturesFailedError = object of CatchableError">AllFuturesFailedError</a></li>
+
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
+  <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#Transcoder"
-    title="Transcoder = object
-  stringToBuffer*: proc (s: string; vb: var VBuffer): bool {.nimcall, gcsafe,
-      noSideEffect, raises: [Defect].}
-  bufferToString*: proc (vb: var VBuffer; s: var string): bool {.nimcall,
-      gcsafe, noSideEffect, raises: [Defect].}
-  validateBuffer*: proc (vb: var VBuffer): bool {.nimcall, gcsafe, noSideEffect,
-      raises: [Defect].}">Transcoder</a></li>
+      <ul class="simple nested-toc-section">anyCompleted
+      <li><a class="reference" href="#anyCompleted%2Cseq%5BFuture%5BT%5D%5D"
+    title="anyCompleted[T](futs: seq[Future[T]]): Future[Future[T]]">anyCompleted[T](futs: seq[Future[T]]): Future[Future[T]]</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -221,38 +220,44 @@ window.addEventListener("DOMContentLoaded", main2);
 
   </div>
   &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/transcoder.nim#L1"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/utils/future.nim#L1"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transcoder.nim#L1" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/future.nim#L1" class="link-seesrc" target="_blank" >Edit</a>
 
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements transcoder interface.</p>
-  <div class="section" id="6">
-<h1><a class="toc-backref" href="#6">Imports</a></h1>
-<dl class="item">
-<a class="reference external" href="vbuffer.html">vbuffer</a>
-</dl></div>
-<div class="section" id="7">
+  <p class="module-desc"></p>
+  <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
-<div id="Transcoder" class="tohide">
-<dt><pre><a href="transcoder.html#Transcoder"><span class="Identifier">Transcoder</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">stringToBuffer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">vb</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="vbuffer.html#VBuffer"><span class="Identifier">VBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">nimcall</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-      </span><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}
-  <span class="Identifier">bufferToString</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">vb</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="vbuffer.html#VBuffer"><span class="Identifier">VBuffer</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">nimcall</span><span class="Other">,</span>
-      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}
-  <span class="Identifier">validateBuffer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">vb</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="vbuffer.html#VBuffer"><span class="Identifier">VBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">nimcall</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">noSideEffect</span><span class="Other">,</span>
-      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}
-</pre></dt>
+<div id="AllFuturesFailedError" class="tohide">
+<dt><pre><a href="future.html#AllFuturesFailedError"><span class="Identifier">AllFuturesFailedError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">CatchableError</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/transcoder.nim#L14"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/utils/future.nim#L18"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transcoder.nim#L14" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/future.nim#L18" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+
+</dl></div>
+<div class="section" id="12">
+<h1><a class="toc-backref" href="#12">Procs</a></h1>
+<dl class="item">
+<div id="anyCompleted,seq[Future[T]]" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#anyCompleted%2Cseq%5BFuture%5BT%5D%5D"><span class="Identifier">anyCompleted</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">futs</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">]</span> {.
+    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+Returns a future that will complete with the first future that completes. If all futures fail or futs is empty, the returned future will fail with AllFuturesFailedError.
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/utils/future.nim#L20"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/future.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -266,7 +271,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-21 10:35:59 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-21 10:36:00 UTC</small>
       </div>
     </div>
   </div>

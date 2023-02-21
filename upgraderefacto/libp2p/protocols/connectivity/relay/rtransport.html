@@ -238,10 +238,10 @@ window.addEventListener("DOMContentLoaded", main2);
 
   </ul>
   <ul class="simple nested-toc-section">dial
-      <li><a class="reference" href="#dial.e%2CRelayTransport%2Cstring%2CMultiAddress"
-    title="dial(self: RelayTransport; hostname: string; address: MultiAddress): Future[
-    Connection]">dial(self: RelayTransport; hostname: string; address: MultiAddress): Future[
-    Connection]</a></li>
+      <li><a class="reference" href="#dial.e%2CRelayTransport%2Cstring%2CMultiAddress%2COpt%5BPeerId%5D"
+    title="dial(self: RelayTransport; hostname: string; ma: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]">dial(self: RelayTransport; hostname: string; ma: MultiAddress;
+     peerId: Opt[PeerId] = Opt.none(PeerId)): Future[Connection]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">handles
@@ -306,7 +306,8 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="dial,RelayTransport,MultiAddress" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#dial%2CRelayTransport%2CMultiAddress"><span class="Identifier">dial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">;</span> <span class="Identifier">ma</span><span class="Other">:</span> <a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-    </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -337,7 +338,8 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="accept.e,RelayTransport" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#accept.e%2CRelayTransport"><span class="Identifier">accept</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-    </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -348,17 +350,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="dial.e,RelayTransport,string,MultiAddress" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#dial.e%2CRelayTransport%2Cstring%2CMultiAddress"><span class="Identifier">dial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">address</span><span class="Other">:</span> <a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                  <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="dial.e,RelayTransport,string,MultiAddress,Opt[PeerId]" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#dial.e%2CRelayTransport%2Cstring%2CMultiAddress%2COpt%5BPeerId%5D"><span class="Identifier">dial</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">ma</span><span class="Other">:</span> <a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">;</span>
+            <span class="Identifier">peerId</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">Opt</span><span class="Other">.</span><span class="Identifier">none</span><span class="Other">(</span><span class="Identifier">PeerId</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/protocols/connectivity/relay/rtransport.nim#L95"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/protocols/connectivity/relay/rtransport.nim#L96"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/rtransport.nim#L95" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/rtransport.nim#L96" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -369,15 +372,16 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/protocols/connectivity/relay/rtransport.nim#L98"
+href="https://github.com/status-im/nim-libp2p/tree/upgraderefacto/libp2p/protocols/connectivity/relay/rtransport.nim#L100"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/rtransport.nim#L98" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/rtransport.nim#L100" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="start.e,RelayTransport,seq[MultiAddress]" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#start.e%2CRelayTransport%2Cseq%5BMultiAddress%5D"><span class="Identifier">start</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">;</span> <span class="Identifier">ma</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.
-    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -390,7 +394,7 @@ class="link-seesrc" target="_blank">Source</a>
 </div>
 <div id="stop.e,RelayTransport" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#stop.e%2CRelayTransport"><span class="Identifier">stop</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="rtransport.html#RelayTransport"><span class="Identifier">RelayTransport</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -411,7 +415,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-01-30 17:33:33 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-21 10:36:01 UTC</small>
       </div>
     </div>
   </div>
