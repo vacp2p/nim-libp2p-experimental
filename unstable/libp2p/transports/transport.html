@@ -269,14 +269,14 @@ window.addEventListener("DOMContentLoaded", main2);
   </ul>
   <ul class="simple nested-toc-section">upgradeIncoming
       <li><a class="reference" href="#upgradeIncoming.e%2CTransport%2CConnection"
-    title="upgradeIncoming(self: Transport; conn: Connection): Future[void]">upgradeIncoming(self: Transport; conn: Connection): Future[void]</a></li>
+    title="upgradeIncoming(self: Transport; conn: Connection): Future[Muxer]">upgradeIncoming(self: Transport; conn: Connection): Future[Muxer]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">upgradeOutgoing
       <li><a class="reference" href="#upgradeOutgoing.e%2CTransport%2CConnection%2COpt%5BPeerId%5D"
     title="upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]">upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]</a></li>
+    Muxer]">upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
+    Muxer]</a></li>
 
   </ul>
 
@@ -298,7 +298,7 @@ class="link-seesrc" target="_blank">Source</a>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
+<a class="reference external" href="../stream/connection.html">../stream/connection</a>, <a class="reference external" href="../multiaddress.html">../multiaddress</a>, <a class="reference external" href="../multicodec.html">../multicodec</a>, <a class="reference external" href="../muxers/muxer.html">../muxers/muxer</a>, <a class="reference external" href="../upgrademngrs/upgrade.html">../upgrademngrs/upgrade</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
@@ -313,9 +313,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L31"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L32"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -325,9 +325,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L29"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L30"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -337,9 +337,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L27"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L28"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L27" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -349,9 +349,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L28"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L29"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -368,9 +368,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L75"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L76"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L76" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -381,9 +381,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L36"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L37"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -399,9 +399,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 accept incoming connections 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L58"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L59"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L58" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -413,9 +413,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 dial a peer 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L65"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L66"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L65" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L66" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -426,9 +426,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 check if transport supports the multiaddress 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L100"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L101"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L100" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L101" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -440,9 +440,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 start the transport 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L42"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L43"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -453,35 +453,35 @@ class="link-seesrc" target="_blank">Source</a>
 
 stop and cleanup the transport including all outstanding connections 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L50"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L51"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L51" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="upgradeIncoming.e,Transport,Connection" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#upgradeIncoming.e%2CTransport%2CConnection"><span class="Identifier">upgradeIncoming</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span>
+<dt><pre><span class="Keyword">method</span> <a href="#upgradeIncoming.e%2CTransport%2CConnection"><span class="Identifier">upgradeIncoming</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="../muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 base upgrade method that the transport uses to perform transport specific upgrades 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L81"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L82"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L81" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L82" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="upgradeOutgoing.e,Transport,Connection,Opt[PeerId]" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#upgradeOutgoing.e%2CTransport%2CConnection%2COpt%5BPeerId%5D"><span class="Identifier">upgradeOutgoing</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="../upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">;</span> <span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">peerId</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <a href="../muxers/muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 base upgrade method that the transport uses to perform transport specific upgrades 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L90"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/transports/transport.nim#L91"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L90" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/transports/transport.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -495,7 +495,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-06 15:39:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-08 11:32:12 UTC</small>
       </div>
     </div>
   </div>

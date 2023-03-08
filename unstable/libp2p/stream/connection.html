@@ -213,7 +213,6 @@ window.addEventListener("DOMContentLoaded", main2);
   timeoutHandler*: TimeoutHandler
   peerId*: PeerId
   observedAddr*: Opt[MultiAddress]
-  upgraded*: Future[void]
   protocol*: string
   transportDir*: Direction
   when defined(libp2p_agents_metrics):
@@ -241,11 +240,6 @@ window.addEventListener("DOMContentLoaded", main2);
     title="hash(p: Connection): Hash">hash(p: Connection): Hash</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">isUpgraded
-      <li><a class="reference" href="#isUpgraded%2CConnection"
-    title="isUpgraded(s: Connection): bool">isUpgraded(s: Connection): bool</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">new
       <li><a class="reference" href="#new%2CtypeConnection%2CPeerId%2CDirection%2COpt%5BMultiAddress%5D%2CDuration%2CTimeoutHandler"
     title="new(C: type Connection; peerId: PeerId; dir: Direction;
@@ -257,19 +251,9 @@ window.addEventListener("DOMContentLoaded", main2);
     timeoutHandler: TimeoutHandler = nil): Connection</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">onUpgrade
-      <li><a class="reference" href="#onUpgrade%2CConnection"
-    title="onUpgrade(s: Connection): Future[void]">onUpgrade(s: Connection): Future[void]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">shortLog
       <li><a class="reference" href="#shortLog%2CConnection"
     title="shortLog(conn: Connection): string">shortLog(conn: Connection): string</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">upgrade
-      <li><a class="reference" href="#upgrade%2CConnection%2Cref.CatchableError"
-    title="upgrade(s: Connection; failed: ref CatchableError = nil)">upgrade(s: Connection; failed: ref CatchableError = nil)</a></li>
 
   </ul>
 
@@ -342,7 +326,6 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">timeoutHandler</span><span class="Operator">*</span><span class="Other">:</span> <a href="connection.html#TimeoutHandler"><span class="Identifier">TimeoutHandler</span></a>
   <span class="Identifier">peerId</span><span class="Operator">*</span><span class="Other">:</span> <a href="../peerid.html#PeerId"><span class="Identifier">PeerId</span></a>
   <span class="Identifier">observedAddr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span>
-  <span class="Identifier">upgraded</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span>
   <span class="Identifier">protocol</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
   <span class="Identifier">transportDir</span><span class="Operator">*</span><span class="Other">:</span> <a href="lpstream.html#Direction"><span class="Identifier">Direction</span></a>
   <span class="Keyword">when</span> <span class="Identifier">defined</span><span class="Other">(</span><span class="Identifier">libp2p_agents_metrics</span><span class="Other">)</span><span class="Other">:</span>
@@ -411,21 +394,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L111"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L87"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="isUpgraded,Connection" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#isUpgraded%2CConnection"><span class="Identifier">isUpgraded</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L50"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L87" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -438,22 +409,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L161"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L144"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L161" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="onUpgrade,Connection" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#onUpgrade%2CConnection"><span class="Identifier">onUpgrade</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L62"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L144" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -463,22 +421,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L66"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L49"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L66" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="upgrade,Connection,ref.CatchableError" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#upgrade%2CConnection%2Cref.CatchableError"><span class="Identifier">upgrade</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">failed</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Identifier">CatchableError</span> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L54"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -493,9 +438,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L95"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L75"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L95" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -505,9 +450,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L158"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L134"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L158" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L134" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -517,9 +462,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L75"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L58"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L58" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -534,9 +479,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L73"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/stream/connection.nim#L56"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L73" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/stream/connection.nim#L56" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -555,7 +500,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-06 15:39:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-08 11:32:12 UTC</small>
       </div>
     </div>
   </div>

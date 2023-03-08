@@ -690,13 +690,7 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="multicodec: codec(mt: typedesc[MultiCodec]; code: int): MultiCodec" href="libp2p/multicodec.html#codec%2Ctypedesc%5BMultiCodec%5D%2Cint">multicodec: codec(mt: typedesc[MultiCodec]; code: int): MultiCodec</a></li>
           <li><a class="reference external"
           data-doc-search-tag="multicodec: codec(mt: typedesc[MultiCodec]; name: string): MultiCodec" href="libp2p/multicodec.html#codec%2Ctypedesc%5BMultiCodec%5D%2Cstring">multicodec: codec(mt: typedesc[MultiCodec]; name: string): MultiCodec</a></li>
-          </ul></dd>
-<dt><a name="Codec" href="#Codec"><span>Codec:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="multistream: Codec" href="libp2p/multistream.html#Codec">multistream: Codec</a></li>
-          </ul></dd>
-<dt><a name="codec" href="#codec"><span>codec:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
+          <li><a class="reference external"
           data-doc-search-tag="protocol: codec(p: LPProtocol): string" href="libp2p/protocols/protocol.html#codec%2CLPProtocol">protocol: codec(p: LPProtocol): string</a></li>
           </ul></dd>
 <dt><a name="codec%3D" href="#codec%3D"><span>codec=:</span></a></dt><dd><ul class="simple">
@@ -815,8 +809,6 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="contains" href="#contains"><span>contains:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: contains(c: ConnManager; conn: Connection): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CConnection">connmanager: contains(c: ConnManager; conn: Connection): bool</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="connmanager: contains(c: ConnManager; muxer: Muxer): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CMuxer">connmanager: contains(c: ConnManager; muxer: Muxer): bool</a></li>
           <li><a class="reference external"
           data-doc-search-tag="connmanager: contains(c: ConnManager; peerId: PeerId): bool" href="libp2p/connmanager.html#contains%2CConnManager%2CPeerId">connmanager: contains(c: ConnManager; peerId: PeerId): bool</a></li>
@@ -1451,7 +1443,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="expectConnection" href="#expectConnection"><span>expectConnection:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: expectConnection(c: ConnManager; p: PeerId; dir: Direction): Future[Connection]" href="libp2p/connmanager.html#expectConnection%2CConnManager%2CPeerId%2CDirection">connmanager: expectConnection(c: ConnManager; p: PeerId; dir: Direction): Future[Connection]</a></li>
+          data-doc-search-tag="connmanager: expectConnection(c: ConnManager; p: PeerId; dir: Direction): Future[Muxer]" href="libp2p/connmanager.html#expectConnection%2CConnManager%2CPeerId%2CDirection">connmanager: expectConnection(c: ConnManager; p: PeerId; dir: Direction): Future[Muxer]</a></li>
           </ul></dd>
 <dt><a name="expire" href="#expire"><span>expire:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1763,7 +1755,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="getStream" href="#getStream"><span>getStream:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: getStream(c: ConnManager; conn: Connection): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CConnection">connmanager: getStream(c: ConnManager; conn: Connection): Future[Connection]</a></li>
+          data-doc-search-tag="connmanager: getStream(c: ConnManager; muxer: Muxer): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CMuxer">connmanager: getStream(c: ConnManager; muxer: Muxer): Future[Connection]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="connmanager: getStream(c: ConnManager; peerId: PeerId): Future[Connection]" href="libp2p/connmanager.html#getStream%2CConnManager%2CPeerId">connmanager: getStream(c: ConnManager; peerId: PeerId): Future[Connection]</a></li>
           <li><a class="reference external"
@@ -1791,6 +1783,8 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="getWrapped" href="#getWrapped"><span>getWrapped:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="yamux: getWrapped(channel: YamuxChannel): Connection" href="libp2p/muxers/yamux/yamux.html#getWrapped.e%2CYamuxChannel">yamux: getWrapped(channel: YamuxChannel): Connection</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="rconn: getWrapped(self: RelayConnection): Connection" href="libp2p/protocols/connectivity/relay/rconn.html#getWrapped.e%2CRelayConnection">rconn: getWrapped(self: RelayConnection): Connection</a></li>
           <li><a class="reference external"
           data-doc-search-tag="secure: getWrapped(s: SecureConn): Connection" href="libp2p/protocols/secure/secure.html#getWrapped.e%2CSecureConn">secure: getWrapped(s: SecureConn): Connection</a></li>
@@ -1862,6 +1856,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="multistream: handle(m: MultistreamSelect; conn: Connection; active: bool = false): Future[
     void]" href="libp2p/multistream.html#handle%2CMultistreamSelect%2CConnection%2Cbool">multistream: handle(m: MultistreamSelect; conn: Connection; active: bool = false): Future[
     void]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="multistream: handle(_: type MultistreamSelect; conn: Connection; protos: seq[string];
+       matchers = newSeq[Matcher](); active: bool = false): Future[string]" href="libp2p/multistream.html#handle%2CtypeMultistreamSelect%2CConnection%2Cseq%5Bstring%5D%2Cbool">multistream: handle(_: type MultistreamSelect; conn: Connection; protos: seq[string];
+       matchers = newSeq[Matcher](); active: bool = false): Future[string]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="muxer: handle(m: Muxer): Future[void]" href="libp2p/muxers/muxer.html#handle.e%2CMuxer">muxer: handle(m: Muxer): Future[void]</a></li>
           <li><a class="reference external"
@@ -1975,6 +1973,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="floodsub: hasSeen(f: FloodSub; msgId: MessageId): bool" href="libp2p/protocols/pubsub/floodsub.html#hasSeen%2CFloodSub%2CMessageId">floodsub: hasSeen(f: FloodSub; msgId: MessageId): bool</a></li>
           </ul></dd>
+<dt><a name="hasSendConn" href="#hasSendConn"><span>hasSendConn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="pubsubpeer: hasSendConn(p: PubSubPeer): bool" href="libp2p/protocols/pubsub/pubsubpeer.html#hasSendConn%2CPubSubPeer">pubsubpeer: hasSendConn(p: PubSubPeer): bool</a></li>
+          </ul></dd>
 <dt><a name="heartbeat" href="#heartbeat"><span>heartbeat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="behavior: heartbeat(g: GossipSub): Future[void]" href="libp2p/protocols/pubsub/gossipsub/behavior.html#heartbeat%2CGossipSub">behavior: heartbeat(g: GossipSub): Future[void]</a></li>
@@ -2042,10 +2044,6 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="identify: identify(p: Identify; conn: Connection; remotePeerId: PeerId): Future[
     IdentifyInfo]" href="libp2p/protocols/identify.html#identify%2CIdentify%2CConnection%2CPeerId">identify: identify(p: Identify; conn: Connection; remotePeerId: PeerId): Future[
     IdentifyInfo]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="muxedupgrade: identify(self: MuxedUpgrade; muxer: Muxer): Future[void]" href="libp2p/upgrademngrs/muxedupgrade.html#identify%2CMuxedUpgrade%2CMuxer">muxedupgrade: identify(self: MuxedUpgrade; muxer: Muxer): Future[void]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="upgrade: identify(self: Upgrade; conn: Connection): Future[void]" href="libp2p/upgrademngrs/upgrade.html#identify%2CUpgrade%2CConnection">upgrade: identify(self: Upgrade; conn: Connection): Future[void]</a></li>
           </ul></dd>
 <dt><a name="IdentifyCodec" href="#IdentifyCodec"><span>IdentifyCodec:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2507,10 +2505,6 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="vbuffer: isEnough(vb: VBuffer; length: int): bool" href="libp2p/vbuffer.html#isEnough.t%2CVBuffer%2Cint">vbuffer: isEnough(vb: VBuffer; length: int): bool</a></li>
           </ul></dd>
-<dt><a name="isUpgraded" href="#isUpgraded"><span>isUpgraded:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connection: isUpgraded(s: Connection): bool" href="libp2p/stream/connection.html#isUpgraded%2CConnection">connection: isUpgraded(s: Connection): bool</a></li>
-          </ul></dd>
 <dt><a name="items" href="#items"><span>items:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: items(ma: MultiAddress): MaResult[MultiAddress]" href="libp2p/multiaddress.html#items.i%2CMultiAddress">multiaddress: items(ma: MultiAddress): MaResult[MultiAddress]</a></li>
@@ -2739,10 +2733,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="lpstream: LPStreamWriteError" href="libp2p/stream/lpstream.html#LPStreamWriteError">lpstream: LPStreamWriteError</a></li>
           </ul></dd>
-<dt><a name="Ls" href="#Ls"><span>Ls:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="multistream: Ls" href="libp2p/multistream.html#Ls">multistream: Ls</a></li>
-          </ul></dd>
 <dt><a name="mac" href="#mac"><span>mac:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="crypto: mac(secret: Secret; id: int): seq[byte]" href="libp2p/crypto/crypto.html#mac%2CSecret%2Cint">crypto: mac(secret: Secret; id: int): seq[byte]</a></li>
@@ -2911,10 +2901,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="mplex: MplexCodec" href="libp2p/muxers/mplex/mplex.html#MplexCodec">mplex: MplexCodec</a></li>
           </ul></dd>
-<dt><a name="MSCodec" href="#MSCodec"><span>MSCodec:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="multistream: MSCodec" href="libp2p/multistream.html#MSCodec">multistream: MSCodec</a></li>
-          </ul></dd>
 <dt><a name="Msg" href="#Msg"><span>Msg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="coder: Msg" href="libp2p/muxers/mplex/coder.html#Msg">coder: Msg</a></li>
@@ -2922,10 +2908,6 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="MsgIdProvider" href="#MsgIdProvider"><span>MsgIdProvider:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="pubsub: MsgIdProvider" href="libp2p/protocols/pubsub/pubsub.html#MsgIdProvider">pubsub: MsgIdProvider</a></li>
-          </ul></dd>
-<dt><a name="MsgSize" href="#MsgSize"><span>MsgSize:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="multistream: MsgSize" href="libp2p/multistream.html#MsgSize">multistream: MsgSize</a></li>
           </ul></dd>
 <dt><a name="MsgType" href="#MsgType"><span>MsgType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2979,7 +2961,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="mux" href="#mux"><span>mux:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="muxedupgrade: mux(self: MuxedUpgrade; conn: Connection): Future[Muxer]" href="libp2p/upgrademngrs/muxedupgrade.html#mux%2CMuxedUpgrade%2CConnection">muxedupgrade: mux(self: MuxedUpgrade; conn: Connection): Future[Muxer]</a></li>
+          data-doc-search-tag="muxedupgrade: mux(self: MuxedUpgrade; conn: Connection; direction: Direction): Future[Muxer]" href="libp2p/upgrademngrs/muxedupgrade.html#mux%2CMuxedUpgrade%2CConnection%2CDirection">muxedupgrade: mux(self: MuxedUpgrade; conn: Connection; direction: Direction): Future[Muxer]</a></li>
           </ul></dd>
 <dt><a name="MuxedUpgrade" href="#MuxedUpgrade"><span>MuxedUpgrade:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3005,10 +2987,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="muxer: MuxerProvider" href="libp2p/muxers/muxer.html#MuxerProvider">muxer: MuxerProvider</a></li>
           </ul></dd>
-<dt><a name="Na" href="#Na"><span>Na:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="multistream: Na" href="libp2p/multistream.html#Na">multistream: Na</a></li>
-          </ul></dd>
 <dt><a name="NameResolver" href="#NameResolver"><span>NameResolver:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="nameresolver: NameResolver" href="libp2p/nameresolving/nameresolver.html#NameResolver">nameresolver: NameResolver</a></li>
@@ -3022,9 +3000,9 @@ window.addEventListener('DOMContentLoaded', main);
     maxConnections = MaxConnections; maxIn = -1; maxOut = -1): ConnManager</a></li>
           <li><a class="reference external"
           data-doc-search-tag="dialer: new(T: type Dialer; localPeerId: PeerId; connManager: ConnManager;
-    transports: seq[Transport]; ms: MultistreamSelect;
-    nameResolver: NameResolver = nil): Dialer" href="libp2p/dialer.html#new%2CtypeDialer%2CPeerId%2CConnManager%2Cseq%5BTransport%5D%2CMultistreamSelect%2CNameResolver">dialer: new(T: type Dialer; localPeerId: PeerId; connManager: ConnManager;
-    transports: seq[Transport]; ms: MultistreamSelect;
+    peerStore: PeerStore; transports: seq[Transport];
+    nameResolver: NameResolver = nil): Dialer" href="libp2p/dialer.html#new%2CtypeDialer%2CPeerId%2CConnManager%2CPeerStore%2Cseq%5BTransport%5D%2CNameResolver">dialer: new(T: type Dialer; localPeerId: PeerId; connManager: ConnManager;
+    peerStore: PeerStore; transports: seq[Transport];
     nameResolver: NameResolver = nil): Dialer</a></li>
           <li><a class="reference external"
           data-doc-search-tag="multistream: new(T: typedesc[MultistreamSelect]): T:type" href="libp2p/multistream.html#new%2Ctypedesc%5BMultistreamSelect%5D">multistream: new(T: typedesc[MultistreamSelect]): T:type</a></li>
@@ -3143,9 +3121,9 @@ window.addEventListener('DOMContentLoaded', main);
     observedAddr: Opt[MultiAddress]; timeout = 10.minutes): T:type" href="libp2p/transports/wstransport.html#new%2CtypeWsStream%2CWSSession%2CDirection%2COpt%5BMultiAddress%5D">wstransport: new(T: type WsStream; session: WSSession; dir: Direction;
     observedAddr: Opt[MultiAddress]; timeout = 10.minutes): T:type</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxedupgrade: new(T: type MuxedUpgrade; identity: Identify; muxers: seq[MuxerProvider];
+          data-doc-search-tag="muxedupgrade: new(T: type MuxedUpgrade; muxers: seq[MuxerProvider];
     secureManagers: openArray[Secure] = []; connManager: ConnManager;
-    ms: MultistreamSelect): T:type" href="libp2p/upgrademngrs/muxedupgrade.html#new%2CtypeMuxedUpgrade%2CIdentify%2Cseq%5BMuxerProvider%5D%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect">muxedupgrade: new(T: type MuxedUpgrade; identity: Identify; muxers: seq[MuxerProvider];
+    ms: MultistreamSelect): T:type" href="libp2p/upgrademngrs/muxedupgrade.html#new%2CtypeMuxedUpgrade%2Cseq%5BMuxerProvider%5D%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect">muxedupgrade: new(T: type MuxedUpgrade; muxers: seq[MuxerProvider];
     secureManagers: openArray[Secure] = []; connManager: ConnManager;
     ms: MultistreamSelect): T:type</a></li>
           </ul></dd>
@@ -3233,13 +3211,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="newSwitch" href="#newSwitch"><span>newSwitch:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
+          data-doc-search-tag="switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport];
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
-          ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch" href="libp2p/switch.html#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CIdentify%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CNameResolver">switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport]; identity: Identify;
+          ms: MultistreamSelect; peerStore: PeerStore;
+          nameResolver: NameResolver = nil; services = newSeq[Service]()): Switch" href="libp2p/switch.html#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CPeerStore%2CNameResolver">switch: newSwitch(peerInfo: PeerInfo; transports: seq[Transport];
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
-          ms: MultistreamSelect; nameResolver: NameResolver = nil;
-          peerStore = PeerStore.new(); services = newSeq[Service]()): Switch</a></li>
+          ms: MultistreamSelect; peerStore: PeerStore;
+          nameResolver: NameResolver = nil; services = newSeq[Service]()): Switch</a></li>
           </ul></dd>
 <dt><a name="newTransportClosedError" href="#newTransportClosedError"><span>newTransportClosedError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3314,10 +3292,6 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="gossipsub: onTopicSubscription(g: GossipSub; topic: string; subscribed: bool)" href="libp2p/protocols/pubsub/gossipsub.html#onTopicSubscription.e%2CGossipSub%2Cstring%2Cbool">gossipsub: onTopicSubscription(g: GossipSub; topic: string; subscribed: bool)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsub: onTopicSubscription(p: PubSub; topic: string; subscribed: bool)" href="libp2p/protocols/pubsub/pubsub.html#onTopicSubscription.e%2CPubSub%2Cstring%2Cbool">pubsub: onTopicSubscription(p: PubSub; topic: string; subscribed: bool)</a></li>
-          </ul></dd>
-<dt><a name="onUpgrade" href="#onUpgrade"><span>onUpgrade:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connection: onUpgrade(s: Connection): Future[void]" href="libp2p/stream/connection.html#onUpgrade%2CConnection">connection: onUpgrade(s: Connection): Future[void]</a></li>
           </ul></dd>
 <dt><a name="open" href="#open"><span>open:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4127,7 +4101,9 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="wstransport: secure(self: WsTransport): bool" href="libp2p/transports/wstransport.html#secure%2CWsTransport">wstransport: secure(self: WsTransport): bool</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="upgrade: secure(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[Connection]" href="libp2p/upgrademngrs/upgrade.html#secure%2CUpgrade%2CConnection%2COpt%5BPeerId%5D">upgrade: secure(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[Connection]</a></li>
+          data-doc-search-tag="upgrade: secure(self: Upgrade; conn: Connection; direction: Direction;
+       peerId: Opt[PeerId]): Future[Connection]" href="libp2p/upgrademngrs/upgrade.html#secure%2CUpgrade%2CConnection%2CDirection%2COpt%5BPeerId%5D">upgrade: secure(self: Upgrade; conn: Connection; direction: Direction;
+       peerId: Opt[PeerId]): Future[Connection]</a></li>
           </ul></dd>
 <dt><a name="SecureConn" href="#SecureConn"><span>SecureConn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4143,27 +4119,25 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="select" href="#select"><span>select:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="multistream: select(_: MultistreamSelect | type MultistreamSelect; conn: Connection;
+       proto: seq[string]): Future[string]" href="libp2p/multistream.html#select%2C%2CConnection%2Cseq%5Bstring%5D">multistream: select(_: MultistreamSelect | type MultistreamSelect; conn: Connection;
+       proto: seq[string]): Future[string]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="multistream: select(_: MultistreamSelect | type MultistreamSelect; conn: Connection;
+       proto: string): Future[bool]" href="libp2p/multistream.html#select%2C%2CConnection%2Cstring">multistream: select(_: MultistreamSelect | type MultistreamSelect; conn: Connection;
+       proto: string): Future[bool]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="multistream: select(m: MultistreamSelect; conn: Connection): Future[bool]" href="libp2p/multistream.html#select%2CMultistreamSelect%2CConnection">multistream: select(m: MultistreamSelect; conn: Connection): Future[bool]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="multistream: select(m: MultistreamSelect; conn: Connection; proto: seq[string]): Future[
-    string]" href="libp2p/multistream.html#select%2CMultistreamSelect%2CConnection%2Cseq%5Bstring%5D">multistream: select(m: MultistreamSelect; conn: Connection; proto: seq[string]): Future[
-    string]</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="multistream: select(m: MultistreamSelect; conn: Connection; proto: string): Future[bool]" href="libp2p/multistream.html#select%2CMultistreamSelect%2CConnection%2Cstring">multistream: select(m: MultistreamSelect; conn: Connection; proto: string): Future[bool]</a></li>
           </ul></dd>
 <dt><a name="selectBest" href="#selectBest"><span>selectBest:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="crypto: selectBest(order: int; p1, p2: string): string" href="libp2p/crypto/crypto.html#selectBest%2Cint%2Cstring%2Cstring">crypto: selectBest(order: int; p1, p2: string): string</a></li>
           </ul></dd>
-<dt><a name="selectConn" href="#selectConn"><span>selectConn:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: selectConn(c: ConnManager; peerId: PeerId): Connection" href="libp2p/connmanager.html#selectConn%2CConnManager%2CPeerId">connmanager: selectConn(c: ConnManager; peerId: PeerId): Connection</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="connmanager: selectConn(c: ConnManager; peerId: PeerId; dir: Direction): Connection" href="libp2p/connmanager.html#selectConn%2CConnManager%2CPeerId%2CDirection">connmanager: selectConn(c: ConnManager; peerId: PeerId; dir: Direction): Connection</a></li>
-          </ul></dd>
 <dt><a name="selectMuxer" href="#selectMuxer"><span>selectMuxer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; conn: Connection): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CConnection">connmanager: selectMuxer(c: ConnManager; conn: Connection): Muxer</a></li>
+          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; peerId: PeerId): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CPeerId">connmanager: selectMuxer(c: ConnManager; peerId: PeerId): Muxer</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="connmanager: selectMuxer(c: ConnManager; peerId: PeerId; dir: Direction): Muxer" href="libp2p/connmanager.html#selectMuxer%2CConnManager%2CPeerId%2CDirection">connmanager: selectMuxer(c: ConnManager; peerId: PeerId; dir: Direction): Muxer</a></li>
           </ul></dd>
 <dt><a name="send" href="#send"><span>send:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4429,13 +4403,9 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="messages: StopMessageType" href="libp2p/protocols/connectivity/relay/messages.html#StopMessageType">messages: StopMessageType</a></li>
           </ul></dd>
-<dt><a name="storeConn" href="#storeConn"><span>storeConn:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connmanager: storeConn(c: ConnManager; conn: Connection)" href="libp2p/connmanager.html#storeConn%2CConnManager%2CConnection">connmanager: storeConn(c: ConnManager; conn: Connection)</a></li>
-          </ul></dd>
 <dt><a name="storeMuxer" href="#storeMuxer"><span>storeMuxer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="connmanager: storeMuxer(c: ConnManager; muxer: Muxer; handle: Future[void] = nil)" href="libp2p/connmanager.html#storeMuxer%2CConnManager%2CMuxer%2CFuture%5Bvoid%5D">connmanager: storeMuxer(c: ConnManager; muxer: Muxer; handle: Future[void] = nil)</a></li>
+          data-doc-search-tag="connmanager: storeMuxer(c: ConnManager; muxer: Muxer)" href="libp2p/connmanager.html#storeMuxer%2CConnManager%2CMuxer">connmanager: storeMuxer(c: ConnManager; muxer: Muxer)</a></li>
           </ul></dd>
 <dt><a name="StreamHandler" href="#StreamHandler"><span>StreamHandler:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4635,6 +4605,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="connmanager: trackConnection(cs: ConnectionSlot; conn: Connection)" href="libp2p/connmanager.html#trackConnection%2CConnectionSlot%2CConnection">connmanager: trackConnection(cs: ConnectionSlot; conn: Connection)</a></li>
           </ul></dd>
+<dt><a name="trackMuxer" href="#trackMuxer"><span>trackMuxer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="connmanager: trackMuxer(cs: ConnectionSlot; mux: Muxer)" href="libp2p/connmanager.html#trackMuxer%2CConnectionSlot%2CMuxer">connmanager: trackMuxer(cs: ConnectionSlot; mux: Muxer)</a></li>
+          </ul></dd>
 <dt><a name="Transcoder" href="#Transcoder"><span>Transcoder:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="transcoder: Transcoder" href="libp2p/transcoder.html#Transcoder">transcoder: Transcoder</a></li>
@@ -4781,10 +4755,6 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="scoring: updateScores(g: GossipSub)" href="libp2p/protocols/pubsub/gossipsub/scoring.html#updateScores%2CGossipSub">scoring: updateScores(g: GossipSub)</a></li>
           </ul></dd>
-<dt><a name="upgrade" href="#upgrade"><span>upgrade:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="connection: upgrade(s: Connection; failed: ref CatchableError = nil)" href="libp2p/stream/connection.html#upgrade%2CConnection%2Cref.CatchableError">connection: upgrade(s: Connection; failed: ref CatchableError = nil)</a></li>
-          </ul></dd>
 <dt><a name="Upgrade" href="#Upgrade"><span>Upgrade:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="upgrade: Upgrade" href="libp2p/upgrademngrs/upgrade.html#Upgrade">upgrade: Upgrade</a></li>
@@ -4795,25 +4765,25 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="upgradeIncoming" href="#upgradeIncoming"><span>upgradeIncoming:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="transport: upgradeIncoming(self: Transport; conn: Connection): Future[void]" href="libp2p/transports/transport.html#upgradeIncoming.e%2CTransport%2CConnection">transport: upgradeIncoming(self: Transport; conn: Connection): Future[void]</a></li>
+          data-doc-search-tag="transport: upgradeIncoming(self: Transport; conn: Connection): Future[Muxer]" href="libp2p/transports/transport.html#upgradeIncoming.e%2CTransport%2CConnection">transport: upgradeIncoming(self: Transport; conn: Connection): Future[Muxer]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="muxedupgrade: upgradeIncoming(self: MuxedUpgrade; incomingConn: Connection): Future[void]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeIncoming.e%2CMuxedUpgrade%2CConnection">muxedupgrade: upgradeIncoming(self: MuxedUpgrade; incomingConn: Connection): Future[void]</a></li>
+          data-doc-search-tag="muxedupgrade: upgradeIncoming(self: MuxedUpgrade; conn: Connection): Future[Muxer]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeIncoming.e%2CMuxedUpgrade%2CConnection">muxedupgrade: upgradeIncoming(self: MuxedUpgrade; conn: Connection): Future[Muxer]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="upgrade: upgradeIncoming(self: Upgrade; conn: Connection): Future[void]" href="libp2p/upgrademngrs/upgrade.html#upgradeIncoming.e%2CUpgrade%2CConnection">upgrade: upgradeIncoming(self: Upgrade; conn: Connection): Future[void]</a></li>
+          data-doc-search-tag="upgrade: upgradeIncoming(self: Upgrade; conn: Connection): Future[Muxer]" href="libp2p/upgrademngrs/upgrade.html#upgradeIncoming.e%2CUpgrade%2CConnection">upgrade: upgradeIncoming(self: Upgrade; conn: Connection): Future[Muxer]</a></li>
           </ul></dd>
 <dt><a name="upgradeOutgoing" href="#upgradeOutgoing"><span>upgradeOutgoing:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="transport: upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]" href="libp2p/transports/transport.html#upgradeOutgoing.e%2CTransport%2CConnection%2COpt%5BPeerId%5D">transport: upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]</a></li>
+    Muxer]" href="libp2p/transports/transport.html#upgradeOutgoing.e%2CTransport%2CConnection%2COpt%5BPeerId%5D">transport: upgradeOutgoing(self: Transport; conn: Connection; peerId: Opt[PeerId]): Future[
+    Muxer]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeOutgoing.e%2CMuxedUpgrade%2CConnection%2COpt%5BPeerId%5D">muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]</a></li>
+    Muxer]" href="libp2p/upgrademngrs/muxedupgrade.html#upgradeOutgoing.e%2CMuxedUpgrade%2CConnection%2COpt%5BPeerId%5D">muxedupgrade: upgradeOutgoing(self: MuxedUpgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Muxer]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="upgrade: upgradeOutgoing(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]" href="libp2p/upgrademngrs/upgrade.html#upgradeOutgoing.e%2CUpgrade%2CConnection%2COpt%5BPeerId%5D">upgrade: upgradeOutgoing(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[
-    Connection]</a></li>
+    Muxer]" href="libp2p/upgrademngrs/upgrade.html#upgradeOutgoing.e%2CUpgrade%2CConnection%2COpt%5BPeerId%5D">upgrade: upgradeOutgoing(self: Upgrade; conn: Connection; peerId: Opt[PeerId]): Future[
+    Muxer]</a></li>
           </ul></dd>
 <dt><a name="UTP" href="#UTP"><span>UTP:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5172,7 +5142,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-06 15:39:29 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-08 11:32:15 UTC</small>
       </div>
     </div>
   </div>
