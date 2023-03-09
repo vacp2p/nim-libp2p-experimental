@@ -208,6 +208,7 @@ window.addEventListener("DOMContentLoaded", main2);
       <li><a class="reference" href="#Muxer"
     title="Muxer = ref object of RootObj
   streamHandler*: StreamHandler
+  handler*: Future[void]
   connection*: Connection">Muxer</a></li>
   <li><a class="reference" href="#MuxerConstructor"
     title="MuxerConstructor = proc (conn: Connection): Muxer {.gcsafe, closure,
@@ -217,10 +218,9 @@ window.addEventListener("DOMContentLoaded", main2);
   <li><a class="reference" href="#MuxerHandler"
     title="MuxerHandler = proc (muxer: Muxer): Future[void] {.gcsafe, raises: [Defect].}">MuxerHandler</a></li>
   <li><a class="reference" href="#MuxerProvider"
-    title="MuxerProvider = ref object of LPProtocol
+    title="MuxerProvider = object
   newMuxer*: MuxerConstructor
-  streamHandler*: StreamHandler
-  muxerHandler*: MuxerHandler">MuxerProvider</a></li>
+  codec*: string">MuxerProvider</a></li>
   <li><a class="reference" href="#StreamHandler"
     title="StreamHandler = proc (conn: Connection): Future[void] {.gcsafe, raises: [Defect].}">StreamHandler</a></li>
   <li><a class="reference" href="#TooManyChannels"
@@ -308,6 +308,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="Muxer" class="tohide">
 <dt><pre><a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span>
   <span class="Identifier">streamHandler</span><span class="Operator">*</span><span class="Other">:</span> <a href="muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a>
+  <span class="Identifier">handler</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span>
   <span class="Identifier">connection</span><span class="Operator">*</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a>
 </pre></dt>
 <dd>
@@ -327,9 +328,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L38"
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L39"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -358,18 +359,17 @@ class="link-seesrc" target="_blank">Source</a>
 </dd>
 </div>
 <div id="MuxerProvider" class="tohide">
-<dt><pre><a href="muxer.html#MuxerProvider"><span class="Identifier">MuxerProvider</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../protocols/protocol.html#LPProtocol"><span class="Identifier">LPProtocol</span></a>
+<dt><pre><a href="muxer.html#MuxerProvider"><span class="Identifier">MuxerProvider</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">newMuxer</span><span class="Operator">*</span><span class="Other">:</span> <a href="muxer.html#MuxerConstructor"><span class="Identifier">MuxerConstructor</span></a>
-  <span class="Identifier">streamHandler</span><span class="Operator">*</span><span class="Other">:</span> <a href="muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a>
-  <span class="Identifier">muxerHandler</span><span class="Operator">*</span><span class="Other">:</span> <a href="muxer.html#MuxerHandler"><span class="Identifier">MuxerHandler</span></a>
+  <span class="Identifier">codec</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
 </pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L41"
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L42"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -426,9 +426,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L55"
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L59"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -451,22 +451,36 @@ class="link-seesrc" target="_blank">Source</a>
 <dl class="item">
 <div id="close.e,Muxer" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#close.e%2CMuxer"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                       <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L52"
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L54"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="handle.e,Muxer" class="tohide">
 <dt><pre><span class="Keyword">method</span> <a href="#handle.e%2CMuxer"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                        <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L57"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L57" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="newStream.e,Muxer,string,bool" class="tohide">
+<dt><pre><span class="Keyword">method</span> <a href="#newStream.e%2CMuxer%2Cstring%2Cbool"><span class="Identifier">newStream</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">;</span> <span class="Identifier">lazy</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                  <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -474,20 +488,6 @@ class="link-seesrc" target="_blank">Source</a>
 href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L53"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="newStream.e,Muxer,string,bool" class="tohide">
-<dt><pre><span class="Keyword">method</span> <a href="#newStream.e%2CMuxer%2Cstring%2Cbool"><span class="Identifier">newStream</span></a><span class="Other">(</span><span class="Identifier">m</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">;</span> <span class="Identifier">lazy</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">]</span> {.<span class="Identifier">base</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">stackTrace</span><span class="Other">:</span> <span class="DecNumber">false</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                  <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L51"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L51" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -502,9 +502,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L47"
+href="https://github.com/status-im/nim-libp2p/tree/gossipfix/libp2p/muxers/muxer.nim#L49"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -518,7 +518,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-02-09 16:30:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-09 10:05:48 UTC</small>
       </div>
     </div>
   </div>
