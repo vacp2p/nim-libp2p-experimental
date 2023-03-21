@@ -278,10 +278,10 @@ window.addEventListener("DOMContentLoaded", main2);
     title="newSwitch(peerInfo: PeerInfo; transports: seq[Transport];
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; peerStore: PeerStore;
-          nameResolver: NameResolver = nil; services = newSeq[Service]()): Switch">newSwitch(peerInfo: PeerInfo; transports: seq[Transport];
+          nameResolver: NameResolver = nil; services = newSeq()): Switch">newSwitch(peerInfo: PeerInfo; transports: seq[Transport];
           secureManagers: openArray[Secure] = []; connManager: ConnManager;
           ms: MultistreamSelect; peerStore: PeerStore;
-          nameResolver: NameResolver = nil; services = newSeq[Service]()): Switch</a></li>
+          nameResolver: NameResolver = nil; services = newSeq()): Switch</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">removeConnEventHandler
@@ -547,7 +547,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newSwitch%2CPeerInfo%2Cseq%5BTransport%5D%2CopenArray%5BSecure%5D%2CConnManager%2CMultistreamSelect%2CPeerStore%2CNameResolver"><span class="Identifier">newSwitch</span></a><span class="Other">(</span><span class="Identifier">peerInfo</span><span class="Other">:</span> <a href="peerinfo.html#PeerInfo"><span class="Identifier">PeerInfo</span></a><span class="Other">;</span> <span class="Identifier">transports</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="upgrademngrs/upgrade.html#Transport"><span class="Identifier">Transport</span></a><span class="Other">]</span><span class="Other">;</span>
                <span class="Identifier">secureManagers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><a href="protocols/secure/secure.html#Secure"><span class="Identifier">Secure</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">connManager</span><span class="Other">:</span> <a href="connmanager.html#ConnManager"><span class="Identifier">ConnManager</span></a><span class="Other">;</span>
                <span class="Identifier">ms</span><span class="Other">:</span> <a href="multistream.html#MultistreamSelect"><span class="Identifier">MultistreamSelect</span></a><span class="Other">;</span> <span class="Identifier">peerStore</span><span class="Other">:</span> <a href="peerstore.html#PeerStore"><span class="Identifier">PeerStore</span></a><span class="Other">;</span>
-               <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span> <span class="Identifier">services</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">[</span><a href="transports/transport.html#Service"><span class="Identifier">Service</span></a><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a> {.
+               <span class="Identifier">nameResolver</span><span class="Other">:</span> <a href="nameresolving/nameresolver.html#NameResolver"><span class="Identifier">NameResolver</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">;</span> <span class="Identifier">services</span> <span class="Other">=</span> <span class="Identifier">newSeq</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="transports/transport.html#Switch"><span class="Identifier">Switch</span></a> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <a href="errors.html#LPError"><span class="Identifier">LPError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
@@ -731,7 +731,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-09 10:05:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-03-21 12:39:12 UTC</small>
       </div>
     </div>
   </div>
