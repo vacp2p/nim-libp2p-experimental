@@ -93,8 +93,7 @@ method write*(
 
 method closeImpl*(s: WsStream): Future[void] {.async.} =
   await s.session.close()
-  if not isNil(s.session.stream):
-    await s.session.stream.closeWait()
+  await s.session.stream.closeWait()
   await procCall Connection(s).closeImpl()
 
 method getWrapped*(s: WsStream): Connection = nil
