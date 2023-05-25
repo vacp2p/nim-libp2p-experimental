@@ -78,6 +78,8 @@ method readOnce*(
   s: WsStream,
   pbytes: pointer,
   nbytes: int): Future[int] {.async.} =
+  if s.atEof:
+    raise newLPStreamEOFError()
   let res = mapExceptions(await s.session.recv(pbytes, nbytes))
 
   if res == 0 and s.session.readyState == ReadyState.Closed:
