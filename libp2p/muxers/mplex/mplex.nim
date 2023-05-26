@@ -131,7 +131,7 @@ method handle*(m: Mplex) {.async, gcsafe.} =
     while not m.connection.atEof:
       trace "waiting for data", m
       let
-        (id, msgType, data) = await m.connection.readMsg()
+        (id, msgType, data) = await m.connection.readMsg().wait(10.minutes)
         initiator = bool(ord(msgType) and 1)
 
       logScope:
