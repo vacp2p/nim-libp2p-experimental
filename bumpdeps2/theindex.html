@@ -3108,8 +3108,8 @@ window.addEventListener('DOMContentLoaded', main);
     rng: ref HmacDrbgContext = newRng()): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
-    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type" href="libp2p/protocols/protocol.html#new%2CtypeLPProtocol%2Cseq%5Bstring%5D%2CLPProtoHandler">protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
-    maxIncomingStreams: Opt[int] | int = Opt[int]()): T:type</a></li>
+    maxIncomingStreams: Opt[int] | int = Opt.none(int)): T:type" href="libp2p/protocols/protocol.html#new%2CtypeLPProtocol%2Cseq%5Bstring%5D%2CLPProtoHandler">protocol: new(T: type LPProtocol; codecs: seq[string]; handler: LPProtoHandler;
+    maxIncomingStreams: Opt[int] | int = Opt.none(int)): T:type</a></li>
           <li><a class="reference external"
           data-doc-search-tag="pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
     codec: string; maxMessageSize: int): T:type" href="libp2p/protocols/pubsub/pubsubpeer.html#new%2Ctypedesc%5BPubSubPeer%5D%2CPeerId%2CGetConn%2COnEvent%2Cstring%2Cint">pubsubpeer: new(T: typedesc[PubSubPeer]; peerId: PeerId; getConn: GetConn; onEvent: OnEvent;
@@ -4509,6 +4509,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: TCP" href="libp2p/multiaddress.html#TCP">multiaddress: TCP</a></li>
           </ul></dd>
+<dt><a name="TCP_DNS" href="#TCP_DNS"><span>TCP_DNS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: TCP_DNS" href="libp2p/multiaddress.html#TCP_DNS">multiaddress: TCP_DNS</a></li>
+          </ul></dd>
+<dt><a name="TCP_IP" href="#TCP_IP"><span>TCP_IP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: TCP_IP" href="libp2p/multiaddress.html#TCP_IP">multiaddress: TCP_IP</a></li>
+          </ul></dd>
 <dt><a name="TcpOnion3" href="#TcpOnion3"><span>TcpOnion3:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: TcpOnion3" href="libp2p/multiaddress.html#TcpOnion3">multiaddress: TcpOnion3</a></li>
@@ -4745,6 +4753,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: UDP" href="libp2p/multiaddress.html#UDP">multiaddress: UDP</a></li>
           </ul></dd>
+<dt><a name="UDP_DNS" href="#UDP_DNS"><span>UDP_DNS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: UDP_DNS" href="libp2p/multiaddress.html#UDP_DNS">multiaddress: UDP_DNS</a></li>
+          </ul></dd>
+<dt><a name="UDP_IP" href="#UDP_IP"><span>UDP_IP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: UDP_IP" href="libp2p/multiaddress.html#UDP_IP">multiaddress: UDP_IP</a></li>
+          </ul></dd>
 <dt><a name="udpProtocol" href="#udpProtocol"><span>udpProtocol:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="IpTransportProtocol.udpProtocol" href="libp2p/multiaddress.html#udpProtocol">IpTransportProtocol.udpProtocol</a></li>
@@ -4905,6 +4921,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: WebSockets" href="libp2p/multiaddress.html#WebSockets">multiaddress: WebSockets</a></li>
           </ul></dd>
+<dt><a name="WebSockets_DNS" href="#WebSockets_DNS"><span>WebSockets_DNS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WebSockets_DNS" href="libp2p/multiaddress.html#WebSockets_DNS">multiaddress: WebSockets_DNS</a></li>
+          </ul></dd>
+<dt><a name="WebSockets_IP" href="#WebSockets_IP"><span>WebSockets_IP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WebSockets_IP" href="libp2p/multiaddress.html#WebSockets_IP">multiaddress: WebSockets_IP</a></li>
+          </ul></dd>
 <dt><a name="window" href="#window"><span>window:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="mcache: window(c: MCache; topic: string): HashSet[MessageId]" href="libp2p/protocols/pubsub/mcache.html#window%2CMCache%2Cstring">mcache: window(c: MCache; topic: string): HashSet[MessageId]</a></li>
@@ -4956,8 +4980,8 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="withPeerStats" href="#withPeerStats"><span>withPeerStats:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="scoring: withPeerStats(g: GossipSub; peerId: PeerId;
-              action: proc (stats: var PeerStats) {.gcsafe, raises: [Defect].})" href="libp2p/protocols/pubsub/gossipsub/scoring.html#withPeerStats%2CGossipSub%2CPeerId%2Cproc%28PeerStats%29">scoring: withPeerStats(g: GossipSub; peerId: PeerId;
-              action: proc (stats: var PeerStats) {.gcsafe, raises: [Defect].})</a></li>
+              action: proc (stats: var PeerStats) {.gcsafe, raises: [].})" href="libp2p/protocols/pubsub/gossipsub/scoring.html#withPeerStats%2CGossipSub%2CPeerId%2Cproc%28PeerStats%29">scoring: withPeerStats(g: GossipSub; peerId: PeerId;
+              action: proc (stats: var PeerStats) {.gcsafe, raises: [].})</a></li>
           </ul></dd>
 <dt><a name="withPeerStore" href="#withPeerStore"><span>withPeerStore:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5133,9 +5157,25 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: WS" href="libp2p/multiaddress.html#WS">multiaddress: WS</a></li>
           </ul></dd>
+<dt><a name="WS_DNS" href="#WS_DNS"><span>WS_DNS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WS_DNS" href="libp2p/multiaddress.html#WS_DNS">multiaddress: WS_DNS</a></li>
+          </ul></dd>
+<dt><a name="WS_IP" href="#WS_IP"><span>WS_IP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WS_IP" href="libp2p/multiaddress.html#WS_IP">multiaddress: WS_IP</a></li>
+          </ul></dd>
 <dt><a name="WSS" href="#WSS"><span>WSS:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: WSS" href="libp2p/multiaddress.html#WSS">multiaddress: WSS</a></li>
+          </ul></dd>
+<dt><a name="WSS_DNS" href="#WSS_DNS"><span>WSS_DNS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WSS_DNS" href="libp2p/multiaddress.html#WSS_DNS">multiaddress: WSS_DNS</a></li>
+          </ul></dd>
+<dt><a name="WSS_IP" href="#WSS_IP"><span>WSS_IP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="multiaddress: WSS_IP" href="libp2p/multiaddress.html#WSS_IP">multiaddress: WSS_IP</a></li>
           </ul></dd>
 <dt><a name="WsTransport" href="#WsTransport"><span>WsTransport:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5178,7 +5218,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-30 09:42:31 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-07 12:18:28 UTC</small>
       </div>
     </div>
   </div>

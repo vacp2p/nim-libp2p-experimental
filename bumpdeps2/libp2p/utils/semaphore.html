@@ -269,9 +269,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L24"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L21"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L24" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L21" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -286,38 +286,14 @@ class="link-seesrc" target="_blank">Source</a>
 
 Acquire a resource and decrement the resource counter. If no more resources are available, the returned future will not complete until the resource count goes above 0. 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L44"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L41"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L44" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="count,AsyncSemaphore" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#count%2CAsyncSemaphore"><span class="Identifier">count</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L32"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="forceAcquire,AsyncSemaphore" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#forceAcquire%2CAsyncSemaphore"><span class="Identifier">forceAcquire</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-ForceAcquire will always succeed, creating a temporary slot if required. This temporary slot will stay usable until there is less <tt class="docutils literal"><span class="pre"><span class="Identifier">acquire</span></span></tt>s than <tt class="docutils literal"><span class="pre"><span class="Identifier">release</span></span></tt>s
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L68"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L68" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="newAsyncSemaphore,int" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#newAsyncSemaphore%2Cint"><span class="Identifier">newAsyncSemaphore</span></a><span class="Other">(</span><span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -328,15 +304,39 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
+<div id="forceAcquire,AsyncSemaphore" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#forceAcquire%2CAsyncSemaphore"><span class="Identifier">forceAcquire</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+ForceAcquire will always succeed, creating a temporary slot if required. This temporary slot will stay usable until there is less <tt class="docutils literal"><span class="pre"><span class="Identifier">acquire</span></span></tt>s than <tt class="docutils literal"><span class="pre"><span class="Identifier">release</span></span></tt>s
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L65"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L65" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="newAsyncSemaphore,int" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#newAsyncSemaphore%2Cint"><span class="Identifier">newAsyncSemaphore</span></a><span class="Other">(</span><span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L26"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="release,AsyncSemaphore" class="tohide">
 <dt><pre><span class="Keyword">proc</span> <a href="#release%2CAsyncSemaphore"><span class="Identifier">release</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="semaphore.html#AsyncSemaphore"><span class="Identifier">AsyncSemaphore</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Release a resource from the semaphore, by picking the first future from the queue and completing it and incrementing the internal resource count 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L75"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L72"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L75" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L72" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -346,9 +346,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Attempts to acquire a resource, if successful returns true, otherwise false 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L34"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/utils/semaphore.nim#L31"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/utils/semaphore.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -362,7 +362,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-30 09:42:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-07 12:18:26 UTC</small>
       </div>
     </div>
   </div>

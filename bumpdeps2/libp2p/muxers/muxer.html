@@ -211,18 +211,17 @@ window.addEventListener("DOMContentLoaded", main2);
   handler*: Future[void]
   connection*: Connection">Muxer</a></li>
   <li><a class="reference" href="#MuxerConstructor"
-    title="MuxerConstructor = proc (conn: Connection): Muxer {.gcsafe, closure,
-    raises: [Defect].}">MuxerConstructor</a></li>
+    title="MuxerConstructor = proc (conn: Connection): Muxer {.gcsafe, closure, raises: [].}">MuxerConstructor</a></li>
   <li><a class="reference" href="#MuxerError"
     title="MuxerError = object of LPError">MuxerError</a></li>
   <li><a class="reference" href="#MuxerHandler"
-    title="MuxerHandler = proc (muxer: Muxer): Future[void] {.gcsafe, raises: [Defect].}">MuxerHandler</a></li>
+    title="MuxerHandler = proc (muxer: Muxer): Future[void] {.gcsafe, raises: [].}">MuxerHandler</a></li>
   <li><a class="reference" href="#MuxerProvider"
     title="MuxerProvider = object
   newMuxer*: MuxerConstructor
   codec*: string">MuxerProvider</a></li>
   <li><a class="reference" href="#StreamHandler"
-    title="StreamHandler = proc (conn: Connection): Future[void] {.gcsafe, raises: [Defect].}">StreamHandler</a></li>
+    title="StreamHandler = proc (conn: Connection): Future[void] {.gcsafe, raises: [].}">StreamHandler</a></li>
   <li><a class="reference" href="#TooManyChannels"
     title="TooManyChannels = object of MuxerError">TooManyChannels</a></li>
 
@@ -320,22 +319,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L32"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L29"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="MuxerConstructor" class="tohide">
-<dt><pre><a href="muxer.html#MuxerConstructor"><span class="Identifier">MuxerConstructor</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">closure</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><a href="muxer.html#MuxerConstructor"><span class="Identifier">MuxerConstructor</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> </span><span class="Identifier">closure</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L38"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L35"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -345,21 +343,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L26"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L23"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L23" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="MuxerHandler" class="tohide">
-<dt><pre><a href="muxer.html#MuxerHandler"><span class="Identifier">MuxerHandler</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">muxer</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><a href="muxer.html#MuxerHandler"><span class="Identifier">MuxerHandler</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">muxer</span><span class="Other">:</span> <a href="muxer.html#Muxer"><span class="Identifier">Muxer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L30"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L27"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L27" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -372,21 +370,21 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L41"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L38"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L41" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="StreamHandler" class="tohide">
-<dt><pre><a href="muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><a href="muxer.html#StreamHandler"><span class="Identifier">StreamHandler</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L29"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L26"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L29" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -396,9 +394,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L27"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L24"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L27" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L24" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -413,9 +411,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L23"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L20"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L23" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -431,9 +429,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L58"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L55"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L58" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -443,9 +441,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L45"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L42"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L42" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -462,9 +460,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L53"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L50"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L50" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -474,9 +472,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L66"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L63"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L66" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L63" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -488,9 +486,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L56"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L53"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L56" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -502,9 +500,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L52"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L49"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L52" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -519,9 +517,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L48"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/muxers/muxer.nim#L45"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L48" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/muxers/muxer.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -535,7 +533,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-30 09:42:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-07 12:18:25 UTC</small>
       </div>
     </div>
   </div>

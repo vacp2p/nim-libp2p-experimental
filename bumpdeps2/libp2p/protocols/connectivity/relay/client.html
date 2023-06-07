@@ -211,7 +211,7 @@ window.addEventListener("DOMContentLoaded", main2);
   canHop: bool">RelayClient</a></li>
   <li><a class="reference" href="#RelayClientAddConn"
     title="RelayClientAddConn = proc (conn: Connection; duration: uint32; data: uint64): Future[
-    void] {.gcsafe, raises: [Defect].}">RelayClientAddConn</a></li>
+    void] {.gcsafe, raises: [].}">RelayClientAddConn</a></li>
   <li><a class="reference" href="#RelayClientError"
     title="RelayClientError = object of LPError">RelayClientError</a></li>
   <li><a class="reference" href="#RelayV1DialError"
@@ -304,27 +304,51 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L43"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="RelayClientAddConn" class="tohide">
-<dt><pre><a href="client.html#RelayClientAddConn"><span class="Identifier">RelayClientAddConn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">duration</span><span class="Other">:</span> <span class="Identifier">uint32</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">uint64</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
-    <span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">]</span></span>.}</pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
 href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L40"
 class="link-seesrc" target="_blank">Source</a>
 &nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L40" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
+<div id="RelayClientAddConn" class="tohide">
+<dt><pre><a href="client.html#RelayClientAddConn"><span class="Identifier">RelayClientAddConn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">conn</span><span class="Other">:</span> <a href="../../../stream/connection.html#Connection"><span class="Identifier">Connection</span></a><span class="Other">;</span> <span class="Identifier">duration</span><span class="Other">:</span> <span class="Identifier">uint32</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">uint64</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">void</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L37"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="RelayClientError" class="tohide">
 <dt><pre><a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="../../../errors.html#LPError"><span class="Identifier">LPError</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L33"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L33" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="RelayV1DialError" class="tohide">
+<dt><pre><a href="client.html#RelayV1DialError"><span class="Identifier">RelayV1DialError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L35"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="RelayV2DialError" class="tohide">
+<dt><pre><a href="client.html#RelayV2DialError"><span class="Identifier">RelayV2DialError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a></pre></dt>
 <dd>
 
 
@@ -335,39 +359,15 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dd>
 </div>
-<div id="RelayV1DialError" class="tohide">
-<dt><pre><a href="client.html#RelayV1DialError"><span class="Identifier">RelayV1DialError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a></pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L38"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
-<div id="RelayV2DialError" class="tohide">
-<dt><pre><a href="client.html#RelayV2DialError"><span class="Identifier">RelayV2DialError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a></pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L39"
-class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L39" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-</div>
 <div id="ReservationError" class="tohide">
 <dt><pre><a href="client.html#ReservationError"><span class="Identifier">ReservationError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="client.html#RelayClientError"><span class="Identifier">RelayClientError</span></a></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L37"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L34"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -383,9 +383,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L47"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L44"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L44" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -403,9 +403,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L129"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L126"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L129" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L126" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -418,9 +418,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L173"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L170"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -438,9 +438,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L258"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L255"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L258" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L255" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -452,9 +452,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L88"
+href="https://github.com/status-im/nim-libp2p/tree/bumpdeps2/libp2p/protocols/connectivity/relay/client.nim#L85"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L88" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/client.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -468,7 +468,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-30 09:42:29 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-07 12:18:27 UTC</small>
       </div>
     </div>
   </div>
