@@ -358,9 +358,11 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 6)], value: 0), (operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 4),
                          (operator: Eq, args: [], value: 41)], value: 0),
-    (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
-                          (operator: Eq, args: [], value: 478)], value: 0)],
-    value: 0)], value: 0), (operator: Eq, args: [], value: 421)], value: 0)">IPFS</a></li>
+    (operator: Eq, args: [], value: 6)], value: 0)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)], value: 0)], value: 0),
+                              (operator: Eq, args: [], value: 421)], value: 0)">IPFS</a></li>
   <li><a class="reference" href="#Onion3"
     title="Onion3 = (operator: Eq, args: [], value: 445)">Onion3</a></li>
   <li><a class="reference" href="#P2PPattern"
@@ -420,9 +422,10 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 6)], value: 0), (operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 4),
                          (operator: Eq, args: [], value: 41)], value: 0),
-    (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
-                          (operator: Eq, args: [], value: 478)], value: 0)],
-    value: 0)], value: 0)">Reliable</a></li>
+    (operator: Eq, args: [], value: 6)], value: 0)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)], value: 0)], value: 0)">Reliable</a></li>
   <li><a class="reference" href="#TCP"
     title="TCP = (operator: Or, args: [(operator: And, args: [(operator: Or, args: [
     (operator: Eq, args: [], value: 53), (operator: Eq, args: [], value: 54),
@@ -454,6 +457,11 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
                                    (operator: Eq, args: [], value: 445)],
              value: 0)">TcpOnion3</a></li>
+  <li><a class="reference" href="#TLS_WS"
+    title="TLS_WS = (operator: Or, args: [(operator: Eq, args: [], value: 478), (
+    operator: And, args: [(operator: Eq, args: [], value: 448),
+                          (operator: Eq, args: [], value: 477)], value: 0)],
+          value: 0)">TLS_WS</a></li>
   <li><a class="reference" href="#TranscoderDNS"
     title="TranscoderDNS = (stringToBuffer: dnsStB, bufferToString: dnsBtS,
                  validateBuffer: dnsVB)">TranscoderDNS</a></li>
@@ -582,8 +590,10 @@ window.addEventListener("DOMContentLoaded", main2);
     value: 0), (operator: Eq, args: [], value: 6)], value: 0), (operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 4),
                          (operator: Eq, args: [], value: 41)], value: 0),
-    (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
-    (operator: Eq, args: [], value: 478)], value: 0)], value: 0)">WebSockets</a></li>
+    (operator: Eq, args: [], value: 6)], value: 0)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)], value: 0)">WebSockets</a></li>
   <li><a class="reference" href="#WebSockets_DNS"
     title="WebSockets_DNS = (operator: Or, args: [(operator: And, args: [(operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 53),
@@ -596,7 +606,10 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 53), (operator: Eq, args: [], value: 54),
     (operator: Eq, args: [], value: 55), (operator: Eq, args: [], value: 56)],
                            value: 0), (operator: Eq, args: [], value: 6)],
-    value: 0), (operator: Eq, args: [], value: 478)], value: 0)], value: 0)">WebSockets_DNS</a></li>
+    value: 0), (operator: Or, args: [(operator: Eq, args: [], value: 478), (
+    operator: And, args: [(operator: Eq, args: [], value: 448),
+                          (operator: Eq, args: [], value: 477)], value: 0)],
+                value: 0)], value: 0)], value: 0)">WebSockets_DNS</a></li>
   <li><a class="reference" href="#WebSockets_IP"
     title="WebSockets_IP = (operator: Or, args: [(operator: And, args: [(operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 4),
@@ -606,7 +619,10 @@ window.addEventListener("DOMContentLoaded", main2);
     operator: And, args: [(operator: Or, args: [
     (operator: Eq, args: [], value: 4), (operator: Eq, args: [], value: 41)],
                            value: 0), (operator: Eq, args: [], value: 6)],
-    value: 0), (operator: Eq, args: [], value: 478)], value: 0)], value: 0)">WebSockets_IP</a></li>
+    value: 0), (operator: Or, args: [(operator: Eq, args: [], value: 478), (
+    operator: And, args: [(operator: Eq, args: [], value: 448),
+                          (operator: Eq, args: [], value: 477)], value: 0)],
+                value: 0)], value: 0)], value: 0)">WebSockets_IP</a></li>
   <li><a class="reference" href="#WS"
     title="WS = (operator: And, args: [(operator: Or, args: [(operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 53),
@@ -638,19 +654,25 @@ window.addEventListener("DOMContentLoaded", main2);
     (operator: Eq, args: [], value: 6)], value: 0), (operator: And, args: [(
     operator: Or, args: [(operator: Eq, args: [], value: 4),
                          (operator: Eq, args: [], value: 41)], value: 0),
-    (operator: Eq, args: [], value: 6)], value: 0)], value: 0),
-                             (operator: Eq, args: [], value: 478)], value: 0)">WSS</a></li>
+    (operator: Eq, args: [], value: 6)], value: 0)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)">WSS</a></li>
   <li><a class="reference" href="#WSS_DNS"
     title="WSS_DNS = (operator: And, args: [(operator: And, args: [(operator: Or, args: [
     (operator: Eq, args: [], value: 53), (operator: Eq, args: [], value: 54),
     (operator: Eq, args: [], value: 55), (operator: Eq, args: [], value: 56)],
-    value: 0), (operator: Eq, args: [], value: 6)], value: 0),
-                                 (operator: Eq, args: [], value: 478)], value: 0)">WSS_DNS</a></li>
+    value: 0), (operator: Eq, args: [], value: 6)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)">WSS_DNS</a></li>
   <li><a class="reference" href="#WSS_IP"
     title="WSS_IP = (operator: And, args: [(operator: And, args: [(operator: Or, args: [
     (operator: Eq, args: [], value: 4), (operator: Eq, args: [], value: 41)],
-    value: 0), (operator: Eq, args: [], value: 6)], value: 0),
-                                (operator: Eq, args: [], value: 478)], value: 0)">WSS_IP</a></li>
+    value: 0), (operator: Eq, args: [], value: 6)], value: 0), (operator: Or, args: [
+    (operator: Eq, args: [], value: 478), (operator: And, args: [
+    (operator: Eq, args: [], value: 448), (operator: Eq, args: [], value: 477)],
+    value: 0)], value: 0)], value: 0)">WSS_IP</a></li>
 
   </ul>
 </li>
@@ -1039,9 +1061,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L516"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L520"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L516" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L520" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1054,9 +1076,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L467"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L470"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L467" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L470" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1066,9 +1088,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L462"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L465"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L462" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L465" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1078,9 +1100,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L463"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L466"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L463" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L466" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1095,9 +1117,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L469"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L472"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L469" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L472" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1107,9 +1129,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L464"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L467"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L464" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L467" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1119,9 +1141,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L461"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L464"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L461" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L464" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1148,9 +1170,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L499"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L503"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L499" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L503" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1177,9 +1199,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L505"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L509"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L505" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L509" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1190,9 +1212,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L468"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L471"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L468" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L471" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1202,9 +1224,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L465"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L468"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L465" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L468" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1214,9 +1236,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L466"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L469"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L466" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L469" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1267,16 +1289,18 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
     <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span>
                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">421</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">421</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L497"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L501"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L497" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L501" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1286,9 +1310,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L488"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L492"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L488" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L492" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1298,9 +1322,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L495"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L499"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L495" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L499" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1319,9 +1343,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L477"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L480"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L477" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L480" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1369,16 +1393,17 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
     <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span>
                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L493"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L497"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L493" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L497" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1394,9 +1419,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L472"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L475"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L472" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L475" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1410,9 +1435,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L470"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L473"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L470" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L473" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1425,9 +1450,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L471"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L474"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L471" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L474" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1447,9 +1472,24 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L489"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L493"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L489" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L493" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="TLS_WS" class="tohide">
+<dt><pre><a href="multiaddress.html#TLS_WS"><span class="Identifier">TLS_WS</span></a> <span class="Other">=</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span>
+    <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span>
+                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+          <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L485"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L485" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1582,9 +1622,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L475"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L478"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L475" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L478" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1598,9 +1638,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L473"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L476"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L473" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L476" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1613,9 +1653,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L474"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L477"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L474" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L477" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1625,9 +1665,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L478"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L481"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L478" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L481" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1645,9 +1685,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L491"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L495"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L491" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L495" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1666,9 +1706,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L476"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L479"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L476" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L479" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1717,9 +1757,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L511"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L515"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L511" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L515" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1741,15 +1781,17 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
     <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span>
                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L487"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L491"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L487" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L491" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1765,14 +1807,17 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">53</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">54</span><span class="Other">)</span><span class="Other">,</span>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">55</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">56</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
                            <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span>
+    <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span>
+                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+                <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L485"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L489"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L485" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L489" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1785,14 +1830,17 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
                            <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span>
+    <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span>
+                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+                <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L486"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L490"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L486" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L490" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1811,9 +1859,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L481"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L484"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L481" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L484" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1827,9 +1875,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L479"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L482"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L479" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L482" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1842,9 +1890,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L480"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L483"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L480" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L483" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1857,15 +1905,17 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span>
     <span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span>
                          <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-                             <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L484"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L488"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L484" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L488" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1873,30 +1923,34 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><a href="multiaddress.html#WSS_DNS"><span class="Identifier">WSS_DNS</span></a> <span class="Other">=</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">53</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">54</span><span class="Other">)</span><span class="Other">,</span>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">55</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">56</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-                                 <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L482"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L486"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L482" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L486" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="WSS_IP" class="tohide">
 <dt><pre><a href="multiaddress.html#WSS_IP"><span class="Identifier">WSS_IP</span></a> <span class="Other">=</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
     <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">41</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span>
-                                <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">6</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Or</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">478</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">And</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">448</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Identifier">operator</span><span class="Other">:</span> <span class="DecNumber">Eq</span><span class="Other">,</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">477</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L483"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L487"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L483" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L487" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1911,9 +1965,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return pattern <tt class="docutils literal"><span class="pre">pat</span></tt> as string.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1094"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1098"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1094" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1098" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1923,9 +1977,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L775"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L779"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L775" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L779" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1938,9 +1992,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This procedure performs validation of concatenated result and can raise exception on error. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1034"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1038"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1034" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1038" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1953,9 +2007,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>This procedure performs validation of concatenated result and can raise exception on error. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1024"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1028"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1024" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1028" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1966,9 +2020,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Check of two MultiAddress are equal
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1044"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1048"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1044" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1048" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1979,9 +2033,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns partial MultiAddress with MultiCodec <tt class="docutils literal"><span class="pre">codec</span></tt> and present in MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L734"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L738"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L734" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L738" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1992,9 +2046,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns part with index <tt class="docutils literal"><span class="pre">i</span></tt> of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L670"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L674"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L670" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L674" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2005,9 +2059,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns parts with slice <tt class="docutils literal"><span class="pre">slice</span></tt> of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L678"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L682"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L678" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L682" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2018,9 +2072,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1017"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1021"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1017" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1021" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2030,9 +2084,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1106"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1110"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1106" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1110" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2043,9 +2097,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1008"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1012"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1008" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1012" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2056,9 +2110,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt>, if address with MultiCodec <tt class="docutils literal"><span class="pre">codec</span></tt> present in MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L725"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L729"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L725" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L729" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2081,9 +2135,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Get MultiBase encoded representation of <tt class="docutils literal"><span class="pre">ma</span></tt> using encoding <tt class="docutils literal"><span class="pre">encoding</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L796"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L800"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L796" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L800" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2094,9 +2148,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1112"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1116"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1112" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1116" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2108,9 +2162,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Read repeated field from protobuf message. <tt class="docutils literal"><span class="pre">field</span></tt> is field number. If the message is malformed, an error is returned. If field is not present in message, then <tt class="docutils literal"><span class="pre">ok(false)</span></tt> is returned and value is empty. If field is present, but no items could be parsed, then <tt class="docutils literal"><span class="pre">err(ProtoError.IncorrectBlob)</span></tt> is returned and value is empty. If field is present and some item could be parsed, then <tt class="docutils literal"><span class="pre">true</span></tt> is returned and value contains the parsed values.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1127"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1131"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1127" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1131" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2132,9 +2186,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return hexadecimal string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L788"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L792"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L788" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L792" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2144,9 +2198,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize empty MultiAddress.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L950"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L954"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L950" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L954" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2157,9 +2211,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress using chronos.TransportAddress (IPv4/IPv6/Unix) and protocol information (UDP/TCP).
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L976"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L980"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L976" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L980" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2171,9 +2225,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L954"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L958"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L954" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L958" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2184,9 +2238,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress with array of bytes <tt class="docutils literal"><span class="pre">data</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L935"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L939"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L935" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L939" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2198,9 +2252,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and array of bytes <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L823"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L827"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L823" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L827" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2211,9 +2265,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and integer <tt class="docutils literal"><span class="pre">value</span></tt>. This procedure can be used to instantiate <tt class="docutils literal"><span class="pre">tcp</span></tt>, <tt class="docutils literal"><span class="pre">udp</span></tt>, <tt class="docutils literal"><span class="pre">dccp</span></tt> and <tt class="docutils literal"><span class="pre">sctp</span></tt> MultiAddresses.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L861"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L865"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L861" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L865" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2224,9 +2278,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from protocol id <tt class="docutils literal"><span class="pre">protocol</span></tt> and peer id <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L855"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L859"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L855" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L859" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2237,9 +2291,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Initialize MultiAddress object from string representation <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L887"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L891"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L887" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L891" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2249,9 +2303,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt>, if MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> is empty or non initialized.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1004"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1008"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1004" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1008" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2261,9 +2315,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L718"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L722"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L718" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L722" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2310,9 +2364,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Match full <tt class="docutils literal"><span class="pre">address</span></tt> using pattern <tt class="docutils literal"><span class="pre">pat</span></tt> and return <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">address</span></tt> satisfies pattern.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1076"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1080"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1076" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1080" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2323,9 +2377,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Match prefix part of <tt class="docutils literal"><span class="pre">address</span></tt> using pattern <tt class="docutils literal"><span class="pre">pat</span></tt> and return <tt class="docutils literal"><span class="pre">true</span></tt> if <tt class="docutils literal"><span class="pre">address</span></tt> starts with pattern.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1085"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1089"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1085" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1089" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2338,9 +2392,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result array will be empty.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L597"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L601"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L597" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L601" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2353,9 +2407,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result array will be empty.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L607"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L611"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L607" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L611" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2368,9 +2422,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If current MultiAddress do not have argument value, then result will be <tt class="docutils literal"><span class="pre">0</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L562"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L566"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L562" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L566" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2381,9 +2435,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> protocol code.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L536"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L540"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L536" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L540" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2394,9 +2448,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns list of protocol codecs inside of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L781"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L785"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L781" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L785" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2407,9 +2461,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> protocol name.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L549"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L553"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L549" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L553" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2420,9 +2474,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Return string representation of MultiAddress <tt class="docutils literal"><span class="pre">value</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L743"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L747"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L743" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L747" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2432,9 +2486,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns <tt class="docutils literal"><span class="pre">true</span></tt> if MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt> is valid.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L802"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L806"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L802" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L806" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2445,9 +2499,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1109"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L1113"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1109" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L1113" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2458,9 +2512,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write MultiAddress value <tt class="docutils literal"><span class="pre">ma</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L792"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L796"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L792" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L796" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2476,9 +2530,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Iterates over all addresses inside of MultiAddress <tt class="docutils literal"><span class="pre">ma</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L682"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/multiaddress.nim#L686"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L682" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/multiaddress.nim#L686" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -2497,7 +2551,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-07 16:07:22 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-12 15:48:28 UTC</small>
       </div>
     </div>
   </div>
