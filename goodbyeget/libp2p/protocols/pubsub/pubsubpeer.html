@@ -229,6 +229,7 @@ window.addEventListener("DOMContentLoaded", main2);
   score*: float64
   sentIHaves*: Deque[HashSet[MessageId]]
   iHaveBudget*: int
+  pingBudget*: int
   maxMessageSize: int
   appScore*: float64
   behaviourPenalty*: float64">PubSubPeer</a></li>
@@ -420,6 +421,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">score</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float64</span>
   <span class="Identifier">sentIHaves</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Deque</span><span class="Other">[</span><span class="Identifier">HashSet</span><span class="Other">[</span><a href="rpc/messages.html#MessageId"><span class="Identifier">MessageId</span></a><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">iHaveBudget</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int</span>
+  <span class="Identifier">pingBudget</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int</span>
   <span class="Identifier">maxMessageSize</span><span class="Other">:</span> <span class="Identifier">int</span>
   <span class="Identifier">appScore</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float64</span>
   <span class="Identifier">behaviourPenalty</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float64</span>
@@ -468,9 +470,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L68"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L69"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L68" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L69" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -485,9 +487,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L83"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L84"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L83" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L84" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -497,9 +499,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L290"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L296"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L290" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L296" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -509,9 +511,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L219"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L223"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L219" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L223" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -521,9 +523,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L91"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L92"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L92" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -534,9 +536,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L122"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L123"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L122" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L123" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -546,9 +548,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L80"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L81"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L80" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L81" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -558,9 +560,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L95"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L96"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L95" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L96" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -570,9 +572,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L225"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L229"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L225" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -584,9 +586,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L297"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L303"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L297" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L303" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -596,9 +598,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L98"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L99"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L98" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L99" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -609,9 +611,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L268"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L274"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L268" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L274" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -623,9 +625,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L235"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L239"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L235" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L239" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -635,9 +637,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L86"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L87"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L87" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -652,9 +654,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L89"
+href="https://github.com/status-im/nim-libp2p/tree/goodbyeget/libp2p/protocols/pubsub/pubsubpeer.nim#L90"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L89" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/pubsubpeer.nim#L90" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -673,7 +675,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-15 08:35:50 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-21 09:21:01 UTC</small>
       </div>
     </div>
   </div>
