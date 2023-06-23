@@ -571,6 +571,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: bytes(value: MultiAddress): seq[byte]" href="libp2p/multiaddress.html#bytes%2CMultiAddress">multiaddress: bytes(value: MultiAddress): seq[byte]</a></li>
           </ul></dd>
+<dt><a name="byteSize" href="#byteSize"><span>byteSize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="messages: byteSize(msg: Message): int" href="libp2p/protocols/pubsub/rpc/messages.html#byteSize%2CMessage">messages: byteSize(msg: Message): int</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="messages: byteSize(msg: RPCMsg): int" href="libp2p/protocols/pubsub/rpc/messages.html#byteSize%2CRPCMsg">messages: byteSize(msg: RPCMsg): int</a></li>
+          </ul></dd>
 <dt><a name="CacheEntry" href="#CacheEntry"><span>CacheEntry:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="mcache: CacheEntry" href="libp2p/protocols/pubsub/mcache.html#CacheEntry">mcache: CacheEntry</a></li>
@@ -1202,6 +1208,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="disconnect" href="#disconnect"><span>disconnect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="switch: disconnect(s: Switch; peerId: PeerId): Future[void]" href="libp2p/switch.html#disconnect%2CSwitch%2CPeerId">switch: disconnect(s: Switch; peerId: PeerId): Future[void]</a></li>
+          </ul></dd>
+<dt><a name="disconnectIfBadPeer" href="#disconnectIfBadPeer"><span>disconnectIfBadPeer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="scoring: disconnectIfBadPeer(g: GossipSub; peer: PubSubPeer; score: float64;
+                    threshold: float64)" href="libp2p/protocols/pubsub/gossipsub/scoring.html#disconnectIfBadPeer%2CGossipSub%2CPubSubPeer%2Cfloat64%2Cfloat64">scoring: disconnectIfBadPeer(g: GossipSub; peer: PubSubPeer; score: float64;
+                    threshold: float64)</a></li>
           </ul></dd>
 <dt><a name="DNS" href="#DNS"><span>DNS:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4763,12 +4775,6 @@ window.addEventListener('DOMContentLoaded', main);
     Opt[MultiAddress]]" href="libp2p/dialer.html#tryDial.e%2CDialer%2CPeerId%2Cseq%5BMultiAddress%5D">dialer: tryDial(self: Dialer; peerId: PeerId; addrs: seq[MultiAddress]): Future[
     Opt[MultiAddress]]</a></li>
           </ul></dd>
-<dt><a name="tryDisconnectBadPeer" href="#tryDisconnectBadPeer"><span>tryDisconnectBadPeer:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="scoring: tryDisconnectBadPeer(g: GossipSub; peer: PubSubPeer; score: float64;
-                     threshold: float64): bool" href="libp2p/protocols/pubsub/gossipsub/scoring.html#tryDisconnectBadPeer%2CGossipSub%2CPubSubPeer%2Cfloat64%2Cfloat64">scoring: tryDisconnectBadPeer(g: GossipSub; peer: PubSubPeer; score: float64;
-                     threshold: float64): bool</a></li>
-          </ul></dd>
 <dt><a name="UDP" href="#UDP"><span>UDP:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="multiaddress: UDP" href="libp2p/multiaddress.html#UDP">multiaddress: UDP</a></li>
@@ -5238,7 +5244,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-23 13:15:24 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-23 15:07:27 UTC</small>
       </div>
     </div>
   </div>

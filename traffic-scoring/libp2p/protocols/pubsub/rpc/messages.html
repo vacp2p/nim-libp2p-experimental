@@ -257,7 +257,14 @@ window.addEventListener("DOMContentLoaded", main2);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">shortLog
+      <ul class="simple nested-toc-section">byteSize
+      <li><a class="reference" href="#byteSize%2CMessage"
+    title="byteSize(msg: Message): int">byteSize(msg: Message): int</a></li>
+  <li><a class="reference" href="#byteSize%2CRPCMsg"
+    title="byteSize(msg: RPCMsg): int">byteSize(msg: RPCMsg): int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">shortLog
       <li><a class="reference" href="#shortLog%2CControlMessage"
     title="shortLog(c: ControlMessage): auto">shortLog(c: ControlMessage): auto</a></li>
   <li><a class="reference" href="#shortLog%2CRPCMsg"
@@ -463,6 +470,30 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+<div id="byteSize,Message" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#byteSize%2CMessage"><span class="Identifier">byteSize</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="messages.html#Message"><span class="Identifier">Message</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/rpc/messages.nim#L126"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/messages.nim#L126" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
+<div id="byteSize,RPCMsg" class="tohide">
+<dt><pre><span class="Keyword">proc</span> <a href="#byteSize%2CRPCMsg"><span class="Identifier">byteSize</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="messages.html#RPCMsg"><span class="Identifier">RPCMsg</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/rpc/messages.nim#L137"
+class="link-seesrc" target="_blank">Source</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/rpc/messages.nim#L137" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+</div>
 <div id="shortLog,ControlMessage" class="tohide">
 <dt><pre><span class="Keyword">func</span> <a href="#shortLog%2CControlMessage"><span class="Identifier">shortLog</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="messages.html#ControlMessage"><span class="Identifier">ControlMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -570,7 +601,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-23 13:15:23 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-23 15:07:26 UTC</small>
       </div>
     </div>
   </div>
