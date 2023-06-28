@@ -961,13 +961,13 @@ window.addEventListener('DOMContentLoaded', main);
     int]" href="libp2p/multihash.html#decode%2Ctypedesc%5BMultiHash%5D%2CopenArray%5Bbyte%5D%2CMultiHash">multihash: decode(mhtype: typedesc[MultiHash]; data: openArray[byte]; mhash: var MultiHash): MhResult[
     int]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="core: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Option[AutonatMsg]" href="libp2p/protocols/connectivity/autonat/core.html#decode%2Ctypedesc%5BAutonatMsg%5D%2Cseq%5Bbyte%5D">core: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Option[AutonatMsg]</a></li>
+          data-doc-search-tag="core: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Opt[AutonatMsg]" href="libp2p/protocols/connectivity/autonat/core.html#decode%2Ctypedesc%5BAutonatMsg%5D%2Cseq%5Bbyte%5D">core: decode(_: typedesc[AutonatMsg]; buf: seq[byte]): Opt[AutonatMsg]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]</a></li>
+          data-doc-search-tag="messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Opt[HopMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[HopMessage]; buf: seq[byte]): Opt[HopMessage]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="messages: decode(_: typedesc[RelayMessage]; buf: seq[byte]): Option[RelayMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BRelayMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[RelayMessage]; buf: seq[byte]): Option[RelayMessage]</a></li>
+          data-doc-search-tag="messages: decode(_: typedesc[RelayMessage]; buf: seq[byte]): Opt[RelayMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BRelayMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[RelayMessage]; buf: seq[byte]): Opt[RelayMessage]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="messages: decode(_: typedesc[StopMessage]; buf: seq[byte]): Option[StopMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BStopMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[StopMessage]; buf: seq[byte]): Option[StopMessage]</a></li>
+          data-doc-search-tag="messages: decode(_: typedesc[StopMessage]; buf: seq[byte]): Opt[StopMessage]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BStopMessage%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[StopMessage]; buf: seq[byte]): Opt[StopMessage]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="messages: decode(_: typedesc[Voucher]; buf: seq[byte]): Result[Voucher, ProtoError]" href="libp2p/protocols/connectivity/relay/messages.html#decode%2Ctypedesc%5BVoucher%5D%2Cseq%5Bbyte%5D">messages: decode(_: typedesc[Voucher]; buf: seq[byte]): Result[Voucher, ProtoError]</a></li>
           <li><a class="reference external"
@@ -1017,7 +1017,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="decodeMsg" href="#decodeMsg"><span>decodeMsg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="identify: decodeMsg(buf: seq[byte]): Option[IdentifyInfo]" href="libp2p/protocols/identify.html#decodeMsg%2Cseq%5Bbyte%5D">identify: decodeMsg(buf: seq[byte]): Option[IdentifyInfo]</a></li>
+          data-doc-search-tag="identify: decodeMsg(buf: seq[byte]): Opt[IdentifyInfo]" href="libp2p/protocols/identify.html#decodeMsg%2Cseq%5Bbyte%5D">identify: decodeMsg(buf: seq[byte]): Opt[IdentifyInfo]</a></li>
           </ul></dd>
 <dt><a name="decodePeerInfoMsg" href="#decodePeerInfoMsg"><span>decodePeerInfoMsg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4633,6 +4633,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="streamseq: toOpenArray(v: StreamSeq; b, e: int): openArray[byte]" href="libp2p/stream/streamseq.html#toOpenArray.t%2CStreamSeq%2Cint%2Cint">streamseq: toOpenArray(v: StreamSeq; b, e: int): openArray[byte]</a></li>
           </ul></dd>
+<dt><a name="toOpt" href="#toOpt"><span>toOpt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="utility: toOpt[T, E](self: Result[T, E]): Opt[T]" href="libp2p/utility.html#toOpt.t%2CResult%5BT%2CE%5D">utility: toOpt[T, E](self: Result[T, E]): Opt[T]</a></li>
+          </ul></dd>
 <dt><a name="TopicHandler" href="#TopicHandler"><span>TopicHandler:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="pubsub: TopicHandler" href="libp2p/protocols/pubsub/pubsub.html#TopicHandler">pubsub: TopicHandler</a></li>
@@ -4883,6 +4887,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="pubsub: ValidatorHandler" href="libp2p/protocols/pubsub/pubsub.html#ValidatorHandler">pubsub: ValidatorHandler</a></li>
           </ul></dd>
+<dt><a name="valueOr" href="#valueOr"><span>valueOr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="utility: valueOr[T](self: Option[T]; body: untyped): untyped" href="libp2p/utility.html#valueOr.t%2COption%5BT%5D%2Cuntyped">utility: valueOr[T](self: Option[T]; body: untyped): untyped</a></li>
+          </ul></dd>
 <dt><a name="Varint" href="#Varint"><span>Varint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="ProtoFieldKind.Varint" href="libp2p/protobuf/minprotobuf.html#Varint">ProtoFieldKind.Varint</a></li>
@@ -5044,6 +5052,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="WithUint32LeLength" href="#WithUint32LeLength"><span>WithUint32LeLength:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="ProtoFlags.WithUint32LeLength" href="libp2p/protobuf/minprotobuf.html#WithUint32LeLength">ProtoFlags.WithUint32LeLength</a></li>
+          </ul></dd>
+<dt><a name="withValue" href="#withValue"><span>withValue:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="utility: withValue[T](self: Opt[T] | Option[T]; value, body, body2: untyped): untyped" href="libp2p/utility.html#withValue.m%2C%2Cuntyped%2Cuntyped%2Cuntyped">utility: withValue[T](self: Opt[T] | Option[T]; value, body, body2: untyped): untyped</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="utility: withValue[T](self: Opt[T] | Option[T]; value, body: untyped): untyped" href="libp2p/utility.html#withValue.t%2C%2Cuntyped%2Cuntyped">utility: withValue[T](self: Opt[T] | Option[T]; value, body: untyped): untyped</a></li>
           </ul></dd>
 <dt><a name="WithVarintLength" href="#WithVarintLength"><span>WithVarintLength:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5232,7 +5246,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-21 08:42:32 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-28 14:50:10 UTC</small>
       </div>
     </div>
   </div>

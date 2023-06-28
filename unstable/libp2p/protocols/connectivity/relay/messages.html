@@ -208,10 +208,10 @@ window.addEventListener("DOMContentLoaded", main2);
       <li><a class="reference" href="#HopMessage"
     title="HopMessage = object
   msgType*: HopMessageType
-  peer*: Option[Peer]
-  reservation*: Option[Reservation]
+  peer*: Opt[Peer]
+  reservation*: Opt[Reservation]
   limit*: Limit
-  status*: Option[StatusV2]">HopMessage</a></li>
+  status*: Opt[StatusV2]">HopMessage</a></li>
   <li><a class="reference" href="#HopMessageType"
     title="HopMessageType {.pure.} = enum
   Reserve = 0, Connect = 1, Status = 2">HopMessageType</a></li>
@@ -225,10 +225,10 @@ window.addEventListener("DOMContentLoaded", main2);
   addrs*: seq[MultiAddress]">Peer</a></li>
   <li><a class="reference" href="#RelayMessage"
     title="RelayMessage = object
-  msgType*: Option[RelayType]
-  srcPeer*: Option[RelayPeer]
-  dstPeer*: Option[RelayPeer]
-  status*: Option[StatusV1]">RelayMessage</a></li>
+  msgType*: Opt[RelayType]
+  srcPeer*: Opt[RelayPeer]
+  dstPeer*: Opt[RelayPeer]
+  status*: Opt[StatusV1]">RelayMessage</a></li>
   <li><a class="reference" href="#RelayPeer"
     title="RelayPeer = object
   peerId*: PeerId
@@ -240,7 +240,7 @@ window.addEventListener("DOMContentLoaded", main2);
     title="Reservation = object
   expire*: uint64
   addrs*: seq[MultiAddress]
-  svoucher*: Option[seq[byte]]">Reservation</a></li>
+  svoucher*: Opt[seq[byte]]">Reservation</a></li>
   <li><a class="reference" href="#SignedVoucher"
     title="SignedVoucher = SignedPayload[Voucher]">SignedVoucher</a></li>
   <li><a class="reference" href="#StatusV1"
@@ -259,9 +259,9 @@ window.addEventListener("DOMContentLoaded", main2);
   <li><a class="reference" href="#StopMessage"
     title="StopMessage = object
   msgType*: StopMessageType
-  peer*: Option[Peer]
+  peer*: Opt[Peer]
   limit*: Limit
-  status*: Option[StatusV2]">StopMessage</a></li>
+  status*: Opt[StatusV2]">StopMessage</a></li>
   <li><a class="reference" href="#StopMessageType"
     title="StopMessageType {.pure.} = enum
   Connect = 0, Status = 1">StopMessageType</a></li>
@@ -283,11 +283,11 @@ window.addEventListener("DOMContentLoaded", main2);
   </ul>
   <ul class="simple nested-toc-section">decode
       <li><a class="reference" href="#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D"
-    title="decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]">decode(_: typedesc[HopMessage]; buf: seq[byte]): Option[HopMessage]</a></li>
+    title="decode(_: typedesc[HopMessage]; buf: seq[byte]): Opt[HopMessage]">decode(_: typedesc[HopMessage]; buf: seq[byte]): Opt[HopMessage]</a></li>
   <li><a class="reference" href="#decode%2Ctypedesc%5BRelayMessage%5D%2Cseq%5Bbyte%5D"
-    title="decode(_: typedesc[RelayMessage]; buf: seq[byte]): Option[RelayMessage]">decode(_: typedesc[RelayMessage]; buf: seq[byte]): Option[RelayMessage]</a></li>
+    title="decode(_: typedesc[RelayMessage]; buf: seq[byte]): Opt[RelayMessage]">decode(_: typedesc[RelayMessage]; buf: seq[byte]): Opt[RelayMessage]</a></li>
   <li><a class="reference" href="#decode%2Ctypedesc%5BStopMessage%5D%2Cseq%5Bbyte%5D"
-    title="decode(_: typedesc[StopMessage]; buf: seq[byte]): Option[StopMessage]">decode(_: typedesc[StopMessage]; buf: seq[byte]): Option[StopMessage]</a></li>
+    title="decode(_: typedesc[StopMessage]; buf: seq[byte]): Opt[StopMessage]">decode(_: typedesc[StopMessage]; buf: seq[byte]): Opt[StopMessage]</a></li>
   <li><a class="reference" href="#decode%2Ctypedesc%5BVoucher%5D%2Cseq%5Bbyte%5D"
     title="decode(_: typedesc[Voucher]; buf: seq[byte]): Result[Voucher, ProtoError]">decode(_: typedesc[Voucher]; buf: seq[byte]): Result[Voucher, ProtoError]</a></li>
 
@@ -347,18 +347,18 @@ class="link-seesrc" target="_blank">Source</a>
 <div id="HopMessage" class="tohide">
 <dt><pre><a href="messages.html#HopMessage"><span class="Identifier">HopMessage</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">msgType</span><span class="Operator">*</span><span class="Other">:</span> <a href="messages.html#HopMessageType"><span class="Identifier">HopMessageType</span></a>
-  <span class="Identifier">peer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#Peer"><span class="Identifier">Peer</span></a><span class="Other">]</span>
-  <span class="Identifier">reservation</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#Reservation"><span class="Identifier">Reservation</span></a><span class="Other">]</span>
+  <span class="Identifier">peer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#Peer"><span class="Identifier">Peer</span></a><span class="Other">]</span>
+  <span class="Identifier">reservation</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#Reservation"><span class="Identifier">Reservation</span></a><span class="Other">]</span>
   <span class="Identifier">limit</span><span class="Operator">*</span><span class="Other">:</span> <a href="messages.html#Limit"><span class="Identifier">Limit</span></a>
-  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#StatusV2"><span class="Identifier">StatusV2</span></a><span class="Other">]</span>
+  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#StatusV2"><span class="Identifier">StatusV2</span></a><span class="Other">]</span>
 </pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L197"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L188"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L188" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -369,9 +369,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L193"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L184"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -384,9 +384,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L180"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L171"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L171" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -399,18 +399,18 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L173"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L164"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="RelayMessage" class="tohide">
 <dt><pre><a href="messages.html#RelayMessage"><span class="Identifier">RelayMessage</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">msgType</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#RelayType"><span class="Identifier">RelayType</span></a><span class="Other">]</span>
-  <span class="Identifier">srcPeer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#RelayPeer"><span class="Identifier">RelayPeer</span></a><span class="Other">]</span>
-  <span class="Identifier">dstPeer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#RelayPeer"><span class="Identifier">RelayPeer</span></a><span class="Other">]</span>
-  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#StatusV1"><span class="Identifier">StatusV1</span></a><span class="Other">]</span>
+  <span class="Identifier">msgType</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#RelayType"><span class="Identifier">RelayType</span></a><span class="Other">]</span>
+  <span class="Identifier">srcPeer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#RelayPeer"><span class="Identifier">RelayPeer</span></a><span class="Other">]</span>
+  <span class="Identifier">dstPeer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#RelayPeer"><span class="Identifier">RelayPeer</span></a><span class="Other">]</span>
+  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#StatusV1"><span class="Identifier">StatusV1</span></a><span class="Other">]</span>
 </pre></dt>
 <dd>
 
@@ -454,15 +454,15 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><a href="messages.html#Reservation"><span class="Identifier">Reservation</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">expire</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>
   <span class="Identifier">addrs</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span>
-  <span class="Identifier">svoucher</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">]</span>
+  <span class="Identifier">svoucher</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">]</span>
 </pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L176"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L167"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L167" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -472,9 +472,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L159"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L150"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L159" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L150" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -505,26 +505,26 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L184"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L175"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L175" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="StopMessage" class="tohide">
 <dt><pre><a href="messages.html#StopMessage"><span class="Identifier">StopMessage</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">msgType</span><span class="Operator">*</span><span class="Other">:</span> <a href="messages.html#StopMessageType"><span class="Identifier">StopMessageType</span></a>
-  <span class="Identifier">peer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#Peer"><span class="Identifier">Peer</span></a><span class="Other">]</span>
+  <span class="Identifier">peer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#Peer"><span class="Identifier">Peer</span></a><span class="Other">]</span>
   <span class="Identifier">limit</span><span class="Operator">*</span><span class="Other">:</span> <a href="messages.html#Limit"><span class="Identifier">Limit</span></a>
-  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#StatusV2"><span class="Identifier">StatusV2</span></a><span class="Other">]</span>
+  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#StatusV2"><span class="Identifier">StatusV2</span></a><span class="Other">]</span>
 </pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L298"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L273"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L298" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L273" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -535,9 +535,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L295"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L270"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L295" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L270" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -551,9 +551,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L124"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L115"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L124" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L115" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -569,27 +569,27 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L164"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L155"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L155" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="decode,typedesc[HopMessage],seq[byte]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#HopMessage"><span class="Identifier">HopMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#HopMessage"><span class="Identifier">HopMessage</span></a><span class="Other">]</span> {.
+<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BHopMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#HopMessage"><span class="Identifier">HopMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#HopMessage"><span class="Identifier">HopMessage</span></a><span class="Other">]</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L237"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L227"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L237" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L227" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
 <div id="decode,typedesc[RelayMessage],seq[byte]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BRelayMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#RelayMessage"><span class="Identifier">RelayMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#RelayMessage"><span class="Identifier">RelayMessage</span></a><span class="Other">]</span> {.
+<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BRelayMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#RelayMessage"><span class="Identifier">RelayMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#RelayMessage"><span class="Identifier">RelayMessage</span></a><span class="Other">]</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
@@ -602,15 +602,15 @@ class="link-seesrc" target="_blank">Source</a>
 </dd>
 </div>
 <div id="decode,typedesc[StopMessage],seq[byte]" class="tohide">
-<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BStopMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#StopMessage"><span class="Identifier">StopMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><a href="messages.html#StopMessage"><span class="Identifier">StopMessage</span></a><span class="Other">]</span> {.
+<dt><pre><span class="Keyword">proc</span> <a href="#decode%2Ctypedesc%5BStopMessage%5D%2Cseq%5Bbyte%5D"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="messages.html#StopMessage"><span class="Identifier">StopMessage</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Opt</span><span class="Other">[</span><a href="messages.html#StopMessage"><span class="Identifier">StopMessage</span></a><span class="Other">]</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L328"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L303"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L328" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L303" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -621,9 +621,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L129"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L120"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L129" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L120" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -633,9 +633,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L204"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L195"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L204" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L195" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -657,9 +657,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L305"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L280"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L305" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L280" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -669,9 +669,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L139"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L130"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L139" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L130" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -682,9 +682,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L149"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L140"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L140" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -694,9 +694,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L161"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L152"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L161" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L152" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -706,9 +706,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L162"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/protocols/connectivity/relay/messages.nim#L153"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L162" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/connectivity/relay/messages.nim#L153" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -722,7 +722,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-21 08:42:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-28 14:50:08 UTC</small>
       </div>
     </div>
   </div>

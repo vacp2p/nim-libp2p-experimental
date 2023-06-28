@@ -226,7 +226,7 @@ window.addEventListener("DOMContentLoaded", main2);
     title="PrivateKey = object
   case scheme*: PKScheme
   of PKScheme.RSA:
-      when supported(RSA):
+      when supported(PKScheme.RSA):
           rsakey*: rsa.RsaPrivateKey
 
       else:
@@ -234,7 +234,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.Ed25519:
-      when supported(Ed25519):
+      when supported(PKScheme.Ed25519):
           edkey*: EdPrivateKey
 
       else:
@@ -242,7 +242,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.Secp256k1:
-      when supported(Secp256k1):
+      when supported(PKScheme.Secp256k1):
           skkey*: SkPrivateKey
 
       else:
@@ -250,7 +250,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.ECDSA:
-      when supported(ECDSA):
+      when supported(PKScheme.ECDSA):
           eckey*: ecnist.EcPrivateKey
 
       else:
@@ -267,7 +267,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.Ed25519:
-      when supported(Ed25519):
+      when supported(PKScheme.Ed25519):
           edkey*: EdPublicKey
 
       else:
@@ -275,7 +275,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.Secp256k1:
-      when supported(Secp256k1):
+      when supported(PKScheme.Secp256k1):
           skkey*: SkPublicKey
 
       else:
@@ -283,7 +283,7 @@ window.addEventListener("DOMContentLoaded", main2);
 
     
   of PKScheme.ECDSA:
-      when supported(ECDSA):
+      when supported(PKScheme.ECDSA):
           eckey*: ecnist.EcPublicKey
 
       else:
@@ -682,7 +682,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><a href="crypto.html#PrivateKey"><span class="Identifier">PrivateKey</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Keyword">case</span> <span class="Identifier">scheme</span><span class="Operator">*</span><span class="Other">:</span> <a href="crypto.html#PKScheme"><span class="Identifier">PKScheme</span></a>
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">RSA</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">RSA</span><span class="Other">)</span><span class="Other">:</span>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">RSA</span><span class="Other">)</span><span class="Other">:</span>
           <span class="Identifier">rsakey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">rsa</span><span class="Other">.</span><span class="Identifier">RsaPrivateKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
@@ -690,23 +690,23 @@ class="link-seesrc" target="_blank">Source</a>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Ed25519</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">Ed25519</span><span class="Other">)</span><span class="Other">:</span>
-          <span class="Identifier">edkey</span><span class="Operator">*</span><span class="Other">:</span> <a href="ed25519/ed25519.html#EdPrivateKey"><span class="Identifier">EdPrivateKey</span></a>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Ed25519</span><span class="Other">)</span><span class="Other">:</span>
+          <span class="Identifier">edkey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">EdPrivateKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
           <span class="Keyword">nil</span>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Secp256k1</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">Secp256k1</span><span class="Other">)</span><span class="Other">:</span>
-          <span class="Identifier">skkey</span><span class="Operator">*</span><span class="Other">:</span> <a href="secp.html#SkPrivateKey"><span class="Identifier">SkPrivateKey</span></a>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Secp256k1</span><span class="Other">)</span><span class="Other">:</span>
+          <span class="Identifier">skkey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">SkPrivateKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
           <span class="Keyword">nil</span>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">ECDSA</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">ECDSA</span><span class="Other">)</span><span class="Other">:</span>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">ECDSA</span><span class="Other">)</span><span class="Other">:</span>
           <span class="Identifier">eckey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">ecnist</span><span class="Other">.</span><span class="Identifier">EcPrivateKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
@@ -736,23 +736,23 @@ class="link-seesrc" target="_blank">Source</a>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Ed25519</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">Ed25519</span><span class="Other">)</span><span class="Other">:</span>
-          <span class="Identifier">edkey</span><span class="Operator">*</span><span class="Other">:</span> <a href="ed25519/ed25519.html#EdPublicKey"><span class="Identifier">EdPublicKey</span></a>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Ed25519</span><span class="Other">)</span><span class="Other">:</span>
+          <span class="Identifier">edkey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">EdPublicKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
           <span class="Keyword">nil</span>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Secp256k1</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">Secp256k1</span><span class="Other">)</span><span class="Other">:</span>
-          <span class="Identifier">skkey</span><span class="Operator">*</span><span class="Other">:</span> <a href="secp.html#SkPublicKey"><span class="Identifier">SkPublicKey</span></a>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">Secp256k1</span><span class="Other">)</span><span class="Other">:</span>
+          <span class="Identifier">skkey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">SkPublicKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
           <span class="Keyword">nil</span>
 
     
   <span class="Keyword">of</span> <span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">ECDSA</span><span class="Other">:</span>
-      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">ECDSA</span><span class="Other">)</span><span class="Other">:</span>
+      <span class="Keyword">when</span> <span class="Identifier">supported</span><span class="Other">(</span><span class="Identifier">PKScheme</span><span class="Other">.</span><span class="Identifier">ECDSA</span><span class="Other">)</span><span class="Other">:</span>
           <span class="Identifier">eckey</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">ecnist</span><span class="Other">.</span><span class="Identifier">EcPublicKey</span>
 
       <span class="Keyword">else</span><span class="Other">:</span>
@@ -914,9 +914,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create SecIO exchange message using ephemeral public key <tt class="docutils literal"><span class="pre">epubkey</span></tt> and signature of proposal blocks <tt class="docutils literal"><span class="pre">signature</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L980"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L979"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L980" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L979" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -943,9 +943,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>Procedure returns <tt class="docutils literal"><span class="pre">true</span></tt> on success and <tt class="docutils literal"><span class="pre">false</span></tt> on error.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L989"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L988"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L989" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L988" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1038,9 +1038,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>On success deserialized signature will be stored in <tt class="docutils literal"><span class="pre">value</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1044"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1043"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1044" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1043" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1053,9 +1053,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>On success deserialized key will be stored in <tt class="docutils literal"><span class="pre">value</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1026"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1025"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1026" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1025" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1589,9 +1589,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1022"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1021"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1022" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1021" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1602,9 +1602,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write PublicKey value <tt class="docutils literal"><span class="pre">pubkey</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1002"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1001"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1002" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1001" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1615,9 +1615,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write PrivateKey value <tt class="docutils literal"><span class="pre">seckey</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1007"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1006"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1007" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1006" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1628,9 +1628,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Write Signature value <tt class="docutils literal"><span class="pre">sig</span></tt> to buffer <tt class="docutils literal"><span class="pre">vb</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1012"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1011"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1012" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1011" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1641,9 +1641,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1017"
+href="https://github.com/status-im/nim-libp2p/tree/unstable/libp2p/crypto/crypto.nim#L1016"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1017" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/crypto/crypto.nim#L1016" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -1729,7 +1729,7 @@ class="link-seesrc" target="_blank">Source</a>
 <div class="section" id="19">
 <h1><a class="toc-backref" href="#19">Exports</a></h1>
 <dl class="item">
-<a href="../utility.html#compilesOr.t,untyped,untyped"><span class="Identifier">compilesOr</span></a>, <a href="../utility.html#exceptionToAssert.t,untyped"><span class="Identifier">exceptionToAssert</span></a>, <a href="../utility.html#public.t"><span class="Identifier">public</span></a>, <a href="../utility.html#shortLog,openArray[byte]"><span class="Identifier">shortLog</span></a>, <a href="../utility.html#safeConvert.t,S"><span class="Identifier">safeConvert</span></a>, <a href="../utility.html#shortLog,string"><span class="Identifier">shortLog</span></a>
+<a href="../utility.html#withValue.t,,untyped,untyped"><span class="Identifier">withValue</span></a>, <a href="../utility.html#safeConvert.t,S"><span class="Identifier">safeConvert</span></a>, <a href="../utility.html#shortLog,openArray[byte]"><span class="Identifier">shortLog</span></a>, <a href="../utility.html#withValue.m,,untyped,untyped,untyped"><span class="Identifier">withValue</span></a>, <a href="../utility.html#public.t"><span class="Identifier">public</span></a>, <a href="../utility.html#shortLog,string"><span class="Identifier">shortLog</span></a>, <a href="../utility.html#compilesOr.t,untyped,untyped"><span class="Identifier">compilesOr</span></a>, <a href="../utility.html#valueOr.t,Option[T],untyped"><span class="Identifier">valueOr</span></a>, <a href="../utility.html#toOpt.t,Result[T,E]"><span class="Identifier">toOpt</span></a>, <a href="../utility.html#exceptionToAssert.t,untyped"><span class="Identifier">exceptionToAssert</span></a>
 </dl></div>
 
   </div>
@@ -1739,7 +1739,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-21 08:42:29 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-06-28 14:50:06 UTC</small>
       </div>
     </div>
   </div>
