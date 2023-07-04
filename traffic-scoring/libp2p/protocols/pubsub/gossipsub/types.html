@@ -262,7 +262,8 @@ window.addEventListener("DOMContentLoaded", main2);
   behaviourPenaltyDecay*: float64
   directPeers*: Table[PeerId, seq[MultiAddress]]
   disconnectBadPeers*: bool
-  enablePX*: bool">GossipSubParams</a></li>
+  enablePX*: bool
+  invalidTrafficRatioThreshold*: float64">GossipSubParams</a></li>
   <li><a class="reference" href="#MeshMetrics"
     title="MeshMetrics = object
   otherPeersPerTopicMesh*: int64
@@ -380,9 +381,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L145"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L146"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L145" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L146" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -413,9 +414,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L155"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L156"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L155" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L156" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -453,6 +454,7 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">directPeers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Table</span><span class="Other">[</span><a href="../../../peerid.html#PeerId"><span class="Identifier">PeerId</span></a><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="../../../multiaddress.html#MultiAddress"><span class="Identifier">MultiAddress</span></a><span class="Other">]</span><span class="Other">]</span>
   <span class="Identifier">disconnectBadPeers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
   <span class="Identifier">enablePX</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
+  <span class="Identifier">invalidTrafficRatioThreshold</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float64</span>
 </pre></dt>
 <dd>
 
@@ -478,9 +480,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L179"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L180"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L179" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -510,9 +512,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L149"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L150"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L150" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -522,9 +524,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L148"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L149"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L148" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -585,9 +587,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L146"
+href="https://github.com/status-im/nim-libp2p/tree/traffic-scoring/libp2p/protocols/pubsub/gossipsub/types.nim#L147"
 class="link-seesrc" target="_blank">Source</a>
-&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L146" class="link-seesrc" target="_blank" >Edit</a>
+&nbsp;&nbsp;<a href="https://github.com/status-im/nim-libp2p/edit/devel/libp2p/protocols/pubsub/gossipsub/types.nim#L147" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 </div>
@@ -774,7 +776,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-07-04 15:17:08 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-07-04 20:20:33 UTC</small>
       </div>
     </div>
   </div>
