@@ -141,6 +141,7 @@ type
 
     disconnectBadPeers*: bool
     enablePX*: bool
+    invalidTrafficRatioThreshold*: float64
 
   BackoffTable* = Table[string, Table[PeerId, Moment]]
   ValidationSeenTable* = Table[MessageId, HashSet[PubSubPeer]]

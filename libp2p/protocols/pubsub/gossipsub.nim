@@ -74,7 +74,8 @@ proc init*(_: type[GossipSubParams]): GossipSubParams =
       behaviourPenaltyWeight: -1.0,
       behaviourPenaltyDecay: 0.999,
       disconnectBadPeers: false,
-      enablePX: false
+      enablePX: false,
+      invalidTrafficRatioThreshold: 0.3,
     )
 
 proc validateParameters*(parameters: GossipSubParams): Result[void, cstring] =
