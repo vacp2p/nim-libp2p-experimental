@@ -1,3 +1,6 @@
+:warning: This repository is for experiments only.
+For production use, visit the [original nim-libp2p repository](https://github.com/status-im/nim-libp2p)
+
 <h1 align="center">
   <a href="https://libp2p.io"><img width="250" src="./.assets/full-logo.svg?raw=true" alt="nim-libp2p logo" /></a>
 </h1>
