@@ -276,6 +276,35 @@ proc new*(
     torSwitch.connManager.peerStore = switch.peerStore
     return torSwitch
 
+proc new*(
+  T: typedesc[TorSwitch],
+  torServer: TransportAddress,
+  rng: ref HmacDrbgContext,
+  addresses: seq[MultiAddress] = @[],
+  flags: set[ServerFlags] = {},
+  seckey: PrivateKey ): TorSwitch
+  {.raises: [LPError], public.} =
+    var builder = SwitchBuilder.new()
+        .withPrivateKey(seckey)
+        .withRng(rng)
+        .withTransport(proc(upgr: Upgrade): Transport = TorTransport.new(torServer, flags, upgr))
+    if addresses.len != 0:
+        builder = builder.withAddresses(addresses)
+    let switch = builder.withMplex()
+        .withNoise()
+        .build()
+    let torSwitch = T(
+      peerInfo: switch.peerInfo,
+      ms: switch.ms,
+      transports: switch.transports,
+      connManager: switch.connManager,
+      peerStore: switch.peerStore,
+      dialer: Dialer.new(switch.peerInfo.peerId, switch.connManager, switch.peerStore, switch.transports, nil),
+      nameResolver: nil)
+
+    torSwitch.connManager.peerStore = switch.peerStore
+    return torSwitch
+  
 method addTransport*(s: TorSwitch, t: Transport) =
   doAssert(false, "not implemented!")
 
