@@ -277,7 +277,7 @@ proc new*(
   torServer: TransportAddress,
   rng: ref HmacDrbgContext,
   addresses: seq[MultiAddress] = @[],
-  flags: set[ServerFlags] = {}
+  flags: set[ServerFlags] = {},
   seckey: PrivateKey ): TorSwitch
   {.raises: [LPError], public.} =
     var builder = SwitchBuilder.new()
@@ -300,7 +300,7 @@ proc new*(
 
     torSwitch.connManager.peerStore = switch.peerStore
     return torSwitch
-
+  
 method addTransport*(s: TorSwitch, t: Transport) =
   doAssert(false, "not implemented!")
 
